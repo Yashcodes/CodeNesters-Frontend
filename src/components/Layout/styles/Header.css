@@ -34,6 +34,29 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.nav-container .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-container .navbar-brand img {
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width : 325px) {
+  .navbar-brand .brand-text {
+    display: none;
+  }
+
+  .nav-container .navbar-brand img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -45,6 +68,15 @@ body {
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.menu li a{
+ text-decoration: none; 
+ color: white;
 }
 
 .menu-button-container {

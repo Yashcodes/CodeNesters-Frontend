@@ -1,4 +1,6 @@
 import React from "react";
+import brandLogo from "../../assets/images/brandLogo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,9 +8,15 @@ const Header = () => {
       <header>
         <nav>
           <section class="top-nav container-fluid">
-            <div className="container nav-container">
+            <div
+              className={`${
+                window.innerWidth >= 325
+                  ? "container nav-container"
+                  : "container-fluid nav-container"
+              }`}
+            >
               <div className="navbar-brand">
-                <img src="" className="brand-logo" alt="" />
+                <img src={brandLogo} className="brand-logo img-fluid" alt="" />
                 <span className="fs-2 brand-text">CodeNesters</span>
               </div>
 
@@ -18,9 +26,17 @@ const Header = () => {
               </label>
 
               <ul class="menu fs-5">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li>
+                  <Link to={"/"}>Home</Link>
+                </li>
+
+                <li>
+                  <Link to={"/about"}>About</Link>
+                </li>
+
+                <li>
+                  <Link to={"/contact"}>Contact</Link>
+                </li>
               </ul>
             </div>
           </section>
