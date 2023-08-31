@@ -3,6 +3,9 @@ import "./App.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 
+//! Stylesheets
+import "./components/Layout/styles/Header.css";
+
 function App() {
   return (
     <>
