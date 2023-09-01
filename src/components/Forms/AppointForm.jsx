@@ -9,6 +9,9 @@ const AppointForm = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [pincode, setPincode] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [userData, setUserData] = useState({});
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,14 +30,19 @@ const AppointForm = () => {
           phone,
           address,
           pincode,
+          message,
         }
       );
+
+      setUserData(data);
+
       toast.success("Form submitted Successfully");
       setName("");
       setEmail("");
       setPhone("");
       setAddress("");
       setPincode("");
+      setMessage("");
     } catch (error) {
       toast.error("Error in submitting form");
     }
@@ -106,67 +114,18 @@ const AppointForm = () => {
                       />
                     </label>
                   </div>
-                </fieldset>
 
-                {/* <fieldset>
-                  <legend>Appointment request</legend>
-                  <div className="two-cols">
-                    <label>
-                      Date
-                      <input type="date" name="Appointment request" required />
-                    </label>
-                    <div className="inline">
-                      <label>
-                        <input
-                          type="hidden"
-                          name="Morning desired"
-                          defaultValue="no"
-                        />
-                        <input
-                          type="checkbox"
-                          name="Morning desired"
-                          defaultValue="yes"
-                        />
-                        Morning
-                      </label>
-                      <label>
-                        <input
-                          type="hidden"
-                          name="Afternoon desired"
-                          defaultValue="no"
-                        />
-                        <input
-                          type="checkbox"
-                          name="Afternoon desired"
-                          defaultValue="yes"
-                        />
-                        Afternoon
-                      </label>
-                    </div>
-                  </div>
-                  <p className="appoint-form-head">Confirmation requested by</p>
-                  <div className="inline">
-                    <label>
-                      <input
-                        type="radio"
-                        name="Confirmation requested by"
-                        defaultValue="email"
-                        defaultChecked
-                        className="input-border"
-                      />
-                      Email
-                    </label>
-                    <label>
-                      <input
-                        type="radio"
-                        name="Confirmation requested by"
-                        defaultValue="phone"
-                        className="input-border"
-                      />
-                      Phone call
-                    </label>
-                  </div>
-                </fieldset> */}
+                  <label>
+                    Message
+                    <input
+                      type="text"
+                      name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                    />
+                  </label>
+                </fieldset>
 
                 <div className="btns">
                   <input
