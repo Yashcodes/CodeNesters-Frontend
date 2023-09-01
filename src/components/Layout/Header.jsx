@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <section class="top-nav container-fluid">
+          <section className="top-nav container-fluid">
             <div
               className={`${
                 window.innerWidth >= 325
@@ -21,11 +21,11 @@ const Header = () => {
               </div>
 
               <input id="menu-toggle" type="checkbox" />
-              <label class="menu-button-container" for="menu-toggle">
-                <div class="menu-button"></div>
+              <label className="menu-button-container" htmlFor="menu-toggle">
+                <div className="menu-button"></div>
               </label>
 
-              <ul class="menu fs-5">
+              <ul className="menu fs-5">
                 <li>
                   <Link to={"/"}>Home</Link>
                 </li>

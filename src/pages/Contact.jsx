@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 
 import AppointForm from "../components/Forms/AppointForm";
-import ContactForm from "../components/Forms/ContactForm";
 import ContactBanner from "../components/Layout/ContactBanner";
 
 const Contact = () => {
@@ -13,9 +12,6 @@ const Contact = () => {
 
       {/*//! Appointment Form */}
       <AppointForm />
-
-      {/*//! Contact Form */}
-      <ContactForm />
     </Layout>
   );
 };
