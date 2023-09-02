@@ -1,12 +1,17 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import Testimonial from "../components/Testimonial";
+import HeroSectionHome from "../components/HeroSectionHome";
 
 const Home = () => {
   return (
     <Layout>
-      <div>
-        <h1>This is CodeNesters</h1>
-      </div>
+      {/* //! Hero Section  */}
+      <HeroSectionHome />
+
+      {/* //! Testimonial  */}
+      <Testimonial />
+      {/* <Carousel /> */}
     </Layout>
   );
 };

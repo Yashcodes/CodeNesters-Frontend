@@ -1,0 +1,46 @@
+.main-container {
+  margin: 0;
+  padding: 66px 44px;
+  background-image: linear-gradient(to top, #fee0e9 0%, #ffffff 100%);
+}
+
+.hero-section {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hero-btn > .hero-btn-1 {
+  margin: 1px 4px 1px 0px;
+  padding: 12px 22px;
+  font-size: 14px;
+}
+
+.hero-btn > .hero-btn-2 {
+  margin: 1px 0px 1px 4px;
+  padding: 12px 22px;
+  font-size: 14px;
+}
+
+.hero-head {
+  font-size: 50px;
+  font-family: "poppins", "sans-serif";
+  font-weight: 700;
+}
+
+.hero-head > span {
+  color: violet;
+}
+
+.left-hero-section,
+.right-hero-section {
+  margin: 44px 0px;
+}
+
+.left-hero-section p {
+    font-size: 22px;
+}

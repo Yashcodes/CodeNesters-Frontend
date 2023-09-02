@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../../styles/Contact.css";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 
 const AppointForm = () => {
   const [name, setName] = useState("");
@@ -43,6 +45,8 @@ const AppointForm = () => {
       setAddress("");
       setPincode("");
       setMessage("");
+
+      console.log(userData);
     } catch (error) {
       toast.error("Error in submitting form");
     }

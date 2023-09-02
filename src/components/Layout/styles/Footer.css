@@ -1,0 +1,20 @@
+.footer {
+  background-color: rgb(10, 47, 51);
+  padding: 22px 0px;
+  color: white;
+  width: 100%;
+}
+
+.footer-column ul {
+  list-style-type: disc;
+}
+
+.copyright {
+  font-size: 18px;
+  margin-top: 34px;
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  color: white;
+}
