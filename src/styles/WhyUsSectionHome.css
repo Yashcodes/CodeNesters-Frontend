@@ -15,6 +15,13 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: flex;
   flex-direction: column;
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.whyUsCard:hover {
+  transform: scale(1.05);
 }
 
 .whyUsCard h4 {
