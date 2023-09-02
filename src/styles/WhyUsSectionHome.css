@@ -6,11 +6,12 @@
   flex-wrap: wrap;
   gap: 32px;
   text-align: center;
+  margin: 66px 0px 44px 0px;
 }
 
 .whyUsCard {
   width: 350px;
-  padding: 22px 18px;
+  padding: 44px 44px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: flex;
@@ -59,6 +60,7 @@
   border: rgb(89, 191, 255);
 }
 
-text {
-  background-color: rgb(138, 33, 133);
+.whyUsHeading {
+  line-height: 52px;
+  margin-bottom: 80px;
 }

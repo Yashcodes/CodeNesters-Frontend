@@ -7,13 +7,13 @@ const WhyUsSectionHome = () => {
       <section className="py-5 whyUsSection">
         <div className="container p-5">
           <h4 className="text-black text-center">Why CodeNesters?</h4>
-          <h2 className="text-black fw-bold">
-            Making project development easier and convenient
+          <h2 className="fs-1 text-black fw-bold whyUsHeading">
+            Making project development <br /> easier and convenient
           </h2>
 
-          <div className="whyUsCardContainer my-5">
+          <div className="whyUsCardContainer">
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid rgb(251, 125, 245)" }}
             >
               <div
@@ -37,7 +37,7 @@ const WhyUsSectionHome = () => {
             </div>
 
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid rgb(89, 191, 255)" }}
             >
               <div
@@ -61,7 +61,7 @@ const WhyUsSectionHome = () => {
             </div>
 
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid cyan" }}
             >
               <div
@@ -90,7 +90,7 @@ const WhyUsSectionHome = () => {
             </div>
 
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid rgb(59, 240, 197)" }}
             >
               <div
@@ -119,7 +119,7 @@ const WhyUsSectionHome = () => {
             </div>
 
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid rgb(234, 232, 111)" }}
             >
               <div
@@ -143,7 +143,7 @@ const WhyUsSectionHome = () => {
             </div>
 
             <div
-              className="whyUsCard card"
+              className="whyUsCard"
               style={{ "border-bottom": "6px solid rgb(244, 86, 141)" }}
             >
               <div
