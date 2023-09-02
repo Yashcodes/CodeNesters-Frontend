@@ -1,0 +1,57 @@
+.whyUsCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  text-align: center;
+}
+
+.whyUsCard {
+  width: 350px;
+  padding: 22px 18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.whyUsCard h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0px;
+}
+
+.whyUsCard p {
+  font-size: 15px;
+  font-family: "poppins", "sans-serif";
+  color: black;
+  margin: 12px 0px;
+}
+
+.whyUsCard .icon {
+  width: 66px;
+  height: 66px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 22px;
+  margin: 12px auto;
+}
+
+.whyUsSection {
+  background: url(../assets/images/home/bg-section.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-attachment: scroll;
+  border: rgb(89, 191, 255);
+}
+
+text {
+  background-color: rgb(138, 33, 133);
+}

@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles/Testimonial.css";
 import "./components/Layout/styles/Footer.css";
 import "./styles/HeroSection.css";
+import "./styles/WhyUsSectionHome.css";
 import "react-multi-carousel/lib/styles.css";
 import "./index.css";
 import App from "./App";
