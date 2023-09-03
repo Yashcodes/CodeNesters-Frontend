@@ -5,9 +5,14 @@ const Testimonial = () => {
     <>
       <section className="section-2" id="testimonial">
         <div className="container">
-          <h2 className="text-uppercase text-light mb-4">
-            See what our patients say
+          <h2 className="text-uppercase text-dark mb-3">
+            See what our clients say
           </h2>
+          <p className="testimonialHeadText">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            tempore temporibus <br />nemo mollitia esse, inventore
+            magni quaerat.
+          </p>
           <p className="border-btm" />
           <div className="row mb-5 testimonial-gap">
             <div className="col-lg-4">
@@ -18,7 +23,7 @@ const Testimonial = () => {
                     alt=""
                     className="profile"
                   />
-                  <div className="pt-3 text-uppercase name">
+                  <div className="pt-3 text-uppercase name fw-bold">
                     Robert Garrison
                   </div>
                   <div className="designation">Android Developer</div>
@@ -42,7 +47,9 @@ const Testimonial = () => {
                     alt=""
                     className="profile"
                   />
-                  <div className="pt-3 text-uppercase name">Jeffery Kennan</div>
+                  <div className="pt-3 text-uppercase name fw-bold">
+                    Jeffery Kennan
+                  </div>
                   <div className="designation">Full Stack Developer</div>
                 </div>
                 <div className="face back-face">
@@ -64,7 +71,9 @@ const Testimonial = () => {
                     alt=""
                     className="profile"
                   />
-                  <div className="pt-3 text-uppercase name">Issac Maxwell</div>
+                  <div className="pt-3 text-uppercase name fw-bold">
+                    Issac Maxwell
+                  </div>
                   <div className="designation">Finance Director</div>
                 </div>
                 <div className="face back-face">
