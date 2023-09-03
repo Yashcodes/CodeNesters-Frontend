@@ -3,7 +3,7 @@
 
 .business-prob-container {
   padding: 44px 22px;
-  margin: 34px 0px;
+  margin: 0px 0px;
 }
 
 .business-problem-head {
@@ -68,4 +68,12 @@
 
 .card-badge .badge-color-1 {
   background-color: rgb(2, 201, 125) !important;
+}
+
+.business-prob-section {
+  background: url(../assets/images/home/business.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
 }
