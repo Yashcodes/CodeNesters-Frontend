@@ -5,8 +5,6 @@ import "./App.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 
-//! Stylesheets
-import "./components/Layout/styles/Header.css";
 import { Toaster } from "react-hot-toast";
 
 function App() {

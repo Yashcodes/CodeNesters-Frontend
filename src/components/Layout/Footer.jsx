@@ -1,79 +1,56 @@
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 import { Link } from "react-router-dom";
+import brandLogo from "../../assets/images/brandLogo.png";
 
 const Footer = () => {
   return (
     <>
       <footer className="footer" id="footer">
-        <div className="container container-fluid p-5">
-          <div className="row footer-content">
-            <div className="footer-column col-md-4 col-sm-5">
-              <h3>About Us</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                nesciunt dolorem ipsam saepe ex, quisquam sapiente repellat quo
-                natus alias!
-              </p>
-            </div>
-            <div className="footer-column col-md-4 col-sm-5">
-              <h3>Quick Links</h3>
-              <ul>
-                <li>
-                  <a
-                    href="./index.html"
-                    className="text-white text-decoration-none"
-                  >
-                    Home
-                  </a>{" "}
-                </li>
-                <li>
-                  <a
-                    href="./service.html"
-                    className="text-white text-decoration-none"
-                  >
-                    Services
-                  </a>{" "}
-                </li>
-                <li>
-                  <a
-                    href="./contact.html"
-                    className="text-white text-decoration-none"
-                  >
-                    Appointment
-                  </a>{" "}
-                </li>
-              </ul>
-            </div>
-            <div className="footer-column col-md-4 col-sm-5">
-              <h3>Follow Us</h3>
-              <div className="d-flex gap-3 mt-3">
-                <Link>
-                  <MDBIcon
-                    style={{ color: "white" }}
-                    fab
-                    icon="linkedin"
-                    size="2x"
+        <div className="container">
+          <div className="footer-content">
+            <div className="left-footer-content">
+              <div id="content-1">
+                <div className="footer-brand">
+                  <img
+                    src={brandLogo}
+                    alt=""
+                    className="brand-logo img-fluid"
                   />
-                </Link>
+                  <span className="fw-bold">CODENESTERS</span>
+                </div>
 
-                <Link>
-                  <MDBIcon
-                    style={{ color: "white" }}
-                    fab
-                    icon="instagram"
-                    size="2x"
-                  />
-                </Link>
+                <div className="footer-brand-slogan">
+                  <span className="fw-bold">
+                    Think | Code | Create | Deploy
+                  </span>
 
-                <Link>
-                  <MDBIcon
-                    style={{ color: "white" }}
-                    fab
-                    icon="linkedin"
-                    size="2x"
-                  />
-                </Link>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Tenetur, pariatur Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mid-footer-content">
+              <div id="content-2">
+              <div className="footer-content-head">
+                  <span className="fw-bold">MENU</span>
+              </div>
+              </div>
+              <div id="content-3">
+              <div className="footer-content-head">
+                  <span className="fw-bold">POLICIES</span>
+              </div>
+              </div>
+            </div>
+
+            <div className="right-footer-content">
+              <div id="content-4" className="fw-bold">
+                <div className="footer-content-head">
+                  GET IN TOUCH
+                </div>
               </div>
             </div>
           </div>
