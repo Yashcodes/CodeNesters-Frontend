@@ -1,6 +1,9 @@
 import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 
+
+import "../styles/WhyUsSectionHome.css";
+
 const WhyUsSectionHome = () => {
   return (
     <>

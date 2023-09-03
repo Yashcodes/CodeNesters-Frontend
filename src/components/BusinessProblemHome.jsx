@@ -1,6 +1,8 @@
 import { MDBBadge, MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 
+import "../styles/BusinessProblemHome.css";
+
 const BusinessProblemHome = () => {
   return (
     <>

@@ -78,8 +78,8 @@
   background-attachment: scroll;
 }
 
-@media only screen and (max-width : 450px) {
+@media only screen and (max-width : 1755px) {
   .business-prob-section {
-    background-position: bottom;
+    background: none;
   }
 }

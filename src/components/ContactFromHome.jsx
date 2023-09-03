@@ -2,6 +2,8 @@ import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../styles/ContactFromHome.css";
+
 const ContactFromHome = () => {
   return (
     <>

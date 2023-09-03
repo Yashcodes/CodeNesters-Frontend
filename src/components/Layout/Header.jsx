@@ -2,6 +2,8 @@ import React from "react";
 import brandLogo from "../../assets/images/brandLogo.png";
 import { Link } from "react-router-dom";
 
+import "../../components/Layout/styles/Header.css";
+
 const Header = () => {
   return (
     <>

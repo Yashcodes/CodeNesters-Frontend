@@ -1,6 +1,8 @@
 import React from "react";
 import Hero1 from "../assets/images/home/hero2.svg";
 
+import "../styles/HeroSection.css";
+
 const HeroSectionHome = () => {
   return (
     <div className="main-container">

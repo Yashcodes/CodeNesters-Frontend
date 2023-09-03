@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import brandLogo from "../../assets/images/brandLogo.png";
 
+import "../../components/Layout/styles/Footer.css";
+
 const Footer = () => {
   return (
     <>

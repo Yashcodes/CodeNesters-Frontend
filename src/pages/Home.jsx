@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout";
 import Testimonial from "../components/Testimonial";
 import HeroSectionHome from "../components/HeroSectionHome";
 import WhyUsSectionHome from "../components/WhyUsSectionHome";
-import TestimonialCarousel from "../components/TestimonialCarousel";
 import BusinessProblemHome from "../components/BusinessProblemHome";
 import ContactFromHome from "../components/ContactFromHome";
 
@@ -19,14 +18,11 @@ const Home = () => {
       {/* //! Business Problems Section  */}
       <BusinessProblemHome />
 
+      {/* //! Immediate contact from home  */}
+      <ContactFromHome />
+
       {/* //! Testimonial  */}
       <Testimonial />
-
-      {/* //! Immediate contact from home  */}
-      <ContactFromHome/>
-
-      {/* <Carousel /> */}
-      {/* <TestimonialCarousel/> */}
     </Layout>
   );
 };
