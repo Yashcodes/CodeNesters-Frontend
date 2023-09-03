@@ -49,7 +49,7 @@ const BusinessProblemHome = () => {
             <div className="prob-card" id="prob-card-2">
               <div className="card-head">
                 <div className="card-head-icon">
-                  <MDBIcon fas icon="laptop-code" size="2x" />
+                  <MDBIcon fas icon="chart-line" size="2x" />
                 </div>
                 <div className="card-head-text">Analytics</div>
               </div>
@@ -76,7 +76,7 @@ const BusinessProblemHome = () => {
             <div className="prob-card" id="prob-card-2">
               <div className="card-head">
                 <div className="card-head-icon">
-                  <MDBIcon fas icon="laptop-code" size="2x" />
+                  <MDBIcon fas icon="rocket" size="2x" />
                 </div>
                 <div className="card-head-text">Build Engaging Solutions</div>
               </div>

@@ -14,12 +14,12 @@ const WhyUsSectionHome = () => {
           <div className="whyUsCardContainer">
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid rgb(251, 125, 245)" }}
+              style={{ "borderBottom": "6px solid rgb(251, 125, 245)" }}
             >
               <div
                 className="icon"
                 id="icon1"
-                style={{ "background-color": "rgb(251, 125, 245)" }}
+                style={{ "backgroundColor": "rgb(251, 125, 245)" }}
               >
                 <MDBIcon fas icon="bug" size="2x" className="iconChild" />
               </div>
@@ -38,12 +38,12 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid rgb(89, 191, 255)" }}
+              style={{ "borderBottom": "6px solid rgb(89, 191, 255)" }}
             >
               <div
                 className="icon"
                 id="icon2"
-                style={{ "background-color": "rgb(89, 191, 255)" }}
+                style={{ "backgroundColor": "rgb(89, 191, 255)" }}
               >
                 <MDBIcon fas icon="tools" size="2x" className="iconChild" />
               </div>
@@ -62,12 +62,12 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid cyan" }}
+              style={{ "borderBottom": "6px solid cyan" }}
             >
               <div
                 className="icon"
                 id="icon3"
-                style={{ "background-color": "cyan" }}
+                style={{ "backgroundColor": "cyan" }}
               >
                 <MDBIcon
                   fas
@@ -91,12 +91,12 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid rgb(59, 240, 197)" }}
+              style={{ "borderBottom": "6px solid rgb(59, 240, 197)" }}
             >
               <div
                 className="icon"
                 id="icon4"
-                style={{ "background-color": "rgb(59, 240, 197)" }}
+                style={{ "backgroundColor": "rgb(59, 240, 197)" }}
               >
                 <MDBIcon
                   far
@@ -120,12 +120,12 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid rgb(234, 232, 111)" }}
+              style={{ "borderBottom": "6px solid rgb(234, 232, 111)" }}
             >
               <div
                 className="icon"
                 id="icon5"
-                style={{ "background-color": "rgb(234, 232, 111)" }}
+                style={{ "backgroundColor": "rgb(234, 232, 111)" }}
               >
                 <MDBIcon fas icon="users-cog" size="2x" className="iconChild" />
               </div>
@@ -144,12 +144,12 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              style={{ "border-bottom": "6px solid rgb(244, 86, 141)" }}
+              style={{ "borderBottom": "6px solid rgb(244, 86, 141)" }}
             >
               <div
                 className="icon"
                 id="icon6"
-                style={{ "background-color": "rgb(244, 86, 141)" }}
+                style={{ "backgroundColor": "rgb(244, 86, 141)" }}
               >
                 <MDBIcon
                   fas

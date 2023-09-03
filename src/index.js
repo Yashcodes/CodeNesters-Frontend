@@ -9,6 +9,7 @@ import "./styles/HeroSection.css";
 import "./styles/WhyUsSectionHome.css";
 import "./styles/TestimonialCarousel.css";
 import './styles/BusinessProblemHome.css'
+import './styles/ContactFromHome.css'
 import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
