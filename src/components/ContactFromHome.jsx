@@ -36,7 +36,7 @@ const ContactFromHome = () => {
                 <div className="content-right-icons mt-4">
                   <div className="instagram-icon text-white">
                     <Link to={"https://instagram.com/codenesters"}>
-                      <MDBIcon fab icon="instagram" size="3x" />
+                      <MDBIcon fab icon="instagram" size="3x"/>
                     </Link>
                     <span className="fs-5">Instagram</span>
                   </div>

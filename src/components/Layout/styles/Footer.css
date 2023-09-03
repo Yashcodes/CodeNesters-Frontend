@@ -1,5 +1,4 @@
 .footer {
-  /* background-color: #c5a1f9; */
   background-color: #a886f3;
   padding: 22px 0px;
   color: white;
@@ -126,4 +125,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.footer-btn {
+  background-color: #915eff;
 }

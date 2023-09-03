@@ -1,7 +1,7 @@
 .main-container {
   margin: 0;
   padding: 66px 44px;
-  background-image: linear-gradient(to top, #fee0e9 0%, #ffffff 100%);
+  background-image: linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%);
 }
 
 .hero-section {
@@ -28,12 +28,13 @@
 
 .hero-head {
   font-size: 50px;
-  font-family: "poppins", "sans-serif";
+  font-family: "Rubik", "sans-serif";
   font-weight: 700;
+  color: rgba(9, 9, 9, 0.842);
 }
 
 .hero-head > span {
-  color: violet;
+  color: #a87fff;
 }
 
 .left-hero-section,
@@ -42,5 +43,39 @@
 }
 
 .left-hero-section p {
-    font-size: 22px;
+  font-size: 22px;
+}
+
+.hero-btn-1 {
+  /* background-color: #a87fff; */
+  outline: 1px solid #5d4296;
+  color: rgb(40, 39, 39) !important;
+  letter-spacing: 1.15px;
+  transition: all;
+  transition-timing-function: linear;
+  transition-duration: 0.25s;
+}
+
+.hero-btn-1:hover {
+  background-color: #5d4296;
+  color: white !important;
+}
+
+.hero-btn-2 {
+  outline: 1px solid #5d4296;
+  background-color: #5d4296;
+  color: white;
+  letter-spacing: 1.15px;
+  transition: all;
+  transition-timing-function: linear;
+  transition-duration: 0.25s;
+}
+
+.hero-btn-2:hover {
+  outline: 1px solid #5d4296;
+  color: rgb(40, 39, 39) !important;
+}
+
+.hero-head p {
+  color: rgb(93, 93, 93);
 }

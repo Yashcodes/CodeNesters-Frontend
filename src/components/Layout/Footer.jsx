@@ -19,7 +19,7 @@ const Footer = () => {
                     alt=""
                     className="brand-logo img-fluid"
                   />
-                  <span className="fw-bold">CODENESTERS</span>
+                  <span className="fw-bold fs-5">CODENESTERS</span>
                 </div>
 
                 <div className="footer-brand-slogan">
@@ -95,6 +95,14 @@ const Footer = () => {
                         codenesters3@ <span> gmail.com</span>
                       </span>
                     </li>
+
+                    {/* <li className="d-flex align-items-center gap-2">
+                      <span>For more :</span>
+                      <MDBBtn className="footer-btn px-3 py-2">
+                        Visit &nbsp;&nbsp;
+                        <MDBIcon fas icon="external-link-alt" />
+                      </MDBBtn>
+                    </li> */}
                   </ul>
                 </div>
               </div>

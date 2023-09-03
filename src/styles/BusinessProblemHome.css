@@ -1,4 +1,6 @@
 .business-problem-head .prob-main-head {
+  color: #a87fff;
+  font-weight: 600;
 }
 
 .business-prob-container {
@@ -41,7 +43,11 @@
 
 .business-prob-cards .prob-card .card-head .card-head-text {
   font-weight: bold;
-  color: black;
+  /* color: #6674cc; */
+}
+
+.business-prob-cards .prob-card .card-head .card-head-icon {
+  color: #a87fff;
 }
 
 .card-badge {
@@ -67,7 +73,11 @@
 }
 
 .card-badge .badge-color-1 {
-  background-color: rgb(2, 201, 125) !important;
+  background-color: rgba(23, 142, 227, 0.7) !important;
+}
+
+.card-badge .badge-color-2 {
+  background-color: rgb(42, 209, 170) !important;
 }
 
 .business-prob-section {
@@ -78,8 +88,12 @@
   background-attachment: scroll;
 }
 
-@media only screen and (max-width : 1755px) {
+@media only screen and (max-width: 1755px) {
   .business-prob-section {
     background: none;
   }
+}
+
+.card-content p {
+  color: rgba(119, 124, 133, 0.89);
 }

@@ -64,3 +64,7 @@
   line-height: 52px;
   margin-bottom: 80px;
 }
+
+.card-content p {
+  color: rgba(119, 124, 133, 0.89);
+}

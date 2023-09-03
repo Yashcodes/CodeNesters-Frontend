@@ -34,8 +34,8 @@
 }
 
 .contact-home-content .content-left {
-  background-color: white;
-  color: black;
+  background-color: #a886f3;
+  color: white;
   width: 380px;
   /* flex-grow: 1; */
   display: flex;
@@ -45,7 +45,6 @@
 }
 
 .contact-home-content .content-right {
-  /* background-color: blue; */
   flex-grow: 2;
   padding: 44px;
 }

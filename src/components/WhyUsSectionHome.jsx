@@ -9,7 +9,7 @@ const WhyUsSectionHome = () => {
     <>
       <section className="py-5 whyUsSection">
         <div className="container p-5">
-          <h4 className="text-black text-center">Why CodeNesters?</h4>
+          <h4 className="text-center" style={{color : "#a87fff", fontWeight : "600"}}>WHY CODENESTERS?</h4>
           <h2 className="fs-1 text-black fw-bold whyUsHeading">
             Making project development <br /> easier and convenient
           </h2>

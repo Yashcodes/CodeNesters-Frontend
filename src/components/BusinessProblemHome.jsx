@@ -10,7 +10,7 @@ const BusinessProblemHome = () => {
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">
-              <h4 className="prob-main-head text-black">Business Solution</h4>
+              <h4 className="prob-main-head" >BUSINESS SOLUTION</h4>
               <h2 className="fs-1 fw-bold text-black">
                 We are expert people with great <br />
                 business solutions
@@ -71,7 +71,7 @@ const BusinessProblemHome = () => {
                   </div>
 
                   <div id="card-badge-2">
-                    <MDBBadge className="badge">Engagement</MDBBadge>
+                    <MDBBadge className="badge badge-color-2">Engagement</MDBBadge>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const BusinessProblemHome = () => {
                   </div>
 
                   <div id="card-badge-2">
-                    <MDBBadge className="badge">Products</MDBBadge>
+                    <MDBBadge className="badge badge-color-2">Products</MDBBadge>
                   </div>
                 </div>
               </div>
