@@ -52,7 +52,7 @@ const ContactFromHome = () => {
                   </div>
 
                   <div className="email-icon text-white">
-                    <Link to="mailto:pariharyash1989@gmail.com">
+                    <Link to="mailto:codenesters3@gmail.com">
                       <MDBIcon far icon="envelope" size="3x" />
                     </Link>
                     <span className="fs-5">Email</span>

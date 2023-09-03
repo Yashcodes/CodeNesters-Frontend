@@ -34,22 +34,66 @@ const Footer = () => {
             </div>
 
             <div className="mid-footer-content">
-              <div id="content-2">
-              <div className="footer-content-head">
+              <div id="content-2 mx-2">
+                <div className="footer-content-head mb-3">
                   <span className="fw-bold">MENU</span>
+                </div>
+
+                <div className="footer-content-list">
+                  <ul>
+                    <li>
+                      <Link to={"/"}> Home </Link>
+                    </li>
+                    <li>
+                      <Link to={"/about"}> About </Link>
+                    </li>
+                    <li>
+                      <Link to={"/contact"}> Contact </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              </div>
-              <div id="content-3">
-              <div className="footer-content-head">
+
+              <div id="content-3 mx-2">
+                <div className="footer-content-head mb-3">
                   <span className="fw-bold">POLICIES</span>
-              </div>
+                </div>
+
+                <div className="footer-content-list">
+                  <ul>
+                    <li>
+                      <Link>Privacy Policy</Link>
+                    </li>
+                    <li>
+                      <Link>Terms of use</Link>
+                    </li>
+                    <li>
+                      <Link>Refund & Cancellation Policy</Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
             <div className="right-footer-content">
               <div id="content-4" className="fw-bold">
-                <div className="footer-content-head">
-                  GET IN TOUCH
+                <div className="footer-content-head mb-3">
+                  <span className="fw-bold">GET IN TOUCH</span>
+                </div>
+
+                <div className="footer-content-list">
+                  <ul>
+                    <li className="d-flex align-items-center gap-1">
+                      <MDBIcon fas icon="phone" /> <span>77228 14150</span>
+                    </li>
+
+                    <li className="d-flex align-items-center gap-1">
+                      <MDBIcon fas icon="envelope" />{" "}
+                      <span>
+                        codenesters3@ <span> gmail.com</span>
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

@@ -77,3 +77,9 @@
   background-size: cover;
   background-attachment: scroll;
 }
+
+@media only screen and (max-width : 450px) {
+  .business-prob-section {
+    background-position: bottom;
+  }
+}
