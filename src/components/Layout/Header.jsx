@@ -3,7 +3,6 @@ import brandLogo from "../../assets/images/brandLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 import "../../components/Layout/styles/Header.css";
-import "../../scripts/HeroSection.js";
 
 const Header = () => {
   const navigate = useNavigate();
