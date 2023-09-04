@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/Contact.css";
+import { Link } from "react-router-dom";
 
 const ContactBanner = () => {
   return (
@@ -21,9 +22,9 @@ const ContactBanner = () => {
                     sed do eiusmod <br />
                     tempor incididunt ut labore et dolore magna aliqua.
                   </p>
-                  <a href="#contact-form" className="btn btn-appoint">
-                    Contact Us
-                  </a>
+                  <Link className="btn contact-banner-btn">
+                    View Services
+                  </Link>
                 </div>
               </div>
             </div>

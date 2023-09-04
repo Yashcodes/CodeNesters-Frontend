@@ -559,7 +559,7 @@
   padding-bottom: 15px;
 }
 
-.btn-appoint {
+/* .btn-appoint {
   margin-top: 30px;
   padding: 10px 20px;
   font-size: 12px;
@@ -575,7 +575,7 @@
 .btn-appoint:hover {
   outline: 1px solid #5d4296;
   color: #fff;
-}
+} */
 
 .overlay-detail a i {
   text-align: center;
@@ -623,6 +623,27 @@
 }
 
 .appoint-submit-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-banner-btn {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 6px;
+}
+
+.contact-banner-btn:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
