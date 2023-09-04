@@ -1,5 +1,5 @@
 import React from "react";
-import Hero1 from "../assets/images/home/hero7.png";
+import Hero from "../assets/images/home/hero8.png";
 import "../styles/HeroSection.css";
 import { useNavigate } from "react-router-dom";
 
@@ -36,7 +36,7 @@ const HeroSectionHome = () => {
           </div>
         </div>
         <div className="right-hero-section col-md-6">
-          <img className="img-fluid" src={Hero1} alt="" />
+          <img className="img-fluid" src={Hero} alt="" />
         </div>
       </div>
     </div>
