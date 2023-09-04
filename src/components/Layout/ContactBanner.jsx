@@ -10,7 +10,10 @@ const ContactBanner = () => {
             <div className="row">
               <div className="banner-info">
                 <div className="banner-text text-center">
-                  <p className="white" style={{ fontSize: "2rem" }}>
+                  <p
+                    className="white fw-bold fs-1"
+                    style={{ fontSize: "2rem" }}
+                  >
                     We are here for you!
                   </p>
                   <p>
@@ -20,11 +23,6 @@ const ContactBanner = () => {
                   </p>
                   <a href="#contact-form" className="btn btn-appoint">
                     Contact Us
-                  </a>
-                </div>
-                <div className="overlay-detail text-center">
-                  <a href="#order">
-                    <i className="fa fa-angle-down" />
                   </a>
                 </div>
               </div>

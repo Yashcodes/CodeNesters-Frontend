@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../../styles/Contact.css";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
 
 const AppointForm = () => {
   const [name, setName] = useState("");
@@ -55,7 +53,12 @@ const AppointForm = () => {
   return (
     <>
       <section className="appointment" id="appointment">
-        <p className="section-heading appoint-head">Get an Appointment</p>
+        <p
+          className="section-heading appoint-head"
+          style={{ color: "#a87fff" }}
+        >
+          Get an Appointment
+        </p>
         <div className="container mb-4">
           <div className="row">
             <div className="col-md-6">
@@ -132,19 +135,9 @@ const AppointForm = () => {
                 </fieldset>
 
                 <div className="btns">
-                  <input
-                    type="text"
-                    name="_gotcha"
-                    defaultValue
-                    style={{ display: "none" }}
-                    className="nav-button"
-                  />
-                  <input
-                    type="submit"
-                    defaultValue="Submit request"
-                    className="nav-button"
-                    onClick={handleSubmit}
-                  />
+                  <button className="btn btn-primary appoint-submit-btn" onClick={handleSubmit}>
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
