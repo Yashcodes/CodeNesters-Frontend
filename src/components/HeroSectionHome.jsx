@@ -15,12 +15,12 @@ const HeroSectionHome = () => {
             <p>Think | Code | Create | Deploy</p>
           </h2>
 
-          <p className="fs-5">
+          <p className="fs-5 mb-0">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
             voluptates iste minus officiis, soluta quo?
           </p>
 
-          <div className="hero-btn my-3">
+          <div className="hero-btn mb-3 mt-1">
             <button
               className="btn hero-btn-1"
               onClick={() => navigate("/courses")}

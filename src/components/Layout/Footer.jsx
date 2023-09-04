@@ -91,18 +91,10 @@ const Footer = () => {
 
                     <li className="d-flex align-items-center gap-1">
                       <MDBIcon fas icon="envelope" />{" "}
-                      <span>
-                        codenesters3@ <span> gmail.com</span>
+                      <span className="p-0">
+                        codenesters3@ <span className="mx-0"> gmail.com</span>
                       </span>
                     </li>
-
-                    {/* <li className="d-flex align-items-center gap-2">
-                      <span>For more :</span>
-                      <MDBBtn className="footer-btn px-3 py-2">
-                        Visit &nbsp;&nbsp;
-                        <MDBIcon fas icon="external-link-alt" />
-                      </MDBBtn>
-                    </li> */}
                   </ul>
                 </div>
               </div>

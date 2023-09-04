@@ -15,13 +15,13 @@
 }
 
 .hero-btn > .hero-btn-1 {
-  margin: 1px 4px 1px 0px;
+  margin: 12px 4px 1px 0px;
   padding: 12px 22px;
   font-size: 14px;
 }
 
 .hero-btn > .hero-btn-2 {
-  margin: 1px 0px 1px 4px;
+  margin: 12px 0px 1px 4px;
   padding: 12px 22px;
   font-size: 14px;
 }
