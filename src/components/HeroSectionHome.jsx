@@ -1,9 +1,11 @@
 import React from "react";
 import Hero1 from "../assets/images/home/hero7.png";
-
 import "../styles/HeroSection.css";
+import { useNavigate } from "react-router-dom";
 
 const HeroSectionHome = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="main-container">
       <div className="hero-section container ">
@@ -19,8 +21,8 @@ const HeroSectionHome = () => {
           </p>
 
           <div className="hero-btn my-3">
-            <button className="btn hero-btn-1">View Courses</button>
-            <button className="btn hero-btn-2">Contact Us</button>
+            <button className="btn hero-btn-1" onClick={() => navigate('/courses')}>View Courses</button>
+            <button className="btn hero-btn-2" onClick={() => navigate('/contact')}>Contact Us</button>
           </div>
         </div>
         <div className="right-hero-section col-md-6">

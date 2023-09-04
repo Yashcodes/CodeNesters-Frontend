@@ -1,10 +1,13 @@
 import React from "react";
 import brandLogo from "../../assets/images/brandLogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../../components/Layout/styles/Header.css";
+import "../../scripts/HeroSection.js";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header>
@@ -17,7 +20,7 @@ const Header = () => {
                   : "container-fluid nav-container"
               }`}
             >
-              <div className="navbar-brand">
+              <div className="navbar-brand" onClick={() => navigate("/")}>
                 <img src={brandLogo} className="brand-logo img-fluid" alt="" />
                 <span className="fs-2 brand-text">CodeNesters</span>
               </div>
