@@ -11,7 +11,7 @@ const HeroSectionHome = () => {
       <div className="hero-section container ">
         <div className="left-hero-section text-start col-md-6">
           <h2 className="hero-head text-start">
-            Code <span>Nesters</span>
+            Code <span className="text-gradient">Nesters</span>
             <p>Think | Code | Create | Deploy</p>
           </h2>
 
@@ -21,8 +21,18 @@ const HeroSectionHome = () => {
           </p>
 
           <div className="hero-btn my-3">
-            <button className="btn hero-btn-1" onClick={() => navigate('/courses')}>View Courses</button>
-            <button className="btn hero-btn-2" onClick={() => navigate('/contact')}>Contact Us</button>
+            <button
+              className="btn hero-btn-1"
+              onClick={() => navigate("/courses")}
+            >
+              View Courses
+            </button>
+            <button
+              className="btn hero-btn-2"
+              onClick={() => navigate("/contact")}
+            >
+              Contact Us
+            </button>
           </div>
         </div>
         <div className="right-hero-section col-md-6">
