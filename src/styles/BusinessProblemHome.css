@@ -92,9 +92,9 @@
 .card-badge .badge-color-2 {
   background-image: linear-gradient(
     to right,
-    #005c97 0%,
-    #363795 51%,
-    #005c97 100%
+    #16222a 0%,
+    #3a6073 51%,
+    #16222a 100%
   );
   transition: 0.5s;
   background-size: 200% auto;

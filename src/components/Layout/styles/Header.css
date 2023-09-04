@@ -26,7 +26,7 @@ body {
   );
   color: #fff;
   height: 50px;
-  padding: 1em;
+  padding: 2em;
 }
 
 .nav-container {
@@ -138,8 +138,8 @@ body {
   }
   .menu {
     position: absolute;
-    top: 0;
-    margin-top: 50px;
+    top: 0px;
+    margin-top: 63px;
     left: 0;
     flex-direction: column;
     width: 100%;
