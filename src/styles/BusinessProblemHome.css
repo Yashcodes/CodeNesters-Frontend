@@ -73,11 +73,32 @@
 }
 
 .card-badge .badge-color-1 {
-  background-color: rgba(23, 142, 227, 0.7) !important;
+  background-image: linear-gradient(
+    to right,
+    #5c258d 0%,
+    #4389a2 51%,
+    #5c258d 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.card-badge .badge-color-1:hover,
+.card-badge .badge-color-2:hover {
+  background-position: right center;
 }
 
 .card-badge .badge-color-2 {
-  background-color: rgb(42, 209, 170) !important;
+  background-image: linear-gradient(
+    to right,
+    #005c97 0%,
+    #363795 51%,
+    #005c97 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
 }
 
 .business-prob-section {
@@ -96,4 +117,29 @@
 
 .card-content p {
   color: rgba(119, 124, 133, 0.89);
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #005c97 0%,
+    #363795 51%,
+    #005c97 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
