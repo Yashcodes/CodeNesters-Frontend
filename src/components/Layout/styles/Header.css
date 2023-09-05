@@ -80,13 +80,13 @@ body {
 .menu li a {
   text-decoration: none;
   color: white;
+  cursor: pointer !important;
 }
 
 .menu-button-container {
   display: none;
   height: 100%;
   width: 30px;
-  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;

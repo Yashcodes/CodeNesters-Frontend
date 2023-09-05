@@ -30,15 +30,15 @@ const Header = () => {
               </label>
 
               <ul className="menu fs-5">
-                <li>
+                <li onClick={() => navigate("/")}>
                   <Link to={"/"}>Home</Link>
                 </li>
 
-                <li>
+                <li onClick={() => navigate("/about")}>
                   <Link to={"/about"}>About</Link>
                 </li>
 
-                <li>
+                <li onClick={() => navigate("/contact")}>
                   <Link to={"/contact"}>Contact</Link>
                 </li>
               </ul>
