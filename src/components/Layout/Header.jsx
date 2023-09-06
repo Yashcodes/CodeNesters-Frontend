@@ -3,8 +3,11 @@ import brandLogo from "../../assets/images/brandLogo.png";
 import { Link } from "react-router-dom";
 
 import "../../components/Layout/styles/Header.css";
+import { useAuth } from "../../context/Auth";
 
 const Header = () => {
+  const [auth, setAuth] = useAuth();
+
   return (
     <>
       <header>
@@ -40,13 +43,26 @@ const Header = () => {
                   <Link to={"/contact"}>Contact</Link>
                 </li>
 
-                <li>
-                  <button className="btn btn-outline-light text-white fs-6">
-                    <Link to={"/register"} className="text-white">
-                      Register
-                    </Link>
-                  </button>
-                </li>
+                {auth ? (
+                  <li>
+                    <button
+                      className="btn btn-outline-light text-white fs-6"
+                      onClick={() => localStorage.removeItem("auth")}
+                    >
+                      <Link to={"/login"} className="text-white">
+                        Logout
+                      </Link>
+                    </button>
+                  </li>
+                ) : (
+                  <li>
+                    <button className="btn btn-outline-light text-white fs-6">
+                      <Link to={"/register"} className="text-white">
+                        Register
+                      </Link>
+                    </button>
+                  </li>
+                )}
               </ul>
             </div>
           </section>

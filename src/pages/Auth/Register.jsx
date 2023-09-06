@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../styles/AuthStyles/Register.css";
 import Brand from "../../assets/images/brandLogo.png";
 import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useAuth } from "../../context/Auth";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -10,7 +13,10 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [auth, setAuth] = useAuth();
+
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.pathname === "/register") {
@@ -18,9 +24,49 @@ const Register = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (localStorage.getItem("auth")) {
+      navigate("/");
+    }
+  }, [navigate]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("clicked")
+
+    try {
+      const { data } = await axios.post(
+        "https://code-nesters-backend.vercel.app/api/v1/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          name,
+          email,
+          password,
+        }
+      );
+
+      if (data.success) {
+        console.log(data);
+        setAuth({
+          ...auth,
+          user: data.user,
+          authToken: data.authToken,
+        });
+
+        toast.success(data.message);
+
+        localStorage.setItem("auth", JSON.stringify(data));
+        navigate("/");
+      } else {
+        console.log(data);
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error("Error in creating account");
+    }
   };
 
   return (
