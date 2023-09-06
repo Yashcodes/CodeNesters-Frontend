@@ -63,6 +63,7 @@ body {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  align-items: center;
   margin: 0;
   padding: 0;
   z-index: 99;
@@ -81,6 +82,25 @@ body {
   text-decoration: none;
   color: white;
   cursor: pointer !important;
+  margin: 4px 0px;
+}
+
+.menu li button {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 6px;
+}
+
+.menu li button:hover {
+  background-position: right center;
+  color: #fff;
 }
 
 .menu-button-container {
