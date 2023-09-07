@@ -38,7 +38,6 @@ const Login = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            authToken: auth?.authToken,
           },
 
           email,
@@ -63,7 +62,7 @@ const Login = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error("Error in creating account");
+      toast.error("Error while logging in");
     }
   };
 
