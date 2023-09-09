@@ -122,8 +122,8 @@ const Header = () => {
                         className="btn sidebar-btn fs-6"
                         onClick={() => localStorage.removeItem("auth")}
                       >
-                        <Link to={"/login"} className="text-white">
-                          Sign Out
+                        <Link to={"/login"} className="text-white d-flex flex-row align-items-center gap-2">
+                          Sign Out <MDBIcon fas icon="sign-out-alt" />
                         </Link>
                       </button>
                     </li>
