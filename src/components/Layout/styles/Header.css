@@ -209,12 +209,49 @@ body {
 
 .offCanvasBody ul {
   list-style: none;
+  padding: 0;
 }
 
-.offCanvasBody ul li a{
+.offCanvasBody ul li {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.offCanvasBody ul li a {
   color: black;
 }
 
 .sidebar-profile .profile-info {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.sidebar-btn {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 6px;
+}
+
+.sidebar-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
 }

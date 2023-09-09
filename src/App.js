@@ -10,6 +10,9 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Private from "./components/Routes/Private";
 import Profile from "./pages/User/Profile";
+import MyCourses from "./pages/User/MyCourses";
+import Settings from "./pages/User/Settings";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -24,7 +27,11 @@ function App() {
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>
           <Route path="user/profile" element={<Profile />} />
+          <Route path="user/courses" element={<MyCourses />} />
+          <Route path="user/settings" element={<Settings />} />
         </Route>
+a
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

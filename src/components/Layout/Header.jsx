@@ -6,6 +6,7 @@ import { useAuth } from "../../context/Auth";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 import profile from "../../assets/images/Profile/profile_photo.jpg";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 const Header = () => {
   const [auth] = useAuth();
@@ -103,18 +104,25 @@ const Header = () => {
               <Offcanvas.Body>
                 <div className="offCanvasBody">
                   <ul>
-                    <li>
-                      <Link to={"/profile"}>Profile</Link>
+                    <li className="sidebar-list">
+                      <MDBIcon fas icon="user" />
+                      <Link to={"/dashboard/user/profile"}>Profile</Link>
                     </li>
-                    <li>
-                      <Link to={"/courses"}>Courses</Link>
+                    <li className="sidebar-list">
+                      <MDBIcon fas icon="book" />
+                      <Link to={"/dashboard/user/courses"}>My Courses</Link>
                     </li>
+                    <li className="sidebar-list">
+                      <MDBIcon fas icon="cog" />
+                      <Link to={"/dashboard/user/settings"}>Settings</Link>
+                    </li>
+                    <hr />
                     <li>
                       <button
-                        className="btn btn-outline-primary fs-6"
+                        className="btn sidebar-btn fs-6"
                         onClick={() => localStorage.removeItem("auth")}
                       >
-                        <Link to={"/login"} className="text-black">
+                        <Link to={"/login"} className="text-white">
                           Sign Out
                         </Link>
                       </button>
