@@ -7,13 +7,28 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 import profile from "../../assets/images/Profile/profile_photo.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
+import toast from "react-hot-toast";
 
 const Header = () => {
-  const [auth] = useAuth();
+  const [auth, setAuth] = useAuth();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleLogout = async () => {
+    setAuth({
+      ...auth,
+      user: null,
+      authToken: "",
+    });
+
+    localStorage.removeItem("auth");
+
+    toast.success("Logged Out Successfully");
+  };
+
+  console.log(auth)
 
   return (
     <>
@@ -73,7 +88,7 @@ const Header = () => {
               </li>
             )} */}
 
-            {auth ? (
+            {auth?.user ? (
               <img
                 src={profile}
                 alt=""
@@ -118,11 +133,12 @@ const Header = () => {
                     </li>
                     <hr />
                     <li>
-                      <button
-                        className="btn sidebar-btn fs-6"
-                        onClick={() => localStorage.removeItem("auth")}
-                      >
-                        <Link to={"/login"} className="text-white d-flex flex-row align-items-center gap-2">
+                      <button className="btn sidebar-btn fs-6">
+                        <Link
+                          to={"/login"}
+                          className="text-white d-flex flex-row align-items-center gap-2"
+                          onClick={handleLogout}
+                        >
                           Sign Out <MDBIcon fas icon="sign-out-alt" />
                         </Link>
                       </button>
