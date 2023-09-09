@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import brandLogo from "../../assets/images/brandLogo.png";
 import { Link } from "react-router-dom";
-
 import "../../components/Layout/styles/Header.css";
 import { useAuth } from "../../context/Auth";
+import Offcanvas from "react-bootstrap/Offcanvas";
+
+import profile from "../../assets/images/Profile/profile_photo.jpg";
 
 const Header = () => {
-  const [auth, setAuth] = useAuth();
+  const [auth] = useAuth();
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
@@ -42,29 +48,81 @@ const Header = () => {
                 <li>
                   <Link to={"/contact"}>Contact</Link>
                 </li>
-
-                {auth ? (
-                  <li>
-                    <button
-                      className="btn btn-outline-light text-white fs-6"
-                      onClick={() => localStorage.removeItem("auth")}
-                    >
-                      <Link to={"/login"} className="text-white">
-                        Logout
-                      </Link>
-                    </button>
-                  </li>
-                ) : (
-                  <li>
-                    <button className="btn btn-outline-light text-white fs-6">
-                      <Link to={"/register"} className="text-white">
-                        Register
-                      </Link>
-                    </button>
-                  </li>
-                )}
               </ul>
             </div>
+
+            {/* {auth ? (
+              <li>
+                <button
+                  className="btn btn-outline-light text-white fs-6"
+                  onClick={() => localStorage.removeItem("auth")}
+                >
+                  <Link to={"/login"} className="text-white">
+                    Logout
+                  </Link>
+                </button>
+              </li>
+            ) : (
+              <li>
+                <button className="btn btn-outline-light text-white fs-6">
+                  <Link to={"/register"} className="text-white">
+                    Register
+                  </Link>
+                </button>
+              </li>
+            )} */}
+
+            {auth ? (
+              <img
+                src={profile}
+                alt=""
+                className="user-profile"
+                onClick={handleShow}
+              />
+            ) : (
+              <button className="btn btn-outline-light text-white fs-6">
+                <Link to={"/register"} className="text-white">
+                  Register
+                </Link>
+              </button>
+            )}
+
+            <Offcanvas show={show} onHide={handleClose} placement="end">
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>
+                  <div className="sidebar-profile d-flex align-items-center gap-2">
+                    <img src={profile} alt="" className="user-profile" />
+
+                    <div className="profile-info p-0">
+                      <p className="profile-name m-0"> {auth?.user?.name} </p>
+                      <p className="profile-email m-0"> {auth?.user?.email} </p>
+                    </div>
+                  </div>
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <div className="offCanvasBody">
+                  <ul>
+                    <li>
+                      <Link to={"/profile"}>Profile</Link>
+                    </li>
+                    <li>
+                      <Link to={"/courses"}>Courses</Link>
+                    </li>
+                    <li>
+                      <button
+                        className="btn btn-outline-primary fs-6"
+                        onClick={() => localStorage.removeItem("auth")}
+                      >
+                        <Link to={"/login"} className="text-black">
+                          Sign Out
+                        </Link>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </Offcanvas.Body>
+            </Offcanvas>
           </section>
         </nav>
       </header>

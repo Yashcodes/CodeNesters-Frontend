@@ -192,3 +192,29 @@ body {
     border-bottom: 1px solid #444;
   }
 }
+
+.user-profile {
+  display: inline-block !important ;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*! OffCanvas  */
+.offCanvasBody {
+  list-style: none;
+  padding: 0;
+}
+
+.offCanvasBody ul {
+  list-style: none;
+}
+
+.offCanvasBody ul li a{
+  color: black;
+}
+
+.sidebar-profile .profile-info {
+  font-size: 14px;
+}
