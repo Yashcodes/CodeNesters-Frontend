@@ -121,7 +121,7 @@ const Login = () => {
 
           <div className="login-option mb-3">
             <p className="text-center">
-              New user?
+              Don't have an account?
               <Link to={"/register"}> Create Account</Link>
             </p>
           </div>
