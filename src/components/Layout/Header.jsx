@@ -76,7 +76,7 @@ const Header = () => {
                 onClick={handleShow}
               />
             ) : (
-              <button className={`btn register-btn text-white fs-6 ${window.innerWidth <= 470 ? "d-none" : "d-block"}`}>
+              <button className={`btn register-btn text-white fs-6`}>
                 <Link to={"/register"} className="text-white">
                   Register
                 </Link>
