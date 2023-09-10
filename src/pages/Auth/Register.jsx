@@ -6,6 +6,7 @@ import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/Auth";
+// import { useFirebase } from "../../context/Firebase";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -17,6 +18,8 @@ const Register = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  // const firebase = useFirebase();
 
   useEffect(() => {
     if (location.pathname === "/register") {
@@ -68,6 +71,17 @@ const Register = () => {
       toast.error("Error in creating account");
     }
   };
+
+  // const signInWithGoogle = async () => {
+  //   await firebase.signInWithGoogle();
+  // };
+
+  // useEffect(() => {
+  //   if (firebase.isLoggedIn) {
+  //     navigate("/");
+  //     console.log(true)
+  //   }
+  // }, [firebase, navigate]);
 
   return (
     <>
@@ -134,7 +148,7 @@ const Register = () => {
           <div className="divider-text text-center mb-2">or</div>
 
           <div className="register-with-google mb-3">
-            <MDBBtn className="w-100 card-btn">
+            <MDBBtn className="w-100 card-btn" onClick={""}>
               SignUp with Google
               <span>
                 <MDBIcon fab icon="google" className="mx-2" size="lg" />

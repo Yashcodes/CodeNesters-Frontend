@@ -8,14 +8,17 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
+import { FirebaseProvider } from "./context/Firebase";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
-    <Router>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </Router>
-  </AuthProvider>
+  <FirebaseProvider>
+    <AuthProvider>
+      <Router>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Router>
+    </AuthProvider>
+  </FirebaseProvider>
 );

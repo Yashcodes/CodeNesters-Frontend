@@ -8,10 +8,13 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import profile from "../../assets/images/Profile/profile_photo.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
+// import { useFirebase } from "../../context/Firebase";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [show, setShow] = useState(false);
+
+  // const firebase = useFirebase();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -27,8 +30,6 @@ const Header = () => {
 
     toast.success("Logged Out Successfully");
   };
-
-  console.log(auth)
 
   return (
     <>
@@ -67,27 +68,6 @@ const Header = () => {
               </ul>
             </div>
 
-            {/* {auth ? (
-              <li>
-                <button
-                  className="btn btn-outline-light text-white fs-6"
-                  onClick={() => localStorage.removeItem("auth")}
-                >
-                  <Link to={"/login"} className="text-white">
-                    Logout
-                  </Link>
-                </button>
-              </li>
-            ) : (
-              <li>
-                <button className="btn btn-outline-light text-white fs-6">
-                  <Link to={"/register"} className="text-white">
-                    Register
-                  </Link>
-                </button>
-              </li>
-            )} */}
-
             {auth?.user ? (
               <img
                 src={profile}
@@ -96,7 +76,7 @@ const Header = () => {
                 onClick={handleShow}
               />
             ) : (
-              <button className="btn btn-outline-light text-white fs-6">
+              <button className="btn register-btn text-white fs-6">
                 <Link to={"/register"} className="text-white">
                   Register
                 </Link>

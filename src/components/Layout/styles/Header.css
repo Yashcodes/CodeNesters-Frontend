@@ -255,3 +255,24 @@ body {
   gap: 12px;
   cursor: pointer;
 }
+
+.register-btn {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 6px;
+  outline: 1px solid white;
+}
+
+.register-btn:hover {
+  background-position: right center;
+}

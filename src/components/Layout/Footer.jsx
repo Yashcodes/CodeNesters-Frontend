@@ -1,4 +1,4 @@
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 import { Link } from "react-router-dom";
 import brandLogo from "../../assets/images/brandLogo.png";
