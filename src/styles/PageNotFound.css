@@ -1,0 +1,58 @@
+.pageNotFound {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%);
+}
+
+.page-404-image {
+  /* background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif); */
+  background-image: url(../assets/images/PageNotFound/page-not-found.svg);
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: auto;
+}
+
+.page-404-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-404-btn {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  margin: 5px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 6px;
+  border: none;
+}
+
+.page-404-btn:hover {
+  background-position: right center;
+  color: white;
+}
+
+.page-404-head {
+  color: #5d4296;
+  font-size: 44px;
+}
+
+.page-404-text {
+  font-size: 34px;
+}

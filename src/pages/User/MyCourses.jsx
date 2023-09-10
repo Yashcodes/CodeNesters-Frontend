@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../../components/Layout/Layout";
 
 const MyCourses = () => {
   return (
-    <div>
+    <Layout>
       <h1>My Courses</h1>
-    </div>
+    </Layout>
   );
 };
 
