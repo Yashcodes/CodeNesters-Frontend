@@ -1,23 +1,10 @@
-h2 {
-  vertical-align: center;
-  text-align: center;
-}
-
-html,
-body {
-  margin: 0;
-  height: 100%;
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.top-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.navbar {
   background-image: linear-gradient(
     to right,
     #9d50bb 0%,
@@ -25,172 +12,38 @@ body {
     #9d50bb 100%
   );
   color: #fff;
-  height: 50px;
-  padding: 2em;
+  padding: 0;
 }
 
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-container .navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.nav-container .navbar-brand img {
+.navbar-brand img {
   width: 44px;
   height: 44px;
 }
 
-@media (max-width: 325px) {
-  .navbar-brand .brand-text {
-    display: none;
-  }
-
-  .nav-container .navbar-brand img {
-    width: 32px;
-    height: 32px;
-  }
+.nav-link {
+  font-size: 18px;
+  color: white !important;
 }
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  z-index: 99;
-}
-
-.menu > li {
-  margin: 0 1rem;
-  overflow: hidden;
-}
-
-.menu li {
-  cursor: pointer;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer !important;
-  margin: 4px 0px;
-}
-
-.menu li button {
+.register-btn {
   background-image: linear-gradient(
     to right,
     #9d50bb 0%,
     #6e48aa 51%,
     #9d50bb 100%
   );
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  box-shadow: 0 0 20px #eee;
+  color: white;
   border-radius: 6px;
+  outline: 1px solid white;
 }
 
-.menu li button:hover {
+.register-btn:hover {
   background-position: right center;
-  color: #fff;
-}
-
-.menu-button-container {
-  display: none;
-  height: 100%;
-  width: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-  display: block;
-  background-color: #fff;
-  position: absolute;
-  height: 4px;
-  width: 30px;
-  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
-}
-
-.menu-button::before {
-  content: "";
-  margin-top: -8px;
-}
-
-.menu-button::after {
-  content: "";
-  margin-top: 8px;
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
-  transform: rotate(405deg);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button {
-  background: rgba(255, 255, 255, 0);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
-  transform: rotate(-405deg);
-}
-
-@media (max-width: 700px) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0px;
-    margin-top: 63px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
 }
 
 .user-profile {
@@ -254,25 +107,4 @@ body {
   align-items: center;
   gap: 12px;
   cursor: pointer;
-}
-
-.register-btn {
-  background-image: linear-gradient(
-    to right,
-    #9d50bb 0%,
-    #6e48aa 51%,
-    #9d50bb 100%
-  );
-  padding: 10px 30px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 6px;
-  outline: 1px solid white;
-}
-
-.register-btn:hover {
-  background-position: right center;
 }
