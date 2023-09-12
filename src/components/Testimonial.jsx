@@ -7,7 +7,7 @@ const Testimonial = () => {
     <>
       <section className="section-2" id="testimonial">
         <div className="container">
-          <h2 className="text-uppercase text-dark mb-3">
+          <h2 className="text-uppercase text-dark mb-3 text-center">
             See what our clients say
           </h2>
           <p className="testimonialHeadText">
