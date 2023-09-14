@@ -7,7 +7,8 @@ const UserProfileContext = createContext();
 
 const UserProfileProvider = (props) => {
   const [profileUrl, setProfileUrl] = useState("");
-  const [auth] = useAuth();
+  // const [auth] = useAuth();
+  // const [id, setId] = useState("");
 
   // console.log(process.env.REACT_APP_AWS_REGION)
 
@@ -20,11 +21,12 @@ const UserProfileProvider = (props) => {
     },
   });
 
-  const userId = JSON.parse(localStorage.getItem("auth")).user._id;
-  console.log(userId)
-
   //! GetObject URL from S3 bucket
   const getObjectURL = async () => {
+    const userId = JSON.parse(localStorage.getItem("auth")).user._id;
+    // setId(userId);
+    // console.log("userid", userId);
+
     const command = new GetObjectCommand({
       Bucket: "codenesters",
       Key: `uploads/user-profile/profile-${userId}`,

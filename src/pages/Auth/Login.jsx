@@ -46,7 +46,6 @@ const Login = () => {
       );
 
       if (data.success) {
-        console.log(data);
         setAuth({
           ...auth,
           user: data.user,
@@ -58,7 +57,6 @@ const Login = () => {
         localStorage.setItem("auth", JSON.stringify(data));
         navigate("/");
       } else {
-        console.log(data);
         toast.error(data.message);
       }
     } catch (error) {
