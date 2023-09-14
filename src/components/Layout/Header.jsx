@@ -154,7 +154,7 @@ const Header = () => {
                     <li>
                       <button className="btn sidebar-btn fs-6">
                         <Link
-                          to={"/login"}
+                          to={"/"}
                           className="text-white d-flex flex-row align-items-center gap-2"
                           onClick={handleLogout}
                         >
