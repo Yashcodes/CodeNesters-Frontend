@@ -9,16 +9,19 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
 import { FirebaseProvider } from "./context/Firebase";
+import { UserProfileProvider } from "./context/UserProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <FirebaseProvider>
     <AuthProvider>
-      <Router>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      </Router>
+      <UserProfileProvider>
+        <Router>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </Router>
+      </UserProfileProvider>
     </AuthProvider>
   </FirebaseProvider>
 );

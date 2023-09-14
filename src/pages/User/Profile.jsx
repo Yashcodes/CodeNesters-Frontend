@@ -4,11 +4,13 @@ import AWS from "aws-sdk";
 import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { useAuth } from "../../context/Auth";
+import { useUserProfile } from "../../context/UserProfile";
 
 const Profile = () => {
   const [file, setFile] = useState();
-  const [url, setUrl] = useState("");
   const [auth] = useAuth();
+  const [profileUrl] = useUserProfile();
+  const [url, setUrl] = useState("");
 
   const handleFileChange = async (e) => {
     setFile(e.target.files[0]);
@@ -19,7 +21,7 @@ const Profile = () => {
     const S3_BUCKET = "codenesters";
 
     //* S3 Region
-    const REGION = "ap-south-1";
+    const REGION = process.env.REACT_APP_AWS_REGION || "ap-south-1";
 
     //* S3 Credentials
     AWS.config.update({
@@ -58,29 +60,29 @@ const Profile = () => {
     });
   };
 
-  const client = new S3Client({
-    region: "ap-south-1",
-    credentials: {
-      accessKeyId: process.env.REACT_APP_AWS_ACCESSKEY,
-      secretAccessKey: process.env.REACT_APP_AWS_SECRETKEY,
-    },
-  });
+  // const client = new S3Client({
+  //   region: "ap-south-1",
+  //   credentials: {
+  //     accessKeyId: process.env.REACT_APP_AWS_ACCESSKEY,
+  //     secretAccessKey: process.env.REACT_APP_AWS_SECRETKEY,
+  //   },
+  // });
 
-  //! GetObject URL from S3 bucket
-  const getObjectURL = async () => {
-    const command = new GetObjectCommand({
-      Bucket: "codenesters",
-      Key: `uploads/user-profile/profile-${auth?.user?._id}`,
-    });
+  // //! GetObject URL from S3 bucket
+  // const getObjectURL = async () => {
+  //   const command = new GetObjectCommand({
+  //     Bucket: "codenesters",
+  //     Key: `uploads/user-profile/profile-${auth?.user?._id}`,
+  //   });
 
-    const url = await getSignedUrl(client, command);
-    setUrl(url);
-  };
+  //   const url = await getSignedUrl(client, command);
+  //   setUrl(url);
+  // };
 
-  useEffect(() => {
-    getObjectURL();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getObjectURL();
+  //   // eslint-disable-next-line
+  // }, []);
 
   return (
     <Layout>
@@ -88,7 +90,7 @@ const Profile = () => {
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
 
-      <img src={url} alt="" width={"100px"} height={"100px"} />
+      <img src={profileUrl} alt="" width={"100px"} height={"100px"} />
     </Layout>
   );
 };
