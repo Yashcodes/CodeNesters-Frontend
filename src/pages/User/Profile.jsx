@@ -54,32 +54,9 @@ const Profile = () => {
 
       //* File successfully uploaded
       alert("File uploaded successfully");
+      window.location.reload(true);
     });
   };
-
-  // const client = new S3Client({
-  //   region: "ap-south-1",
-  //   credentials: {
-  //     accessKeyId: process.env.REACT_APP_AWS_ACCESSKEY,
-  //     secretAccessKey: process.env.REACT_APP_AWS_SECRETKEY,
-  //   },
-  // });
-
-  // //! GetObject URL from S3 bucket
-  // const getObjectURL = async () => {
-  //   const command = new GetObjectCommand({
-  //     Bucket: "codenesters",
-  //     Key: `uploads/user-profile/profile-${auth?.user?._id}`,
-  //   });
-
-  //   const url = await getSignedUrl(client, command);
-  //   setUrl(url);
-  // };
-
-  // useEffect(() => {
-  //   getObjectURL();
-  //   // eslint-disable-next-line
-  // }, []);
 
   return (
     <Layout>
