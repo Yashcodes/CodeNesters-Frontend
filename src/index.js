@@ -14,14 +14,14 @@ import { UserProfileProvider } from "./context/UserProfile";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <FirebaseProvider>
-    <AuthProvider>
-      <UserProfileProvider>
+    <UserProfileProvider>
+      <AuthProvider>
         <Router>
           <React.StrictMode>
             <App />
           </React.StrictMode>
         </Router>
-      </UserProfileProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </UserProfileProvider>
   </FirebaseProvider>
 );
