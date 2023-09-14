@@ -1,6 +1,8 @@
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import {
+  GetObjectCommand,
+  S3Client,
+} from "@aws-sdk/client-s3";
 import { createContext, useContext, useEffect, useState } from "react";
-import { useAuth } from "./Auth";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
 const UserProfileContext = createContext();
@@ -37,7 +39,7 @@ const UserProfileProvider = (props) => {
   };
 
   useEffect(() => {
-    getObjectURL();
+    if (localStorage.getItem("auth")) getObjectURL();
     //eslint-disable-next-line
   }, []);
 

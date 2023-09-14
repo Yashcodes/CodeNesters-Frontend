@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import AWS from "aws-sdk";
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { useAuth } from "../../context/Auth";
 import { useUserProfile } from "../../context/UserProfile";
 
@@ -10,7 +8,6 @@ const Profile = () => {
   const [file, setFile] = useState();
   const [auth] = useAuth();
   const [profileUrl] = useUserProfile();
-  const [url, setUrl] = useState("");
 
   const handleFileChange = async (e) => {
     setFile(e.target.files[0]);
