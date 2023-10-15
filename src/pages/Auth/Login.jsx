@@ -56,7 +56,7 @@ const Login = () => {
 
         localStorage.setItem("auth", JSON.stringify(data));
         navigate("/");
-        window.location.reload();
+        // window.location.reload();
       } else {
         toast.error(data.message);
       }

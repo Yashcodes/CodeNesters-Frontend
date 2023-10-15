@@ -16,6 +16,9 @@ import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
 import Blogs from "./pages/Blogs";
+import AdminRoute from "./components/Routes/AdminRoute";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import CreateCourse from "./pages/Admin/CreateCourse";
 
 function App() {
   return (
@@ -29,14 +32,21 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/blogs" element={<Blogs />} />
-        
+
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>
           <Route path="user/profile" element={<Profile />} />
           <Route path="user/courses" element={<MyCourses />} />
           <Route path="user/settings" element={<Settings />} />
         </Route>
-        a
+
+        {/* //! Protected Routes for Users  */}
+        <Route path="/dashboard" element={<AdminRoute />}>
+          <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/create-course" element={<CreateCourse />} />
+        </Route>
+
+        {/*//! If above routes are not found then the "*" sign will show the specified page */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

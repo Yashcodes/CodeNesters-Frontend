@@ -63,7 +63,7 @@ const Register = () => {
 
         localStorage.setItem("auth", JSON.stringify(data));
         navigate("/");
-        window.location.reload();
+        // window.location.reload();
       } else {
         console.log(data);
         toast.error(data.message);
