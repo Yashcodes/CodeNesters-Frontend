@@ -6,6 +6,8 @@
   font-family: "Rubik", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+*,
+html,
+body {
+  scroll-behavior: smooth !important;
 }

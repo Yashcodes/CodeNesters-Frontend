@@ -1,0 +1,32 @@
+.about-container {
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #e9f4ff 0%, #efdcff 100%);
+}
+
+/* 
+.about-banner-section{
+  background-color: #a886f3;
+  height: 500px;
+  color: white;
+  width: 100%;
+} */
+
+.about-us-container {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.founders-card {
+  width: 100% !important;
+  border: 2px solid black !important;
+}
+
+.founder-img {
+  width: 75% !important;
+  max-height: 150px !important;
+}
+
+.founder-icons a img {
+  max-width: 20px;
+  max-height: 20px;
+}
