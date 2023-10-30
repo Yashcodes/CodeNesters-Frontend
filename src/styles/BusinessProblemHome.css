@@ -101,13 +101,13 @@
   box-shadow: 0 0 20px #eee;
 }
 
-.business-prob-section {
+/* .business-prob-section { */
   /* background: url(../assets/images/home/business.jpg); */
   /* background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll; */
-}
+/* } */
 
 @media only screen and (max-width: 1755px) {
   .business-prob-section {
