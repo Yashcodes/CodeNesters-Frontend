@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const Founders = () => {
   return (
-    <div>
-      <section className="founders-section">
+    <>
+      <section className="founders-section my-5">
         <p
           className="text-center fs-4 m-0"
           style={{ color: "#a87fff", fontWeight: 600 }}
@@ -19,9 +19,9 @@ const Founders = () => {
           Meet Our Team
         </p>
 
-        <div className="container founders-section-cards mt-4 d-flex justify-content-center gap-5 align-items-center flex-wrap">
+        <div className="container founders-section-cards my-4 d-flex justify-content-center gap-5 align-items-center flex-wrap">
           <div className="">
-            <div className="founders-card card border-1 p-4 d-flex align-items-center flex-column">
+            <div className="founders-card card shadow-lg p-4 d-flex align-items-center flex-column">
               <img
                 className="img-responsive founder-img"
                 src={founder1}
@@ -51,7 +51,7 @@ const Founders = () => {
           </div>
 
           <div className="">
-            <div className="founders-card card p-4 d-flex align-items-center flex-column">
+            <div className="founders-card card shadow-lg p-4 d-flex align-items-center flex-column">
               <img
                 className="img-responsive founder-img"
                 src={founder1}
@@ -81,7 +81,7 @@ const Founders = () => {
           </div>
 
           <div className="">
-            <div className="founders-card card p-4 d-flex align-items-center flex-column">
+            <div className="founders-card card shadow-lg p-4 d-flex align-items-center flex-column">
               <img
                 className="img-responsive founder-img"
                 src={founder1}
@@ -111,7 +111,7 @@ const Founders = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

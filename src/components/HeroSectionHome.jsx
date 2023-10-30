@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../assets/images/home/hero8.png";
+import Hero from "../assets/images/home/hero8.webp";
 import "../styles/HeroSection.css";
 import { useNavigate } from "react-router-dom";
 

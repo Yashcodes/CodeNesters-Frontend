@@ -40,7 +40,7 @@ const Header = () => {
         <div className="container-fluid m-1">
           <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"}>
             <img src={brandLogo} alt="" />
-            CodeNesters
+            {window.innerWidth <= "400" ? "" : <span>CodeNesters</span>}
           </Link>
           <button
             className="navbar-toggler"

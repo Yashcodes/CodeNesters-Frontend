@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const AboutUs = () => {
   return (
     <>
-      <div className="container">
+      <div className="container my-5">
         <div
           className="about-us-container d-flex justify-content-center align-items-start"
           style={{ gap: "44px" }}
@@ -51,8 +51,8 @@ const AboutUs = () => {
             </p>
 
             <div className="about-us-btn d-flex flex-row gap-2 flex-wrap">
-              <Link className="btn contact-banner-btn" to={'/contact'}>Contact Us</Link>
               <Link className="btn contact-banner-btn" to={'/courses'}>View Courses</Link>
+              <Link className="btn contact-banner-btn" to={'/contact'}>Contact Us</Link>
             </div>
           </div>
         </div>
