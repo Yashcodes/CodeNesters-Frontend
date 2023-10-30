@@ -1,15 +1,36 @@
 .about-container {
-  background-color: #8ec5fc;
-  background-image: linear-gradient(62deg, #e9f4ff 0%, #efdcff 100%);
+  /* background-color: #8ec5fc; */
+  /* background-image: linear-gradient(62deg, #e9f4ff 0%, #efdcff 100%); */
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #e9e0fe 0%,
+    #c8a9fa 51%,
+    #d576fb 100%
+  );
+  color: #fff;
 }
 
-/* 
-.about-banner-section{
-  background-color: #a886f3;
-  height: 500px;
-  color: white;
+.about-banner-section {
+  min-height: 500px;
+  color: rgb(255, 255, 255);
   width: 100%;
-} */
+}
+
+.about-banner-left img,
+.about-banner-right img {
+  width: 100%;
+  height: 400px;
+}
+
+.about-banner-left p {
+  font-size: 2.8rem;
+  line-height: 50px;
+}
+
+.about-banner-left {
+  padding: 0px 2vw;
+}
 
 .about-us-container {
   flex-wrap: wrap;
@@ -29,4 +50,10 @@
 .founder-icons a img {
   max-width: 20px;
   max-height: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  .about-banner-left p {
+    font-size: 11vw;
+  }
 }
