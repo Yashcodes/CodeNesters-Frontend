@@ -1,23 +1,14 @@
 .about-container {
-  /* background-color: #8ec5fc; */
-  /* background-image: linear-gradient(62deg, #e9f4ff 0%, #efdcff 100%); */
   padding: 0;
-  background-image: linear-gradient(
-    to right,
-    #e9e0fe 0%,
-    #c8a9fa 51%,
-    #d576fb 100%
-  );
-  color: #fff;
+  background-image: linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%);
 }
 
 .about-banner-section {
-  min-height: 500px;
+  min-height: 700px;
   color: rgb(255, 255, 255);
   width: 100%;
 }
 
-.about-banner-left img,
 .about-banner-right img {
   width: 100%;
   height: 400px;
@@ -35,6 +26,22 @@
 .about-us-container {
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.about-us-bg {
+  background-image: url(../assets/images/about/about-us-bg.webp);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.about-us-content{
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 24px;
+  margin: 12px 0px;
 }
 
 .founders-card {
@@ -55,5 +62,9 @@
 @media only screen and (max-width: 400px) {
   .about-banner-left p {
     font-size: 11vw;
+  }
+
+  .about-banner-section {
+    gap: 0px !important;
   }
 }

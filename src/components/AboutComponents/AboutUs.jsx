@@ -1,16 +1,16 @@
 import React from "react";
 import founder1 from "../../assets/images/Profile/profile_photo.jpg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
-    <>
-      <div className="container my-5">
+    <div className="container-fluid about-us-bg">
+      <div className="container py-5">
         <div
-          className="about-us-container d-flex justify-content-center align-items-start"
+          className="about-us-container d-flex justify-content-center align-items-center"
           style={{ gap: "44px" }}
         >
-          <div className="about-left">
+          <div className="about-left" data-aos="zoom-in">
             <img
               src={founder1}
               alt=""
@@ -25,14 +25,18 @@ const AboutUs = () => {
             />
           </div>
 
-          <div className="about-right" style={{ maxWidth: "600px" }}>
+          <div
+            className="about-right p-2"
+            style={{ maxWidth: "600px" }}
+            data-aos="zoom-in"
+          >
             <h1 className="text-black">About Us</h1>
-            <p>
-              <span className="fs-5">
-                Welcome to the CodeNesters! Join us for better growth and
-                implementations.
-              </span>{" "}
-              <br />
+
+            <h5 style={{ textAlign: "justify", textJustify: "inter-word" }}>
+              Welcome to the CodeNesters! Join us for better growth and
+              implementations.
+            </h5>
+            <p className="about-us-content">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
               tempore, magnam sequi quae illum voluptatum ut esse odio dicta
               quidem blanditiis eos quod! Dolor quia dolores reprehenderit
@@ -50,14 +54,18 @@ const AboutUs = () => {
               exercitationem error eius! Excepturi praesentium maiores magnam?
             </p>
 
-            <div className="about-us-btn d-flex flex-row gap-2 flex-wrap">
-              <Link className="btn contact-banner-btn" to={'/courses'}>View Courses</Link>
-              <Link className="btn contact-banner-btn" to={'/contact'}>Contact Us</Link>
+            <div className="about-us-btn d-flex flex-row gap-2 flex-wrap mt-4">
+              <Link className="btn contact-banner-btn" to={"/courses"}>
+                View Courses
+              </Link>
+              <Link className="btn contact-banner-btn" to={"/contact"}>
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
