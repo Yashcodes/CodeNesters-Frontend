@@ -3,7 +3,7 @@ import "../styles/About.css";
 import Layout from "../components/Layout/Layout";
 import AboutUs from "../components/AboutComponents/AboutUs";
 import AboutBanner from "../components/AboutComponents/AboutBanner";
-import Testimonial from "../components/AboutComponents/Testimonial";
+import Founders from "../components/AboutComponents/Founders";
 
 const About = () => {
   return (
@@ -15,9 +15,7 @@ const About = () => {
       <AboutUs />
 
       {/* //! Founders Section  */}
-      {/* <Founders /> */}
-
-      <Testimonial/>
+      <Founders />
     </Layout>
   );
 };
