@@ -15,11 +15,6 @@ const AboutBanner = () => {
   return (
     <>
       <div className="about-container container-fluid pt-5">
-        {/* <h1 className="text-center text-light">Welcome to the CodeNesters</h1>
-        <p className="text-center fs-5">
-          We Develop Solutions to Make your Business Grow
-        </p> */}
-
         <div className="about-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="about-banner-left align-self-center d-flex flex-column"

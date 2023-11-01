@@ -37,7 +37,7 @@
   background-attachment: scroll;
 }
 
-.about-us-content{
+.about-us-content {
   text-align: justify;
   text-justify: inter-word;
   line-height: 24px;
@@ -67,4 +67,16 @@
   .about-banner-section {
     gap: 0px !important;
   }
+}
+
+.carousel .slide {
+  background: none;
+}
+
+.founder-section-bg {
+  background-image: linear-gradient(198deg, #ede9f7aa 0%, #ffffff 100%);
+}
+
+.carousel .carousel-slider .control-arrow {
+  color: #a87fff !important;
 }
