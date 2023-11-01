@@ -1,17 +1,13 @@
-// import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
-import founder1 from "../assets/images/FounderImage/founder1.jpeg";
-import { Link } from "react-router-dom";
-import linkedinIcon from "../assets/images/FounderIcons/linkedin-icon.svg";
-import instagramIcon from "../assets/images/FounderIcons/instagram-icon.svg";
-import githubIcon from "../assets/images/FounderIcons/github-icon.svg";
+import Layout from "../components/Layout/Layout";
 
 const Courses = () => {
   return (
-    <>
-      <h1 className="text-black text-center">Courses and Trainings</h1>
+    <Layout>
+      <>
+        <h1 className="text-black text-center">Courses and Trainings</h1>
 
-      <div className="container">
+        {/* <div className="container">
         <div
           className="card-container d-flex flex-row flex-wrap  align-items-start shadow"
           style={{ maxWidth: "1000px", borderRadius: "8px" }}
@@ -66,8 +62,9 @@ const Courses = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </div> */}
+      </>
+    </Layout>
   );
 };
 
