@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CourseImage from "../../assets/images/contact/c1.jpg";
+import slugify from "slugify";
 
 const CourseSection = () => {
   const courseCardData = [
@@ -100,7 +101,12 @@ const CourseSection = () => {
 
                 <div className="card-content p-3">
                   <div className="course-card-head d-flex justify-content-between align-items-center">
-                    <h4 className="text-black" style={{fontSize : "22px", fontWeight : "600"}}>{cardData?.card?.title} </h4>
+                    <h4
+                      className="text-black"
+                      style={{ fontSize: "22px", fontWeight: "600" }}
+                    >
+                      {cardData?.card?.title}{" "}
+                    </h4>
                     <span className="badge badge-success">50% off</span>
                   </div>
                   <p className="text-justify" style={{ fontSize: "16px" }}>
@@ -111,9 +117,12 @@ const CourseSection = () => {
                   </p>
 
                   <div className="course-card-btn d-flex align-items-center gap-2">
-                    <button className="btn contact-banner-btn">
+                    <Link
+                      className="btn contact-banner-btn"
+                      to={`/${slugify(cardData.card.title, "-")}`}
+                    >
                       View Details
-                    </button>
+                    </Link>
 
                     <div className="card-price">
                       <span className="m-0 text-gradient">
