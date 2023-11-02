@@ -125,7 +125,7 @@ const CourseSection = () => {
                   <div className="course-card-btn d-flex align-items-center gap-2">
                     <Link
                       className="btn contact-banner-btn"
-                      to={`/${slugify(cardData.card.title, "-")}`}
+                      to={`/${slugify(cardData.card.title, "-").toLowerCase()}`}
                     >
                       View Details
                     </Link>
