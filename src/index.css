@@ -11,3 +11,31 @@ html,
 body {
   scroll-behavior: smooth !important;
 }
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.text-gradient {
+  font-weight: 800;
+  color: darkblue;
+}
+
+@supports (--css: variables) {
+  .text-gradient {
+    background-image: linear-gradient(
+      to right,
+      #9d50bb 0%,
+      #6e48aa 51%,
+      #9d50bb 100%
+    );
+    color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient::selection {
+    color: white;
+    background: darkorchid;
+  }
+}

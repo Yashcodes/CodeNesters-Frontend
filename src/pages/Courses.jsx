@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/Course.css"
+import "../styles/Course.css";
 import Layout from "../components/Layout/Layout";
 import CourseBanner from "../components/CourseComponents/CourseBanner";
+import CourseSection from "../components/CourseComponents/CourseSection";
 
 const Courses = () => {
   return (
@@ -9,7 +10,8 @@ const Courses = () => {
       {/* //! Course Banner */}
       <CourseBanner />
 
-      {/* <h1 className="text-black text-center">Courses and Trainings</h1> */}
+      {/* //! What are the courses we offer  */}
+      <CourseSection />
     </Layout>
   );
 };
