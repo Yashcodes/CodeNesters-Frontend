@@ -74,7 +74,11 @@
 }
 
 .founder-section-bg {
-  background-image: linear-gradient(198deg, #ede9f7aa 0%, rgb(241, 233, 233) 100%);
+  background-image: linear-gradient(
+    198deg,
+    #ede9f7aa 0%,
+    rgb(241, 233, 233) 100%
+  );
 }
 
 .carousel .carousel-slider .control-arrow {

@@ -1,0 +1,35 @@
+.course-container {
+    padding: 0;
+    background-image: linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%);
+  }
+  
+  .course-banner-section {
+    min-height: 700px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+  }
+  
+  .course-banner-right img {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .course-banner-left p {
+    font-size: 2.8rem;
+    line-height: 50px;
+  }
+  
+  .course-banner-left {
+    padding: 0px 2vw;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .course-banner-left p {
+      font-size: 11vw;
+    }
+  
+    .course-banner-section {
+      gap: 0px !important;
+    }
+  }
+  
