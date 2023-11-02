@@ -37,6 +37,39 @@ const CourseSection = () => {
         price: "3499",
       },
     },
+    {
+      card: {
+        title: "Python Programming",
+        discount: "50% off",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Blanditiis quo saepe voluptatem perferendis cupiditate
+        molestias unde! Fuga non id architecto perspiciatis. Vel
+        possimus architecto beatae?`,
+        price: "3499",
+      },
+    },
+    {
+      card: {
+        title: "C++ Programming",
+        discount: "50% off",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Blanditiis quo saepe voluptatem perferendis cupiditate
+        molestias unde! Fuga non id architecto perspiciatis. Vel
+        possimus architecto beatae?`,
+        price: "3499",
+      },
+    },
+    {
+      card: {
+        title: "PHP with MySQL",
+        discount: "50% off",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Blanditiis quo saepe voluptatem perferendis cupiditate
+        molestias unde! Fuga non id architecto perspiciatis. Vel
+        possimus architecto beatae?`,
+        price: "3499",
+      },
+    },
   ];
   console.log(courseCardData);
   return (
@@ -54,8 +87,8 @@ const CourseSection = () => {
       <div className="course-cards container">
         <div className="row d-flex flex-wrap my-5">
           {courseCardData.map((cardData) => (
-            <div className="col-md-4">
-              <div className="course-card border shadow-lg">
+            <div className="col-md-4 my-2">
+              <div className="course-card border shadow">
                 <div className="card-img img-fluid">
                   <img
                     src={CourseImage}
@@ -68,7 +101,7 @@ const CourseSection = () => {
                 <div className="card-content p-3">
                   <div className="course-card-head d-flex justify-content-between align-items-center">
                     <h4 className="text-black" style={{fontSize : "22px", fontWeight : "600"}}>{cardData?.card?.title} </h4>
-                    <span>50% off</span>
+                    <span className="badge badge-success">50% off</span>
                   </div>
                   <p className="text-justify" style={{ fontSize: "16px" }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
