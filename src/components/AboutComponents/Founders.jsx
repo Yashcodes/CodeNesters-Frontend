@@ -10,7 +10,12 @@ import githubIcon from "../../assets/images/FounderIcons/github-icon.svg";
 const Founders = () => {
   return (
     <div className="founder-section-bg p-5">
-      <h4 className="text-center" style={{ color: "#a87fff", fontWeight: "600" }}>BUSINESS FOUNDATION</h4>
+      <h4
+        className="text-center"
+        style={{ color: "#a87fff", fontWeight: "600" }}
+      >
+        BUSINESS FOUNDATION
+      </h4>
       <h2 className="fs-1 fw-bold text-black text-center">
         Meet Our Expert Team
       </h2>
