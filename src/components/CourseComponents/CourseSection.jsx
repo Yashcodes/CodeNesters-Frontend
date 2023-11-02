@@ -14,6 +14,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-right",
       },
     },
     {
@@ -25,6 +26,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-down",
       },
     },
     {
@@ -36,6 +38,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-left",
       },
     },
     {
@@ -47,6 +50,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-right",
       },
     },
     {
@@ -58,6 +62,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-up",
       },
     },
     {
@@ -69,6 +74,7 @@ const CourseSection = () => {
         molestias unde! Fuga non id architecto perspiciatis. Vel
         possimus architecto beatae?`,
         price: "3499",
+        aos: "zoom-out-left",
       },
     },
   ];
@@ -88,7 +94,7 @@ const CourseSection = () => {
       <div className="course-cards container">
         <div className="row d-flex flex-wrap my-5">
           {courseCardData.map((cardData) => (
-            <div className="col-md-4 my-2">
+            <div className="col-md-4 my-2" data-aos={`${cardData.card.aos}`}>
               <div className="course-card border shadow">
                 <div className="card-img img-fluid">
                   <img
