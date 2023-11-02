@@ -78,7 +78,7 @@ const CourseSection = () => {
       },
     },
   ];
-  console.log(courseCardData);
+  
   return (
     <div className="py-5 px-1">
       <h4
