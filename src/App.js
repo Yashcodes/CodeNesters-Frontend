@@ -19,6 +19,7 @@ import Blogs from "./pages/Blogs";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import CreateCourse from "./pages/Admin/CreateCourse";
+import Course from "./components/CourseComponents/Course";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/courses/:slug" element={<Course />} />
 
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>

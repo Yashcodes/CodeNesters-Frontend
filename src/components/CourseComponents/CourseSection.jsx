@@ -78,7 +78,7 @@ const CourseSection = () => {
       },
     },
   ];
-  
+
   return (
     <div className="py-5 px-1">
       <h4
@@ -125,7 +125,16 @@ const CourseSection = () => {
                   <div className="course-card-btn d-flex align-items-center gap-2">
                     <Link
                       className="btn contact-banner-btn"
-                      to={`/${slugify(cardData.card.title, "-").toLowerCase()}`}
+                      to={`/courses/${slugify(
+                        cardData.card.title,
+                        "-"
+                      ).toLowerCase()}`}
+                      onClick={() => {
+                        localStorage.setItem(
+                          "cardData",
+                          JSON.stringify(cardData)
+                        );
+                      }}
                     >
                       View Details
                     </Link>
