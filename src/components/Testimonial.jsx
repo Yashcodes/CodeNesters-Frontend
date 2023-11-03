@@ -7,10 +7,13 @@ const Testimonial = () => {
     <>
       <section className="section-2" id="testimonial">
         <div className="container">
-          <h2 className="text-uppercase text-dark mb-3 text-center">
+          <h2
+            className="text-uppercase text-dark mb-3 text-center"
+            data-aos="fade-up"
+          >
             See what our clients say
           </h2>
-          <p className="testimonialHeadText">
+          <p className="testimonialHeadText" data-aos="fade-up">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
             tempore temporibus <br />
             nemo mollitia esse, inventore magni quaerat.

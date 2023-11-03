@@ -84,10 +84,11 @@ const CourseSection = () => {
       <h4
         className="text-center"
         style={{ color: "#a87fff", fontWeight: "600" }}
+        data-aos="fade-up"
       >
-        Courses and Trainings
+        COURSES AND TRAININGS
       </h4>
-      <h2 className="fs-1 fw-bold text-black text-center">
+      <h2 className="fs-1 fw-bold text-black text-center" data-aos="fade-up">
         Learn and grow your skills <br /> with our courses
       </h2>
 

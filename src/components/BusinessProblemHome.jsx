@@ -18,8 +18,10 @@ const BusinessProblemHome = () => {
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">
-              <h4 className="prob-main-head">BUSINESS SOLUTION</h4>
-              <h2 className="fs-1 fw-bold text-black">
+              <h4 className="prob-main-head" data-aos="fade-up">
+                BUSINESS SOLUTION
+              </h4>
+              <h2 className="fs-1 fw-bold text-black" data-aos="fade-up">
                 We are expert people with great <br />
                 business solutions
               </h2>
@@ -57,7 +59,7 @@ const BusinessProblemHome = () => {
                 </div>
               </div>
 
-              <div className="prob-card" id="prob-card-2"  data-aos="zoom-in">
+              <div className="prob-card" id="prob-card-2" data-aos="zoom-in">
                 <div className="card-head">
                   <div className="card-head-icon">
                     <MDBIcon fas icon="chart-line" size="2x" />
@@ -86,7 +88,7 @@ const BusinessProblemHome = () => {
                 </div>
               </div>
 
-              <div className="prob-card" id="prob-card-2"  data-aos="fade-left">
+              <div className="prob-card" id="prob-card-2" data-aos="fade-left">
                 <div className="card-head">
                   <div className="card-head-icon">
                     <MDBIcon fas icon="rocket" size="2x" />

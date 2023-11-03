@@ -12,7 +12,7 @@ const WhyUsSectionHome = () => {
     });
     AOS.refresh();
   }, []);
-  
+
   return (
     <>
       <section className="py-5 whyUsSection">
@@ -20,17 +20,20 @@ const WhyUsSectionHome = () => {
           <h4
             className="text-center"
             style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
             WHY CODENESTERS?
           </h4>
-          <h2 className="fs-1 text-black fw-bold whyUsHeading text-center">
+          <h2
+            className="fs-1 text-black fw-bold whyUsHeading text-center"
+            data-aos="fade-up"
+          >
             Making project development <br /> easier and convenient
           </h2>
 
           <div className="whyUsCardContainer">
             <div
               className="whyUsCard"
-              // data-aos="fade-right"
               data-aos="zoom-out-right"
               style={{ borderBottom: "6px solid rgb(251, 125, 245)" }}
             >
@@ -56,7 +59,6 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              // data-aos="fade-down"
               data-aos="zoom-out-down"
               style={{ borderBottom: "6px solid rgb(89, 191, 255)" }}
             >
@@ -82,7 +84,6 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              // data-aos="fade-left"
               data-aos="zoom-out-left"
               style={{ borderBottom: "6px solid cyan" }}
             >
@@ -113,7 +114,6 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              // data-aos="fade-right"
               data-aos="zoom-out-right"
               style={{ borderBottom: "6px solid rgb(59, 240, 197)" }}
             >
@@ -144,7 +144,6 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              // data-aos="fade-up"
               data-aos="zoom-out-up"
               style={{ borderBottom: "6px solid rgb(234, 232, 111)" }}
             >
@@ -170,7 +169,6 @@ const WhyUsSectionHome = () => {
 
             <div
               className="whyUsCard"
-              // data-aos="fade-left"
               data-aos="zoom-out-left"
               style={{ borderBottom: "6px solid rgb(244, 86, 141)" }}
             >

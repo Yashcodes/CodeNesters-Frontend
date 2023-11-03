@@ -13,10 +13,11 @@ const Founders = () => {
       <h4
         className="text-center"
         style={{ color: "#a87fff", fontWeight: "600" }}
+        data-aos="fade-up"
       >
         BUSINESS FOUNDATION
       </h4>
-      <h2 className="fs-1 fw-bold text-black text-center">
+      <h2 className="fs-1 fw-bold text-black text-center" data-aos="fade-up">
         Meet Our Expert Team
       </h2>
 
