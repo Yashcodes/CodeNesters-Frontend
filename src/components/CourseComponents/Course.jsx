@@ -12,7 +12,9 @@ const Course = () => {
   return (
     <div>
       <h1>{cardData?.title}</h1>
-      
+      <p>{cardData?.description}</p>
+      <p>{cardData?.price}</p>
+      <p>{cardData?.discount}</p>
     </div>
   );
 };
