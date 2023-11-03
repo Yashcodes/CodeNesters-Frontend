@@ -97,7 +97,7 @@ const CourseSection = () => {
           {courseCardData.map((cardData) => (
             <div className="col-md-4 my-2" data-aos={`${cardData.card.aos}`}>
               <div className="course-card border shadow">
-                <div className="card-img img-fluid">
+                <div className="card-img course-card-img img-fluid">
                   <img
                     src={CourseImage}
                     alt=""
