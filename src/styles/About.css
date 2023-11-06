@@ -73,6 +73,10 @@
   background: none;
 }
 
+.carousel .control-dots .dot {
+  background-color: #a87fff !important;
+}
+
 .founder-section-bg {
   background-image: linear-gradient(
     198deg,

@@ -6,6 +6,81 @@ import "../styles/WhyUsSectionHome.css";
 import "aos/dist/aos.css";
 
 const WhyUsSectionHome = () => {
+  const whyUsCardData = [
+    {
+      data: {
+        title: "Development",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "bug",
+        iconType: "fas",
+        aos: "zoom-out-right",
+        cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
+        iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
+      },
+    },
+    {
+      data: {
+        title: "Maintenance",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "tools",
+        iconType: "fas",
+        aos: "zoom-out-down",
+        cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
+        iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
+      },
+    },
+    {
+      data: {
+        title: "Affordable",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "hand-holding-usd",
+        iconType: "fas",
+        aos: "zoom-out-left",
+        cardInlineStyle: { borderBottom: "6px solid cyan" },
+        iconInlineStyle: { backgroundColor: "cyan" },
+      },
+    },
+    {
+      data: {
+        title: "Support",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "question-circle",
+        iconType: "far",
+        aos: "zoom-out-right",
+        cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
+        iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
+      },
+    },
+    {
+      data: {
+        title: "Real-world Projects",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "users-cog",
+        iconType: "fas",
+        aos: "zoom-out-up",
+        cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
+        iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
+      },
+    },
+    {
+      data: {
+        title: "Career Assistance",
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        iconName: "bug",
+        iconType: "fas",
+        aos: "zoom-out-left",
+        cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
+        iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
+      },
+    },
+  ];
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -32,170 +107,34 @@ const WhyUsSectionHome = () => {
           </h2>
 
           <div className="whyUsCardContainer">
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-right"
-              style={{ borderBottom: "6px solid rgb(251, 125, 245)" }}
-            >
+            {whyUsCardData.map((cardData) => (
               <div
-                className="icon"
-                id="icon1"
-                style={{ backgroundColor: "rgb(251, 125, 245)" }}
+                className="whyUsCard"
+                data-aos={`${cardData?.data?.aos}`}
+                style={cardData?.data?.cardInlineStyle}
               >
-                <MDBIcon fas icon="bug" size="2x" className="iconChild" />
-              </div>
+                <div
+                  className="icon"
+                  id="icon1"
+                  style={cardData?.data?.iconInlineStyle}
+                >
+                  <MDBIcon
+                    {...cardData?.data?.iconType}
+                    icon={cardData?.data?.iconName}
+                    size="2x"
+                    className="iconChild"
+                  />
+                </div>
 
-              <div className="card-head">
-                <h4>Development</h4>
-              </div>
+                <div className="card-head">
+                  <h4>{cardData?.data?.title}</h4>
+                </div>
 
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
+                <div className="card-content">
+                  <p>{cardData?.data?.description}</p>
+                </div>
               </div>
-            </div>
-
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-down"
-              style={{ borderBottom: "6px solid rgb(89, 191, 255)" }}
-            >
-              <div
-                className="icon"
-                id="icon2"
-                style={{ backgroundColor: "rgb(89, 191, 255)" }}
-              >
-                <MDBIcon fas icon="tools" size="2x" className="iconChild" />
-              </div>
-
-              <div className="card-head">
-                <h4>Maintenance</h4>
-              </div>
-
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-left"
-              style={{ borderBottom: "6px solid cyan" }}
-            >
-              <div
-                className="icon"
-                id="icon3"
-                style={{ backgroundColor: "cyan" }}
-              >
-                <MDBIcon
-                  fas
-                  icon="hand-holding-usd"
-                  size="2x"
-                  className="iconChild"
-                />
-              </div>
-
-              <div className="card-head">
-                <h4>Affordable</h4>
-              </div>
-
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-right"
-              style={{ borderBottom: "6px solid rgb(59, 240, 197)" }}
-            >
-              <div
-                className="icon"
-                id="icon4"
-                style={{ backgroundColor: "rgb(59, 240, 197)" }}
-              >
-                <MDBIcon
-                  far
-                  icon="question-circle"
-                  size="2x"
-                  className="iconChild"
-                />
-              </div>
-
-              <div className="card-head">
-                <h4>Support</h4>
-              </div>
-
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-up"
-              style={{ borderBottom: "6px solid rgb(234, 232, 111)" }}
-            >
-              <div
-                className="icon"
-                id="icon5"
-                style={{ backgroundColor: "rgb(234, 232, 111)" }}
-              >
-                <MDBIcon fas icon="users-cog" size="2x" className="iconChild" />
-              </div>
-
-              <div className="card-head">
-                <h4>Real-world Projects</h4>
-              </div>
-
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="whyUsCard"
-              data-aos="zoom-out-left"
-              style={{ borderBottom: "6px solid rgb(244, 86, 141)" }}
-            >
-              <div
-                className="icon"
-                id="icon6"
-                style={{ backgroundColor: "rgb(244, 86, 141)" }}
-              >
-                <MDBIcon
-                  fas
-                  icon="graduation-cap"
-                  size="2x"
-                  className="iconChild"
-                />
-              </div>
-
-              <div className="card-head">
-                <h4>Career Assistance</h4>
-              </div>
-
-              <div className="card-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                  ipsum adipisci unde pariatur eligendi voluptas, vel in
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

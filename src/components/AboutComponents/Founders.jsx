@@ -135,13 +135,32 @@ const Founders = () => {
 
                   <div className="founder-icons d-flex gap-2">
                     <Link to={`${cardData?.card?.linkedin}`}>
-                      <MDBIcon fab icon="linkedin" />
+                      <MDBIcon
+                        fab
+                        icon="linkedin"
+                        size="lg"
+                        style={{ color: "rgb(115 54 245)" }}
+                      />
                     </Link>
+
                     <Link to={`${cardData?.card?.github}`}>
-                      <MDBIcon fab icon="github" />
+                      <MDBIcon
+                        fab
+                        icon="github"
+                        size="lg"
+                        className="ms-1"
+                        style={{ color: "rgb(115 54 245)" }}
+                      />
                     </Link>
+
                     <Link to={`${cardData?.card?.instagram}`}>
-                      <MDBIcon fab icon="instagram" />
+                      <MDBIcon
+                        fab
+                        icon="instagram"
+                        size="lg"
+                        className="ms-1 text-gradient"
+                        style={{ color: "rgb(115 54 245)" }}
+                      />
                     </Link>
                   </div>
                 </div>
