@@ -64,13 +64,13 @@ const Footer = () => {
                 <div className="footer-content-list">
                   <ul>
                     <li>
-                      <Link>Privacy Policy</Link>
+                      <Link to={"/privacy-policy"}>Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link>Terms of use</Link>
+                      <Link to={"/terms-of-services"}>Terms of use</Link>
                     </li>
                     <li>
-                      <Link>Refund & Cancellation Policy</Link>
+                      <Link to={"/cancellation-and-refund"}>Refund & Cancellation Policy</Link>
                     </li>
                   </ul>
                 </div>

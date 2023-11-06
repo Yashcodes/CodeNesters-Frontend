@@ -20,6 +20,9 @@ import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import CreateCourse from "./pages/Admin/CreateCourse";
 import Course from "./components/CourseComponents/Course";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfServices from "./pages/TermsOfServices";
+import CancellationAndRefund from "./pages/CancellationAndRefund";
 
 function App() {
   return (
@@ -34,6 +37,11 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/courses/:slug" element={<Course />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-services" element={<TermsOfServices />} />
+        <Route path="/cancellation-and-refund" element={<CancellationAndRefund />} />
 
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>

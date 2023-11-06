@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import "../../components/Layout/styles/Header.css";
 import { useAuth } from "../../context/Auth";
 import Offcanvas from "react-bootstrap/Offcanvas";
-
-import profile from "../../assets/images/Profile/profile_photo.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
 import { useUserProfile } from "../../context/UserProfile";
