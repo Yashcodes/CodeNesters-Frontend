@@ -96,6 +96,11 @@ const Header = () => {
                       Blogs
                     </Link>
                   </li>
+                  <li>
+                    <Link to={"/events"} className="dropdown-item">
+                      Events
+                    </Link>
+                  </li>
                   {/* <li>
                     <hr className="dropdown-divider" />
                   </li>
