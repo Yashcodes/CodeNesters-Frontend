@@ -1,5 +1,5 @@
 import React from "react";
-import reviewImg from "../assets/images/review1.jpg";
+import client1 from "../assets/images/Anu/img11.jpg";
 import "../styles/Testimonial.css";
 
 const Testimonial = () => {
@@ -25,14 +25,14 @@ const Testimonial = () => {
                 <div className="face front-face">
                   <img
                     // src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
-                    src={reviewImg}
+                    src={client1}
                     alt=""
                     className="profile"
                   />
                   <div className="pt-3 text-uppercase name fw-bold">
                     Anushka Baghel
                   </div>
-                  <div className="designation">Content Writer, Journalism</div>
+                  <div className="designation">Content Writer, Journalist</div>
                 </div>
                 <div className="face back-face">
                   <span className="fas fa-quote-left" />
