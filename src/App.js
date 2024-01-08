@@ -46,7 +46,7 @@ function App() {
 
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>
-          <Route path="user/profile" element={<Profile />} />
+          <Route path="user/profile/:userid" element={<Profile />} />
           <Route path="user/courses" element={<MyCourses />} />
           <Route path="user/settings" element={<Settings />} />
         </Route>

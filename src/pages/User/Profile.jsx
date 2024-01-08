@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import AWS from "aws-sdk";
 import { useAuth } from "../../context/Auth";
-import { useUserProfile } from "../../context/UserProfile";
+// import { useUserProfile } from "../../context/UserProfile";
 
 const Profile = () => {
   const [file, setFile] = useState();
   const [auth] = useAuth();
-  const [profileUrl] = useUserProfile();
+  // const [profileUrl] = useUserProfile();
 
   const handleFileChange = async (e) => {
     setFile(e.target.files[0]);
@@ -64,7 +64,7 @@ const Profile = () => {
       <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
 
-      <img src={profileUrl} alt="" width={"100px"} height={"100px"} />
+      <img src={""} alt="" width={"100px"} height={"100px"} />
     </Layout>
   );
 };

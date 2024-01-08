@@ -6,13 +6,11 @@ import { useAuth } from "../../context/Auth";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { MDBIcon } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
-import { useUserProfile } from "../../context/UserProfile";
 // import { useFirebase } from "../../context/Firebase";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [show, setShow] = useState(false);
-  const [profileUrl] = useUserProfile();
 
   // const firebase = useFirebase();
 
@@ -113,7 +111,7 @@ const Header = () => {
 
             {auth?.user ? (
               <img
-                src={profileUrl}
+                src={""}
                 alt=""
                 className="user-profile"
                 onClick={handleShow}
@@ -130,7 +128,7 @@ const Header = () => {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
                   <div className="sidebar-profile d-flex align-items-center gap-2">
-                    <img src={profileUrl} alt="" className="user-profile" />
+                    <img src={""} alt="" className="user-profile" />
 
                     <div className="profile-info p-0">
                       <p className="profile-name m-0"> {auth?.user?.name} </p>
@@ -144,7 +142,7 @@ const Header = () => {
                   <ul>
                     <li className="sidebar-list">
                       <MDBIcon fas icon="user" />
-                      <Link to={"/dashboard/user/profile"}>Profile</Link>
+                      <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>Profile</Link>
                     </li>
                     <li className="sidebar-list">
                       <MDBIcon fas icon="book" />

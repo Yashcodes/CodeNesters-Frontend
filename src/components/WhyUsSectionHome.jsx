@@ -112,6 +112,7 @@ const WhyUsSectionHome = () => {
                 className="whyUsCard"
                 data-aos={`${cardData?.data?.aos}`}
                 style={cardData?.data?.cardInlineStyle}
+                key={Date.now()+ Math.random()}
               >
                 <div
                   className="icon"
