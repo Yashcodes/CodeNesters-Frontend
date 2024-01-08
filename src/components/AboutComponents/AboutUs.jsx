@@ -10,7 +10,7 @@ const AboutUs = () => {
           className="about-us-container d-flex justify-content-center align-items-center"
           style={{ gap: "44px" }}
         >
-          <div className="about-left" data-aos="zoom-in">
+          <div className="about-left">
             <img
               src={founder1}
               alt=""
@@ -25,11 +25,7 @@ const AboutUs = () => {
             />
           </div>
 
-          <div
-            className="about-right p-2"
-            style={{ maxWidth: "600px" }}
-            data-aos="zoom-in"
-          >
+          <div className="about-right p-2" style={{ maxWidth: "600px" }}>
             <h1 className="text-black">About Us</h1>
 
             <h5 style={{ textAlign: "justify", textJustify: "inter-word" }}>

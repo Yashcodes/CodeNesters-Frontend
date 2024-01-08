@@ -1,9 +1,7 @@
 import { MDBIcon } from "mdb-react-ui-kit";
-import React, { useEffect } from "react";
-import AOS from "aos";
+import React from "react";
 
 import "../styles/WhyUsSectionHome.css";
-import "aos/dist/aos.css";
 
 const WhyUsSectionHome = () => {
   const whyUsCardData = [
@@ -14,7 +12,7 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "bug",
         iconType: "fas",
-        aos: "zoom-out-right",
+
         cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
         iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
       },
@@ -26,7 +24,6 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "tools",
         iconType: "fas",
-        aos: "zoom-out-down",
         cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
         iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
       },
@@ -38,7 +35,6 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "hand-holding-usd",
         iconType: "fas",
-        aos: "zoom-out-left",
         cardInlineStyle: { borderBottom: "6px solid cyan" },
         iconInlineStyle: { backgroundColor: "cyan" },
       },
@@ -50,7 +46,6 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "question-circle",
         iconType: "far",
-        aos: "zoom-out-right",
         cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
         iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
       },
@@ -62,7 +57,6 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "users-cog",
         iconType: "fas",
-        aos: "zoom-out-up",
         cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
         iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
       },
@@ -74,19 +68,11 @@ const WhyUsSectionHome = () => {
         ipsum adipisci unde pariatur eligendi voluptas, vel in`,
         iconName: "bug",
         iconType: "fas",
-        aos: "zoom-out-left",
         cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
         iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
       },
     },
   ];
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-    AOS.refresh();
-  }, []);
 
   return (
     <>
@@ -95,14 +81,10 @@ const WhyUsSectionHome = () => {
           <h4
             className="text-center"
             style={{ color: "#a87fff", fontWeight: "600" }}
-            data-aos="fade-up"
           >
             WHY CODENESTERS?
           </h4>
-          <h2
-            className="fs-1 text-black fw-bold whyUsHeading text-center"
-            data-aos="fade-up"
-          >
+          <h2 className="fs-1 text-black fw-bold whyUsHeading text-center">
             Making project development <br /> easier and convenient
           </h2>
 
@@ -110,9 +92,8 @@ const WhyUsSectionHome = () => {
             {whyUsCardData.map((cardData) => (
               <div
                 className="whyUsCard"
-                data-aos={`${cardData?.data?.aos}`}
                 style={cardData?.data?.cardInlineStyle}
-                key={Date.now()+ Math.random()}
+                key={Date.now() + Math.random()}
               >
                 <div
                   className="icon"

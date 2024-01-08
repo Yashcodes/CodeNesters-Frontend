@@ -84,18 +84,17 @@ const CourseSection = () => {
       <h4
         className="text-center"
         style={{ color: "#a87fff", fontWeight: "600" }}
-        data-aos="fade-up"
       >
         COURSES AND TRAININGS
       </h4>
-      <h2 className="fs-1 fw-bold text-black text-center" data-aos="fade-up">
+      <h2 className="fs-1 fw-bold text-black text-center">
         Learn and grow your skills <br /> with our courses
       </h2>
 
       <div className="course-cards container">
         <div className="row d-flex flex-wrap my-5">
           {courseCardData.map((cardData) => (
-            <div className="col-md-4 my-2" data-aos={`${cardData.card.aos}`}>
+            <div className="col-md-4 my-2">
               <div className="course-card border shadow">
                 <div className="card-img course-card-img img-fluid">
                   <img

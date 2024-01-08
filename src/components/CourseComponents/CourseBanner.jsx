@@ -1,17 +1,8 @@
 import React, { useEffect } from "react";
 import CourseBannerImg from "../../assets/images/course/coursebanner (2).svg";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const CourseBanner = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-    AOS.refresh();
-  }, []);
-
   return (
     <>
       <div className="course-container container-fluid pt-5">
@@ -19,11 +10,10 @@ const CourseBanner = () => {
           <div
             className="course-banner-left align-self-center d-flex flex-column"
             style={{ maxWidth: "700px" }}
-            data-aos="fade-right"
           >
             <p className="text-black fw-bold">
-              Start your journey of Skill Mastery with our <span className="text-gradient">Trainings</span>{" "}
-              and
+              Start your journey of Skill Mastery with our{" "}
+              <span className="text-gradient">Trainings</span> and
               <span className="text-gradient"> Courses</span>
             </p>
 
@@ -37,7 +27,7 @@ const CourseBanner = () => {
             </div>
           </div>
 
-          <div className="course-banner-right" data-aos="fade-left">
+          <div className="course-banner-right">
             <img src={CourseBannerImg} alt="" />
           </div>
         </div>

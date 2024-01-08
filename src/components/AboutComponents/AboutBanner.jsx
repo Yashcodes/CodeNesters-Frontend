@@ -1,17 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AboutBannerImg from "../../assets/images/home/hero1.svg";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const AboutBanner = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-    AOS.refresh();
-  }, []);
-
   return (
     <>
       <div className="about-container container-fluid pt-5">
@@ -19,7 +9,6 @@ const AboutBanner = () => {
           <div
             className="about-banner-left align-self-center d-flex flex-column"
             style={{ maxWidth: "700px" }}
-            data-aos="fade-right"
           >
             <p className="text-black fw-bold">
               We believe in <span className="text-gradient">Collaboration</span>{" "}
@@ -38,7 +27,7 @@ const AboutBanner = () => {
             </div>
           </div>
 
-          <div className="about-banner-right" data-aos="fade-left">
+          <div className="about-banner-right">
             <img src={AboutBannerImg} alt="" />
           </div>
         </div>
