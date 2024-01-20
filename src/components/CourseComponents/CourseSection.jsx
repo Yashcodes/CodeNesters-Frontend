@@ -80,19 +80,19 @@ const CourseSection = () => {
   ];
 
   return (
-    <div className="py-5 px-1">
+    <div className="py-5">
       <h4
-        className="text-center"
+        className="text-center mx-1"
         style={{ color: "#a87fff", fontWeight: "600" }}
       >
         COURSES AND TRAININGS
       </h4>
-      <h2 className="fs-1 fw-bold text-black text-center">
+      <h2 className="fs-1 fw-bold text-black text-center mx-1">
         Learn and grow your skills <br /> with our courses
       </h2>
 
-      <div className="course-cards container">
-        <div className="row d-flex flex-wrap my-5">
+      <div className="course-cards container px-5">
+        <div className="row d-flex flex-wrap flex-row my-5">
           {courseCardData.map((cardData) => (
             <div className="col-md-4 my-2">
               <div className="course-card border shadow">
@@ -111,7 +111,7 @@ const CourseSection = () => {
                       className="text-black"
                       style={{ fontSize: "22px", fontWeight: "600" }}
                     >
-                      {cardData?.card?.title}{" "}
+                      {cardData?.card?.title}
                     </h4>
                     <span className="badge badge-success">50% off</span>
                   </div>
@@ -141,7 +141,7 @@ const CourseSection = () => {
 
                     <div className="card-price">
                       <span className="m-0 text-gradient">
-                        Rs. 3499/-{" "}
+                        Rs. 3499/-
                         <p
                           className="text-decoration-line-through d-inline"
                           style={{
@@ -150,8 +150,8 @@ const CourseSection = () => {
                             color: "gray",
                           }}
                         >
-                          Rs. 6999{" "}
-                        </p>{" "}
+                          Rs. 6999
+                        </p>
                       </span>
                     </div>
                   </div>

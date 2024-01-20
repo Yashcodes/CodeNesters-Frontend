@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CourseBanner = () => {
   return (
     <>
-      <div className="course-container container-fluid pt-5">
+      <div className="course-container container-fluid pt-5 px-2">
         <div className="course-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="course-banner-left align-self-center d-flex flex-column"
