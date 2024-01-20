@@ -6,6 +6,7 @@ import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/Auth";
+import SignIn from "../../assets/images/Register/signIn.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -67,62 +68,76 @@ const Login = () => {
 
   return (
     <>
-      <div className="register-page">
-        <div className="register-card shadow-lg">
-          <div className="register-card-header mt-3">
-            <div className="register-card-img">
-              <img src={Brand} alt="" width="44px" height="44px" />
+      <div className="register-page container-fluid bg-gray-gradient">
+        <div className="register-left col-md-4 col-sm-9">
+          <h2 className="text-gray">
+            Login to <span className="text-gradient">CodeNesters</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            consequatur!
+          </p>
+
+          <img src={SignIn} alt="" className="img-fluid" />
+        </div>
+
+        <div className="register-right col-md-4 col-sm-10">
+          <div className="register-card shadow-lg">
+            <div className="register-card-header my-3">
+              <div className="register-card-img">
+                <img src={Brand} alt="" width="34px" height="34px" />
+              </div>
+              <div className="card-head">
+                <h2>CodeNesters</h2>
+              </div>
             </div>
-            <div className="card-head">
-              <h2>CodeNesters</h2>
+
+            <div className="register-card-input">
+              <div className="register-email mb-3">
+                <MDBInput
+                  label="Email Address"
+                  type="email"
+                  size="lg"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="register-password mb-3">
+                <MDBInput
+                  label="Enter Password"
+                  type="password"
+                  size="lg"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="register-card-input">
-            <div className="register-email mb-3">
-              <MDBInput
-                label="Email Address"
-                type="email"
-                size="lg"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+            <div className="register-card-btn mb-2">
+              <MDBBtn className="w-100 card-btn" onClick={handleSubmit}>
+                Login
+              </MDBBtn>
             </div>
-            <div className="register-password mb-3">
-              <MDBInput
-                label="Enter Password"
-                type="password"
-                size="lg"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
+
+            <div className="divider-text text-center mb-2">or</div>
+
+            <div className="register-with-google mb-3">
+              <MDBBtn className="w-100 card-btn">
+                Sign in with Google
+                <span>
+                  <MDBIcon fab icon="google" className="mx-2" size="lg" />
+                </span>
+              </MDBBtn>
             </div>
-          </div>
 
-          <div className="register-card-btn mb-2">
-            <MDBBtn className="w-100 card-btn" onClick={handleSubmit}>
-              Login
-            </MDBBtn>
-          </div>
-
-          <div className="divider-text text-center mb-2">or</div>
-
-          <div className="register-with-google mb-3">
-            <MDBBtn className="w-100 card-btn">
-              Sign in with Google
-              <span>
-                <MDBIcon fab icon="google" className="mx-2" size="lg" />
-              </span>
-            </MDBBtn>
-          </div>
-
-          <div className="login-option mb-3">
-            <p className="text-center">
-              Don't have an account?
-              <Link to={"/register"}> Create Account</Link>
-            </p>
+            <div className="login-option mb-3">
+              <p className="text-center">
+                Don't have an account?
+                <Link to={"/register"}> Create Account</Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/Auth";
+import SignIn from "../../assets/images/Register/signIn.svg";
 // import { useFirebase } from "../../context/Firebase";
 
 const Register = () => {
@@ -85,12 +86,24 @@ const Register = () => {
   // }, [firebase, navigate]);
 
   return (
-    <>
-      <div className="register-page">
+    <div className="register-page container-fluid bg-gray-gradient">
+      <div className="register-left col-md-4 col-sm-9">
+        <h2 className="text-gray">
+          Register to <span className="text-gradient">CodeNesters</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+          consequatur!
+        </p>
+
+        <img src={SignIn} alt="" className="img-fluid" />
+      </div>
+
+      <div className="register-right col-md-4 col-sm-10">
         <div className="register-card shadow-lg">
-          <div className="register-card-header mt-3">
+          <div className="register-card-header my-3">
             <div className="register-card-img">
-              <img src={Brand} alt="" width="44px" height="44px" />
+              <img src={Brand} alt="" width="34px" height="34px" />
             </div>
             <div className="card-head">
               <h2>CodeNesters</h2>
@@ -141,7 +154,7 @@ const Register = () => {
           </div>
 
           <div className="register-card-btn mb-2">
-            <MDBBtn className="w-100 card-btn" onClick={handleSubmit}>
+            <MDBBtn className={`w-100 card-btn`} onClick={handleSubmit}>
               Create Account
             </MDBBtn>
           </div>
@@ -165,7 +178,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

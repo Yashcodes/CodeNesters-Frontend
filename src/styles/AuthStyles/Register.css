@@ -1,74 +1,93 @@
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  /* background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  ); */
+
+  background-image: linear-gradient(198deg, #cdbbf9aa 0%, #ffffff 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
 .register-page {
+  height: 100vh;
+  width: 100vw;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 4em;
+}
+
+.register-left {
+  max-width: 50em;
+  padding: 22px;
+  margin: 0px 22px;
+}
+
+.register-left img {
+  max-height: 25em;
   width: 100%;
-  height: 100vh;
-  padding: 14px;
+}
+
+.register-right {
+  max-width: 50em;
 }
 
 .register-card {
-  /* min-width: 30em; */
-  padding: 12px 12px;
-  display: flex;
-  flex-direction: column;
+  padding: 22px;
 }
 
 .register-card-header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2px;
-  flex-direction: column;
 }
 
-.card-btn {
-  font-size: 14px;
-  background-image: linear-gradient(
-    to right,
-    #7474bf 0%,
-    #348ac7 51%,
-    #7474bf 100%
-  );
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 6px;
+.register-card-header .card-head h2 {
+  margin: 0;
 }
 
-.card-btn:hover {
-  background-position: right, center;
-  color: white;
+@media (min-width: 0) and (max-width: 576px) {
+  /* .register-left, .register-right {
+    padding: 44px 28px;
+  } */
+
+  .register-page {
+    gap: 0px;
+  }
+
+  .register-left {
+    display: none;
+  }
 }
 
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #000046 0%,
-    #1cb5e0 51%,
-    #000046 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-.login-option p {
-  font-size: 18px;
+@media (min-width: 576px) and (max-width: 768px) {
+  .register-left {
+    display: none;
+  }
 }
