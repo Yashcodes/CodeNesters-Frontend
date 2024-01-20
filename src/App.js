@@ -16,9 +16,6 @@ import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
 import Blogs from "./pages/Blogs";
-import AdminRoute from "./components/Routes/AdminRoute";
-import AdminDashboard from "./pages/Admin/AdminDashboard";
-import CreateCourse from "./pages/Admin/CreateCourse";
 import Course from "./components/CourseComponents/Course";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfServices from "./pages/TermsOfServices";
@@ -49,12 +46,6 @@ function App() {
           <Route path="user/profile/:userid" element={<Profile />} />
           <Route path="user/courses" element={<MyCourses />} />
           <Route path="user/settings" element={<Settings />} />
-        </Route>
-
-        {/* //! Protected Routes for Users  */}
-        <Route path="/dashboard" element={<AdminRoute />}>
-          <Route path="admin" element={<AdminDashboard />} />
-          <Route path="admin/create-course" element={<CreateCourse />} />
         </Route>
 
         {/*//! If above routes are not found then the "*" sign will show the specified page */}

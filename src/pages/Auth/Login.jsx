@@ -55,7 +55,7 @@ const Login = () => {
         toast.success(data.message);
 
         localStorage.setItem("auth", JSON.stringify(data));
-        navigate("/");
+        navigate(location.state || "/");
         // window.location.reload();
       } else {
         toast.error(data.message);
