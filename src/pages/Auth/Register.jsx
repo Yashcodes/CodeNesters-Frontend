@@ -154,7 +154,17 @@ const Register = () => {
           </div>
 
           <div className="register-card-btn mb-2">
-            <MDBBtn className={`w-100 card-btn`} onClick={handleSubmit}>
+            <MDBBtn
+              className={`w-100 card-btn`}
+              onClick={handleSubmit}
+              disabled={
+                password !== confirmPassword ||
+                name === "" ||
+                email === "" ||
+                password === "" ||
+                confirmPassword === ""
+              }
+            >
               Create Account
             </MDBBtn>
           </div>

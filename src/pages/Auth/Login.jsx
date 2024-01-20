@@ -116,7 +116,14 @@ const Login = () => {
             </div>
 
             <div className="register-card-btn mb-2">
-              <MDBBtn className="w-100 card-btn" onClick={handleSubmit}>
+              <MDBBtn
+                className="w-100 card-btn"
+                onClick={handleSubmit}
+                disabled={
+                  email === "" ||
+                  password === ""
+                }
+              >
                 Login
               </MDBBtn>
             </div>
