@@ -68,7 +68,11 @@ const Home = () => {
       <ContactFromHome />
 
       {/* //! Testimonial  */}
-      <Testimonial HomeTestimonialData={HomeTestimonialData} />
+      <Testimonial
+        title="SEE WHAT OUR CLIENTS SAY"
+        caption=""
+        Data={HomeTestimonialData}
+      />
     </Layout>
   );
 };

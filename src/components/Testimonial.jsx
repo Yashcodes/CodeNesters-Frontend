@@ -1,22 +1,21 @@
 import React from "react";
 import "../styles/Testimonial.css";
 
-const Testimonial = ({ HomeTestimonialData }) => {
+const Testimonial = ({ title, caption, Data }) => {
   return (
     <>
       <section className="section-2" id="testimonial">
         <div className="container">
-          <h2 className="text-uppercase text-dark mb-3 text-center">
-            See what our clients say
-          </h2>
-          <p className="testimonialHeadText">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            tempore temporibus <br />
-            nemo mollitia esse, inventore magni quaerat.
-          </p>
+          <h4
+            className="text-center"
+            style={{ color: "#a87fff", fontWeight: "600"}}
+          >
+            {title.toUpperCase()}
+          </h4>
+          <h2 className="fs-1 fw-bold text-black text-center" style={{marginBottom : "60px"}}>{caption}</h2>
           <p className="border-btm" />
           <div className="row mb-5 testimonial-gap">
-            {HomeTestimonialData.map((cardData) => (
+            {Data.map((cardData) => (
               <div className="col-lg-4" key={cardData?.card?.id}>
                 <div className="card">
                   <div className="face front-face">

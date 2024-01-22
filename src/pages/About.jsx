@@ -3,9 +3,40 @@ import "../styles/About.css";
 import Layout from "../components/Layout/Layout";
 import AboutUs from "../components/AboutComponents/AboutUs";
 import AboutBanner from "../components/AboutComponents/AboutBanner";
-import Founders from "../components/AboutComponents/Founders";
+import Testimonial from "../components/Testimonial";
+import founder1 from "../assets/images/FounderImage/founder-1.jpg"
+import founder2 from "../assets/images/FounderImage/founder-2.png"
 
 const About = () => {
+  const FoundersData = [
+    {
+      card: {
+        title: "Bhagvendra Singh",
+        subTitle: "Founder & CEO",
+        content:
+          "I made bacck the purchase price in just 48 hours! Thank youfor making it pain less, pleasant. The service was I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.execellent. I will refer everyone I know.",
+        image: founder1,
+      },
+    },
+    {
+      card: {
+        title: "Upendra Rao",
+        subTitle: "Founder, Developer",
+        content:
+          "I made bacck the purchase price in just 48 hours! Thank youfor making it pain less, pleasant. The service was I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.execellent. I will refer everyone I know.",
+        image: founder2,
+      },
+    },
+    {
+      card: {
+        title: "Ashish Tripathi",
+        subTitle: "Founder",
+        content:
+          "I made bacck the purchase price in just 48 hours! Thank youfor making it pain less, pleasant. The service was I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.execellent. I will refer everyone I know.",
+        image: founder1,
+      },
+    },
+  ];
   return (
     <Layout>
       {/* //! About Banner  */}
@@ -15,7 +46,7 @@ const About = () => {
       <AboutUs />
 
       {/* //! Founders Section  */}
-      <Founders />
+      <Testimonial Data={FoundersData} title="Business Foundation" caption="Meet Our Expert Team" />
     </Layout>
   );
 };
