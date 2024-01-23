@@ -6,6 +6,7 @@ import AboutBanner from "../components/AboutComponents/AboutBanner";
 import Testimonial from "../components/Testimonial";
 import founder1 from "../assets/images/FounderImage/founder-1.jpg"
 import founder2 from "../assets/images/FounderImage/founder-2.png"
+import founder3 from "../assets/images/FounderImage/founder-3.jpg"
 
 const About = () => {
   const FoundersData = [
@@ -33,7 +34,7 @@ const About = () => {
         subTitle: "Founder",
         content:
           "I made bacck the purchase price in just 48 hours! Thank youfor making it pain less, pleasant. The service was I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.execellent. I will refer everyone I know.",
-        image: founder1,
+        image: founder3,
       },
     },
   ];
