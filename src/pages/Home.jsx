@@ -6,7 +6,7 @@ import WhyUsSectionHome from "../components/WhyUsSectionHome";
 import BusinessProblemHome from "../components/BusinessProblemHome";
 import ContactFromHome from "../components/ContactFromHome";
 import { useLocation } from "react-router-dom";
-import client1 from "../assets/images/Anu/img11.jpg";
+import client1 from "../assets/images/Anu/img11.webp";
 
 const Home = () => {
   const location = useLocation();
