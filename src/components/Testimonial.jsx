@@ -24,6 +24,7 @@ const Testimonial = ({ title, caption, Data }) => {
                       src={cardData?.card?.image}
                       alt=""
                       className="profile"
+                      loading="lazy"
                     />
                     <div className="pt-3 text-uppercase name fw-bold">
                       {cardData?.card?.title}
