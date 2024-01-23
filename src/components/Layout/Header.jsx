@@ -35,7 +35,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid m-1">
           <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"}>
-            <img src={brandLogo} alt="" />
+            <img src={brandLogo} alt="" style={{aspectRatio : "auto"}}/>
             {window.innerWidth <= "400" ? "" : <span>CodeNesters</span>}
           </Link>
           <button
