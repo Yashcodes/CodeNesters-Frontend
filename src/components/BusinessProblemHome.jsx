@@ -7,7 +7,7 @@ import "../styles/BusinessProblemHome.css";
 const BusinessProblemHome = () => {
   return (
     <>
-      <section className="business-prob-section m-0">
+      <section className="business-prob-section mt-4">
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">

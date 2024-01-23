@@ -4,7 +4,7 @@ import "../styles/Testimonial.css";
 const Testimonial = ({ title, caption, Data }) => {
   return (
     <>
-      <section className="section-2" id="testimonial">
+      <section className="section-2 mt-5" id="testimonial">
         <div className="container">
           <h4
             className="text-center"
