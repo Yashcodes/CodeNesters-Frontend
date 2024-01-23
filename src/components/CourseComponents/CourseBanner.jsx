@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CourseBannerImg from "../../assets/images/course/coursebanner (2).svg";
 import { Link } from "react-router-dom";
 
