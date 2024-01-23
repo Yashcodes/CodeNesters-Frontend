@@ -43,7 +43,7 @@ const HeroSectionHome = () => {
           </div>
         </div>
         <div className="right-hero-section col-md-6">
-          <img className="img-fluid" src={Hero} alt="" />
+          <img className="img-fluid" src={Hero} alt="" width={"370"} height={"200px"}/>
         </div>
       </div>
     </div>

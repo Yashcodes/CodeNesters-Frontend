@@ -13,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     if (location.pathname === "/") {
-      document.title = "Codenesters - Think | Code | Create | Deploy";
+      document.title = "CodeNesters - Think | Code | Create | Deploy";
     }
   }, [location]);
 
