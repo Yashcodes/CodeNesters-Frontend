@@ -22,9 +22,11 @@ const HeroSectionHome = () => {
             <p>Think | Code | Create | Deploy</p>
           </h2>
 
-          <p className="fs-5 mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            voluptates iste minus officiis, soluta quo?
+          <p className="mb-0 text-justify" style={{fontSize : "19px"}}>
+            Creating the backbone of your online presence with visually
+            appealing and user-friendly interfaces at extremely low cost. Here,
+            we bring dreams to life through exceptional website and app
+            development and design services.
           </p>
 
           <div className="hero-btn mb-3 mt-1">
@@ -43,7 +45,14 @@ const HeroSectionHome = () => {
           </div>
         </div>
         <div className="right-hero-section col-md-6">
-          <img className="img-fluid" src={Hero} alt="" width={"370"} height={"200px"} loading="lazy"/>
+          <img
+            className="img-fluid"
+            src={Hero}
+            alt=""
+            width={"370"}
+            height={"200px"}
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
