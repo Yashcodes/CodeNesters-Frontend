@@ -3,7 +3,6 @@ import React from "react";
 
 import "../styles/BusinessProblemHome.css";
 
-
 const BusinessProblemHome = () => {
   return (
     <>
@@ -11,17 +10,15 @@ const BusinessProblemHome = () => {
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">
-              <h4 className="prob-main-head" >
-                BUSINESS SOLUTION
-              </h4>
-              <h2 className="fs-1 fw-bold text-black" >
+              <h4 className="prob-main-head">BUSINESS SOLUTION</h4>
+              <h2 className="fs-1 fw-bold text-black">
                 We are expert people with great <br />
                 business solutions
               </h2>
             </div>
 
             <div className="business-prob-cards">
-              <div className="prob-card" id="prob-card-1" >
+              <div className="prob-card" id="prob-card-1">
                 <div className="card-head">
                   <div className="card-head-icon">
                     <MDBIcon fas icon="laptop-code" size="2x" />
@@ -33,9 +30,9 @@ const BusinessProblemHome = () => {
 
                 <div className="card-content">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Id, eveniet quas! Laudantium odit similique quam error rerum
-                    dolores cupiditate nisi?
+                    We craft a sleek online presence with our expertise. Our
+                    designs are modern, responsive, and tailored to elevate your
+                    business in the digital landscape.
                   </p>
                 </div>
 
@@ -52,7 +49,7 @@ const BusinessProblemHome = () => {
                 </div>
               </div>
 
-              <div className="prob-card" id="prob-card-2" >
+              <div className="prob-card" id="prob-card-2">
                 <div className="card-head">
                   <div className="card-head-icon">
                     <MDBIcon fas icon="chart-line" size="2x" />
@@ -62,9 +59,9 @@ const BusinessProblemHome = () => {
 
                 <div className="card-content">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Id, eveniet quas! Laudantium odit similique quam error rerum
-                    dolores cupiditate nisi?
+                    Gain actionable insights with our advanced analytics. We
+                    turn data into strategies, empowering your business
+                    decisions for sustainable growth and success.
                   </p>
                 </div>
 
@@ -81,7 +78,7 @@ const BusinessProblemHome = () => {
                 </div>
               </div>
 
-              <div className="prob-card" id="prob-card-2" >
+              <div className="prob-card" id="prob-card-2">
                 <div className="card-head">
                   <div className="card-head-icon">
                     <MDBIcon fas icon="rocket" size="2x" />
@@ -91,9 +88,9 @@ const BusinessProblemHome = () => {
 
                 <div className="card-content">
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Id, eveniet quas! Laudantium odit similique quam error rerum
-                    dolores cupiditate nisi?
+                    Beyond technology, we're storytellers. Let us build engaging
+                    solutions that captivate your audience, turning visitors
+                    into loyal customers for lasting business success.
                   </p>
                 </div>
 
