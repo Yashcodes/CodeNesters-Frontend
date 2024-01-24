@@ -7,21 +7,20 @@ const WhyUsSectionHome = () => {
   const whyUsCardData = [
     {
       data: {
+        id: 1,
         title: "Development",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `Transforming your ideas into digital reality, our team at CodeNesters simplifies project development, ensuring your vision comes to life effortlessly.`,
         iconName: "bug",
         iconType: "fas",
-
         cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
         iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
       },
     },
     {
       data: {
+        id: 2,
         title: "Maintenance",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `Reliable upkeep guarantees seamless digital operations, minimizing downtime and disruptions for sustained performance. Your success is our priority.`,
         iconName: "tools",
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
@@ -30,9 +29,9 @@ const WhyUsSectionHome = () => {
     },
     {
       data: {
+        id: 3,
         title: "Affordable",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `Get premium solutions without the premium price tag. We believe in making excellence accessible through budget-friendly services at CodeNesters.`,
         iconName: "hand-holding-usd",
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid cyan" },
@@ -41,9 +40,9 @@ const WhyUsSectionHome = () => {
     },
     {
       data: {
+        id: 4,
         title: "Support",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `We're more than techies, we're your partners in success! Get ready for friendly guidance and constant support. Your journey is important, and we're here to make it smooth.`,
         iconName: "question-circle",
         iconType: "far",
         cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
@@ -52,9 +51,9 @@ const WhyUsSectionHome = () => {
     },
     {
       data: {
+        id: 5,
         title: "Real-world Projects",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `Dive into our gallery of real-world projects where we've transformed ideas into success stories. Your vision could be the next chapter in our journey of turning possibilities into realities.`,
         iconName: "users-cog",
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
@@ -63,9 +62,9 @@ const WhyUsSectionHome = () => {
     },
     {
       data: {
+        id: 6,
         title: "Career Assistance",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
+        description: `Beyond projects, we're your partners in professional growth. With CodeNesters, expect more than just code – anticipate career assistance that propels you towards new heights.`,
         iconName: "bug",
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
@@ -93,7 +92,7 @@ const WhyUsSectionHome = () => {
               <div
                 className="whyUsCard"
                 style={cardData?.data?.cardInlineStyle}
-                key={Date.now() + Math.random()}
+                key={cardData?.data?.id}
               >
                 <div
                   className="icon"
