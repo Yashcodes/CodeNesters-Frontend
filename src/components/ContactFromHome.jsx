@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../styles/ContactFromHome.css";
 
-const ContactFromHome = () => {
+const ContactFromHome = ({ heading, mainContent, subContent }) => {
   return (
     <>
       <div className="container-fluid contact-home-bg">
@@ -12,13 +12,9 @@ const ContactFromHome = () => {
           <div className="p-0 d-flex justify-content-center align-items-center contact-home-content-parent">
             <div className="contact-home-content container">
               <div className="content-left">
-                <span className="mt-4">Are you interested?</span>
-                <h3 className="my-3">
-                  Entrust Your Project to Our Best Team of Professionals
-                </h3>
-                <p className="my-2">
-                  Have any project on mind? For immidiate support :
-                </p>
+                <span className="mt-4">{heading}</span>
+                <h3 className="my-3">{mainContent}</h3>
+                <p className="my-2">{subContent}</p>
                 <div className="contact-left-phone d-flex align-items-center gap-2 mt-2 mb-3">
                   <MDBIcon fas icon="mobile-alt" />
                   <span>+91 77228 14150</span>

@@ -55,7 +55,14 @@ const About = () => {
       />
 
       {/* //! Social Media Links */}
-      <ContactFromHome />
+      <ContactFromHome
+      heading={"Want your business grow online?"}
+        mainContent={
+          "We provide innovative website development solutions."
+        }
+
+        subContent={"Want to build your online portfolio? Contact us on:"}
+      />
     </Layout>
   );
 };
