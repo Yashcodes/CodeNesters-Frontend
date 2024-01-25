@@ -44,11 +44,11 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                     <span className="fs-5">LinkedIn</span>
                   </div>
 
-                  <div className="telegram-icon text-white">
-                    <div>
-                      <MDBIcon fab icon="telegram-plane" size="3x" />
-                    </div>
-                    <span className="fs-5">Telegram</span>
+                  <div className="whatsapp-icon text-white">
+                    <Link to="https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project.">
+                      <MDBIcon fab icon="whatsapp" size="3x" />
+                    </Link>
+                    <span className="fs-5">WhatsApp</span>
                   </div>
 
                   <div className="email-icon text-white">

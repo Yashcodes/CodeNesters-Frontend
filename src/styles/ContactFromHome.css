@@ -50,7 +50,7 @@
 
 .instagram-icon,
 .linkedin-icon,
-.telegram-icon,
+.whatsapp-icon,
 .email-icon {
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
 
 .instagram-icon > a,
 .linkedin-icon > a,
-.telegram-icon > a,
+.whatsapp-icon > a,
 .email-icon > a {
   color: white;
 }
