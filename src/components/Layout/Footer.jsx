@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
 
             <div className="" id="content-4">
-              <div className="footer-content-3">
+              <div className="footer-content-4">
                 <div className="content-4-head">
                   <h6 className="fw-bold">GET IN TOUCH</h6>
                 </div>
@@ -98,6 +98,37 @@ const Footer = () => {
                       <Link to={"mailto:codenesters3@gmail.com"}>
                         <MDBIcon fas icon="envelope" /> codenesters3@ gmail.com
                       </Link>
+                    </li>
+                    <li>
+                      <ul
+                        className="footer-icon-list d-flex align-items-center gap-3 mt-1"
+                        style={{ listStyle: "none", fontSize: "17px" }}
+                      >
+                        <li>
+                          <Link to={"https://instagram.com/codenesters"}>
+                            <MDBIcon fab icon="instagram" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={"https://linkedin.com/company/codenesters"}>
+                            <MDBIcon fab icon="linkedin" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to={
+                              "https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project."
+                            }
+                          >
+                            <MDBIcon fab icon="whatsapp" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="mailto:codenesters3@gmail.com">
+                            <MDBIcon far icon="envelope" />
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
