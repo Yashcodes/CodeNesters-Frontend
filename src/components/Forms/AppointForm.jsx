@@ -135,7 +135,18 @@ const AppointForm = () => {
                 </fieldset>
 
                 <div className="btns">
-                  <button className="btn btn-primary appoint-submit-btn" onClick={handleSubmit}>
+                  <button
+                    className="btn btn-primary appoint-submit-btn"
+                    onClick={handleSubmit}
+                    disabled={
+                      name === "" &&
+                      email === "" &&
+                      address === "" &&
+                      pincode === "" &&
+                      phone === "" &&
+                      message === ""
+                    }
+                  >
                     Submit
                   </button>
                 </div>
