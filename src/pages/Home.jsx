@@ -65,7 +65,11 @@ const Home = () => {
       <BusinessProblemHome />
 
       {/* //! Immediate contact from home  */}
-      <ContactFromHome />
+      <ContactFromHome
+        heading={"Are you interested?"}
+        mainContent={"Entrust Your Project to Our Best Team of Professionals"}
+        subContent={"Have any project on mind? For immediate support :"}
+      />
 
       {/* //! Testimonial  */}
       <Testimonial

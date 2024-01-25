@@ -58,10 +58,9 @@ const About = () => {
       <ContactFromHome
       heading={"Want your business grow online?"}
         mainContent={
-          "We provide innovative website development solutions."
+          "We Provide Innovative Website Development Solutions."
         }
-
-        subContent={"Want to build your online portfolio? Contact us on:"}
+        subContent={"Want to build your online portfolio? Contact us on :"}
       />
     </Layout>
   );
