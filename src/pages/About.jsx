@@ -4,9 +4,10 @@ import Layout from "../components/Layout/Layout";
 import AboutUs from "../components/AboutComponents/AboutUs";
 import AboutBanner from "../components/AboutComponents/AboutBanner";
 import Testimonial from "../components/Testimonial";
-import founder1 from "../assets/images/FounderImage/founder-1.jpg"
-import founder2 from "../assets/images/FounderImage/founder-2.png"
-import founder3 from "../assets/images/FounderImage/founder-3.jpg"
+import founder1 from "../assets/images/FounderImage/founder-1.jpg";
+import founder2 from "../assets/images/FounderImage/founder-2.png";
+import founder3 from "../assets/images/FounderImage/founder-3.jpg";
+import ContactFromHome from "../components/ContactFromHome";
 
 const About = () => {
   const FoundersData = [
@@ -47,7 +48,14 @@ const About = () => {
       <AboutUs />
 
       {/* //! Founders Section  */}
-      <Testimonial Data={FoundersData} title="Business Foundation" caption="Meet Our Expert Team" />
+      <Testimonial
+        Data={FoundersData}
+        title="Business Foundation"
+        caption="Meet Our Expert Team"
+      />
+
+      {/* //! Social Media Links */}
+      <ContactFromHome />
     </Layout>
   );
 };
