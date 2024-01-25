@@ -156,24 +156,27 @@ const AppointForm = () => {
             <div className="col-md-6">
               <h3 className="why-appoint-head">Why Connect With Us</h3>
               <div className="why-appoint-cont my-4">
-                <h5>24/7 Hours Available</h5>
+                <h5 style={{ color: "rgb(65 64 64)" }}>24/7 Hours Available</h5>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est aspernatur eum.
+                  Need assistance at any time? We're here for you 24/7, ensuring
+                  support and guidance whenever you require it.
                 </p>
               </div>
               <div className="why-appoint-cont">
-                <h5>Experienced Staff Available</h5>
+                <h5 style={{ color: "rgb(65 64 64)" }}>
+                  Experienced Staff Available
+                </h5>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est.
+                  Our team brings years of expertise to the table, assuring
+                  top-notch service and reliable solutions for your needs.
                 </p>
               </div>
               <div className="why-appoint-cont my-4">
-                <h5>Low Fees &amp; Price</h5>
+                <h5 style={{ color: "rgb(65 64 64)" }}>Low Fees &amp; Price</h5>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est aspernatur eum.
+                  Get premium solutions without the premium price tag. We
+                  believe in making excellence accessible through
+                  budget-friendly services at CodeNesters.
                 </p>
               </div>
             </div>
