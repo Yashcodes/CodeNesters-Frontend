@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const Course = () => {
-  const [cardData, setCardData] = useState("");
+  const [cardData, setCardData] = useState({});
 
   useEffect(() => {
-    const { card } = JSON.parse(localStorage.getItem("cardData"));
+    const card = JSON.parse(localStorage.getItem("cardData"));
 
-    setCardData(card);
+    setCardData(card?.card);
   }, []);
 
   return (

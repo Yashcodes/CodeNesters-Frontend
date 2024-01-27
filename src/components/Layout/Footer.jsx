@@ -90,7 +90,7 @@ const Footer = () => {
                 <div className="footer-content-list">
                   <ul>
                     <li>
-                      <Link to={"tel:7722814150"}>
+                      <Link to={""}>
                         <MDBIcon fas icon="phone" /> 7722814150
                       </Link>
                     </li>
