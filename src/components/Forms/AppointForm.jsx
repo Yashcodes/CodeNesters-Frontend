@@ -43,8 +43,6 @@ const AppointForm = () => {
       setAddress("");
       setPincode("");
       setMessage("");
-
-      console.log(userData);
     } catch (error) {
       toast.error("Error in submitting form");
     }

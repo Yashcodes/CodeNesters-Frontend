@@ -53,7 +53,6 @@ const Register = () => {
       );
 
       if (data.success) {
-        console.log(data);
         setAuth({
           ...auth,
           user: data.user,
