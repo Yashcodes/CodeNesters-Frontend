@@ -113,7 +113,7 @@ const CourseSection = () => {
                     >
                       {cardData?.card?.title}
                     </h4>
-                    <span className="badge badge-success">50% off</span>
+                    <span className="badge badge-success">{cardData?.card?.discount}</span>
                   </div>
                   <p className="text-justify" style={{ fontSize: "16px" }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
