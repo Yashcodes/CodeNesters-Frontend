@@ -1,11 +1,12 @@
 import React from "react";
-import CourseBanner from "../components/CourseComponents/CourseBanner";
+import "../styles/Services.css";
 import Layout from "../components/Layout/Layout";
+import ServiceBanner from "../components/ServicesComponents/ServiceBanner";
 
 const Services = () => {
   return (
     <Layout>
-      <CourseBanner />a
+      <ServiceBanner />a
     </Layout>
   );
 };
