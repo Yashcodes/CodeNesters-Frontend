@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const ProjectSection = () => {
   return (
     <>
-      <div className="testimonial-container my-5 p-4">
+      <div className="testimonial-container my-5">
         <Swiper
           slidesPerView={window.innerWidth <= "996px" ? 1 : 2}
           spaceBetween={30}
@@ -29,8 +29,8 @@ const ProjectSection = () => {
             1024: {
               slidesPerView: 2,
             },
-            900: {
-              slidesPerView: 2,
+            996: {
+              slidesPerView: 1,
             },
             640: {
               slidesPerView: 1,
@@ -242,7 +242,7 @@ const ProjectSection = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
