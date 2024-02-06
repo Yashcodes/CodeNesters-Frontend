@@ -18,8 +18,8 @@ const ServiceBanner = () => {
             </p>
 
             <div className="contact-us-btn d-flex flex-row gap-2 flex-wrap">
-              <Link className="btn contact-banner-btn" to={"/services"}>
-                View services
+              <Link className="btn contact-banner-btn" to={"/courses"}>
+                Courses
               </Link>
               <Link className="btn contact-banner-btn" to={"/contact"}>
                 Contact Us
