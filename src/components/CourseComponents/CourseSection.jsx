@@ -9,7 +9,7 @@ const CourseSection = () => {
 
   const getAllCourses = useCallback(async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/v1/course/get-all-courses"
+      "https://code-nesters-backend.vercel.app/api/v1/course/get-all-courses"
     );
 
     setCourses(response.data.courses);

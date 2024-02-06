@@ -23,7 +23,7 @@ const App = (
 );
 
 if (container.hasChildNodes()) {
-  hydrateRoot(App, container);
+  hydrateRoot(container);
 } else {
   root.render(App);
 }
