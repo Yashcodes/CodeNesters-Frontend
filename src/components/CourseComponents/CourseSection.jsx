@@ -65,15 +65,9 @@ const CourseSection = () => {
                     <Link
                       className="btn contact-banner-btn"
                       to={`/courses/${slugify(
-                        course?.courseName,
+                        course?._id,
                         "-"
                       ).toLowerCase()}`}
-                      onClick={() => {
-                        localStorage.setItem(
-                          "cardData",
-                          JSON.stringify(courses)
-                        );
-                      }}
                     >
                       View Details
                     </Link>

@@ -16,11 +16,11 @@ import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
 import Blogs from "./pages/Blogs";
-import Course from "./components/CourseComponents/Course";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfServices from "./pages/TermsOfServices";
 import CancellationAndRefund from "./pages/CancellationAndRefund";
 import Events from "./pages/Events";
+import Course from "./pages/Course";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/courses/:slug" element={<Course />} />
+        <Route path="/courses/:id" element={<Course />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
