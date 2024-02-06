@@ -26,7 +26,7 @@ const ProjectSection = () => {
         </h2>
 
         <Swiper
-          slidesPerView={window.innerWidth <= "996px" ? 1 : 2}
+          slidesPerView={2}
           spaceBetween={30}
           pagination={{
             clickable: true,
