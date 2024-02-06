@@ -1,83 +1,23 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CourseImage from "../../assets/images/contact/c1.jpg";
 import slugify from "slugify";
+import axios from "axios";
 
 const CourseSection = () => {
-  const courseCardData = [
-    {
-      card: {
-        title: "MERN Stack Development",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-right",
-      },
-    },
-    {
-      card: {
-        title: "Flutter with Firebase",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-down",
-      },
-    },
-    {
-      card: {
-        title: "PHP with MySQL",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-left",
-      },
-    },
-    {
-      card: {
-        title: "Python Programming",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-right",
-      },
-    },
-    {
-      card: {
-        title: "C++ Programming",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-up",
-      },
-    },
-    {
-      card: {
-        title: "PHP with MySQL",
-        discount: "50% off",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Blanditiis quo saepe voluptatem perferendis cupiditate
-        molestias unde! Fuga non id architecto perspiciatis. Vel
-        possimus architecto beatae?`,
-        price: "3499",
-        aos: "zoom-out-left",
-      },
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+
+  const getAllCourses = useCallback(async () => {
+    const response = await axios.get(
+      "http://localhost:5000/api/v1/course/get-all-courses"
+    );
+
+    setCourses(response.data.courses);
+  }, []);
+
+  useEffect(() => {
+    getAllCourses();
+  }, [getAllCourses]);
 
   return (
     <div className="py-5">
@@ -93,8 +33,8 @@ const CourseSection = () => {
 
       <div className="course-cards container px-5">
         <div className="row d-flex flex-wrap flex-row my-5">
-          {courseCardData.map((cardData) => (
-            <div className="col-md-4 my-2">
+          {courses?.map((course) => (
+            <div className="col-md-4 my-2" key={course?._id}>
               <div className="course-card border shadow">
                 <div className="card-img course-card-img img-fluid">
                   <img
@@ -111,28 +51,27 @@ const CourseSection = () => {
                       className="text-black"
                       style={{ fontSize: "22px", fontWeight: "600" }}
                     >
-                      {cardData?.card?.title}
+                      {course?.courseName}
                     </h4>
-                    <span className="badge badge-success">{cardData?.card?.discount}</span>
+                    <span className="badge badge-success">
+                      {`${course?.coursePriceDiscount}% off`}
+                    </span>
                   </div>
                   <p className="text-justify" style={{ fontSize: "16px" }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Blanditiis quo saepe voluptatem perferendis cupiditate
-                    molestias unde! Fuga non id architecto perspiciatis. Vel
-                    possimus architecto beatae?
+                    {course?.courseContent}
                   </p>
 
                   <div className="course-card-btn d-flex align-items-center gap-2">
                     <Link
                       className="btn contact-banner-btn"
                       to={`/courses/${slugify(
-                        cardData.card.title,
+                        course?.courseName,
                         "-"
                       ).toLowerCase()}`}
                       onClick={() => {
                         localStorage.setItem(
                           "cardData",
-                          JSON.stringify(cardData)
+                          JSON.stringify(courses)
                         );
                       }}
                     >
@@ -141,7 +80,7 @@ const CourseSection = () => {
 
                     <div className="card-price">
                       <span className="m-0 text-gradient">
-                        Rs. 3499/-
+                        Rs. {course?.courseDiscountedPrice}
                         <p
                           className="text-decoration-line-through d-inline"
                           style={{
@@ -150,7 +89,7 @@ const CourseSection = () => {
                             color: "gray",
                           }}
                         >
-                          Rs. 6999
+                          Rs. {course?.coursePrice}
                         </p>
                       </span>
                     </div>
