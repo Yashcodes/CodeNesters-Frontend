@@ -136,14 +136,6 @@ const AppointForm = () => {
                   <button
                     className="btn btn-primary appoint-submit-btn"
                     onClick={handleSubmit}
-                    disabled={
-                      name === "" &&
-                      email === "" &&
-                      address === "" &&
-                      pincode === "" &&
-                      phone === "" &&
-                      message === ""
-                    }
                   >
                     Submit
                   </button>
