@@ -242,7 +242,7 @@ const ProjectSection = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </div>
+    </>
   );
 };
 
