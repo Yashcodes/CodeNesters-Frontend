@@ -12,8 +12,19 @@ import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
   return (
-    <>
-      <div className="testimonial-container my-5">
+    <div className="container p-5">
+      <div className="testimonial-container">
+        <h4
+          className="text-center"
+          style={{ color: "#a87fff", fontWeight: "600" }}
+        >
+          {"OUR PROJECTS"}
+        </h4>
+        <h2 className="fs-1 text-black fw-bold whyUsHeading text-center mb-5">
+          Discover our portfolio featuring <br />
+          real projects and impactful solutions
+        </h2>
+
         <Swiper
           slidesPerView={window.innerWidth <= "996px" ? 1 : 2}
           spaceBetween={30}
@@ -29,8 +40,8 @@ const ProjectSection = () => {
             1024: {
               slidesPerView: 2,
             },
-            900: {
-              slidesPerView: 2,
+            996: {
+              slidesPerView: 1,
             },
             640: {
               slidesPerView: 1,
@@ -242,7 +253,7 @@ const ProjectSection = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
