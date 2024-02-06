@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const ProjectSection = () => {
   return (
     <>
-      <div className="testimonial-container my-5">
+      <div className="testimonial-container my-5 p-4">
         <Swiper
           slidesPerView={window.innerWidth <= "996px" ? 1 : 2}
           spaceBetween={30}
