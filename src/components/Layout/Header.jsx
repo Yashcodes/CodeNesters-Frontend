@@ -67,6 +67,15 @@ const Header = () => {
               </li>
               <li className="nav-item mx-1">
                 <Link
+                  to={"/services"}
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  Services
+                </Link>
+              </li>
+              <li className="nav-item mx-1">
+                <Link
                   to={"/contact"}
                   className="nav-link active"
                   aria-current="page"

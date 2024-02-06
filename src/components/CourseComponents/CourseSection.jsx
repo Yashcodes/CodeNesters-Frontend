@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CourseImage from "../../assets/images/contact/c1.jpg";
 import slugify from "slugify";
 import axios from "axios";
-import Loading from "../Utils/Loading";
+import Loading from "../../Utils/Loading";
 
 const CourseSection = () => {
   const [courses, setCourses] = useState([]);

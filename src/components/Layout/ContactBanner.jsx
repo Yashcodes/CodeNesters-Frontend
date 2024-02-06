@@ -22,7 +22,7 @@ const ContactBanner = () => {
                     with a simple click. <br />
                     Let's Build Your Digital Success Story Together.
                   </p>
-                  <Link className="btn contact-banner-btn">View Services</Link>
+                  <Link className="btn contact-banner-btn" to={"/services"}>View Services</Link>
                 </div>
               </div>
             </div>

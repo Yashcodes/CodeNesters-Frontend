@@ -21,6 +21,7 @@ import TermsOfServices from "./pages/TermsOfServices";
 import CancellationAndRefund from "./pages/CancellationAndRefund";
 import Events from "./pages/Events";
 import Course from "./pages/Course";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -39,7 +40,11 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-services" element={<TermsOfServices />} />
-        <Route path="/cancellation-and-refund" element={<CancellationAndRefund />} />
+        <Route
+          path="/cancellation-and-refund"
+          element={<CancellationAndRefund />}
+        />
+        <Route path="/services" element={<Services />} />
 
         {/* //! Protected Routes for Users  */}
         <Route path="/dashboard" element={<Private />}>

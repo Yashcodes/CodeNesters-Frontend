@@ -32,9 +32,9 @@ const HeroSectionHome = () => {
           <div className="hero-btn mb-3 mt-1">
             <button
               className="btn hero-btn-1"
-              onClick={() => navigate("/courses")}
+              onClick={() => navigate("/services")}
             >
-              View Courses
+              View Services
             </button>
             <button
               className="btn hero-btn-2"
