@@ -66,3 +66,24 @@
   justify-items: center;
   justify-content: center;
 }
+
+/*! Contact form for services */
+
+.service-page-input input {
+  padding: 6px 4px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid darkviolet;
+  caret-color: rgb(127, 9, 187);
+  font-size: 18px;
+  color: rgb(53, 61, 69);
+}
+
+.service-page-input input:focus {
+  border-color: darkviolet;
+}
+
+.service-page-input label {
+  color: black;
+  font-size: 18px;
+}

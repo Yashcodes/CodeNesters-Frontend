@@ -52,7 +52,7 @@ const ProjectSection = () => {
           className="text-center"
           style={{ color: "#a87fff", fontWeight: "600" }}
         >
-          {"OUR PROJECTS"}
+          OUR PROJECTS
         </h4>
         <h2 className="fs-1 text-black fw-bold whyUsHeading text-center mb-5">
           Discover our portfolio featuring <br />

@@ -4,6 +4,7 @@ import Layout from "../components/Layout/Layout";
 import ServiceBanner from "../components/ServicesComponents/ServiceBanner";
 import ProjectSection from "../components/ServicesComponents/ProjectSection";
 import WhyUsSectionHome from "../components/WhyUsSectionHome";
+import ContactForServices from "../components/ServicesComponents/ContactForServices";
 
 const Services = () => {
   const whyUsCardData = [
@@ -91,6 +92,8 @@ const Services = () => {
       />
 
       <ProjectSection />
+
+      <ContactForServices />
     </Layout>
   );
 };
