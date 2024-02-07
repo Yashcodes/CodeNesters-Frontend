@@ -8,6 +8,7 @@ import founder1 from "../assets/images/FounderImage/founder-1.jpg";
 import founder2 from "../assets/images/FounderImage/founder-2.png";
 import founder3 from "../assets/images/FounderImage/founder-3.jpg";
 import ContactFromHome from "../components/ContactFromHome";
+import Founders from "../components/AboutComponents/Founders";
 
 const About = () => {
   const FoundersData = [
@@ -48,18 +49,13 @@ const About = () => {
       <AboutUs />
 
       {/* //! Founders Section  */}
-      <Testimonial
-        Data={FoundersData}
-        title="Business Foundation"
-        caption="Meet Our Expert Team"
-      />
+      <Founders />
+      {/* <Testimonial title={"Hii"} caption={"dag"} Data={FoundersData}/> */}
 
       {/* //! Social Media Links */}
       <ContactFromHome
-      heading={"Want your business grow online?"}
-        mainContent={
-          "We Provide Innovative Website Development Solutions."
-        }
+        heading={"Want your business grow online?"}
+        mainContent={"We Provide Innovative Website Development Solutions."}
         subContent={"Want to build your online portfolio? Contact us on :"}
       />
     </Layout>

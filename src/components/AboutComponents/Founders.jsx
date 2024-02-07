@@ -1,174 +1,206 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import founder1 from "../../assets/images/FounderImage/founder1.jpeg";
-import img from "../../assets/images/FounderImage/founder-1.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
+import founder1 from "../../assets/images/FounderImage/founder-1.jpg";
+import founder2 from "../../assets/images/FounderImage/founder-2.png";
+import founder3 from "../../assets/images/FounderImage/founder-3.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
 
 const Founders = () => {
-  const founderCardData = [
+  const Data = [
     {
       card: {
-        name: "Yash Parihar",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
-        instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: founder1,
+        id: 1,
+        title: "Bhagvendra Singh Parihar",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder1,
       },
     },
-
     {
       card: {
-        name: "Jalla Upendra Rao",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
-        instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: img,
+        id: 2,
+        title: "Jalla Upendra Rao",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder2,
       },
     },
-
     {
       card: {
-        name: "Yash Parihar",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
-        instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: founder1,
+        id: 3,
+        title: "Ashish Tripathi",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder3,
+      },
+    },
+    {
+      card: {
+        id: 4,
+        title: "Soham Patharkar",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder1,
+      },
+    },
+    {
+      card: {
+        id: 5,
+        title: "Aditya Raut",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder2,
+      },
+    },
+    {
+      card: {
+        id: 6,
+        title: "Anurag Verma",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder3,
+      },
+    },
+    {
+      card: {
+        id: 7,
+        title: "Priyanshu Patel",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder1,
       },
     },
   ];
 
   return (
-    <div className="founder-section-bg p-5">
-      <h4
-        className="text-center"
-        style={{ color: "#a87fff", fontWeight: "600" }}
-      >
-        BUSINESS FOUNDATION
-      </h4>
-      <h2 className="fs-1 fw-bold text-black text-center">
-        Meet Our Expert Team
-      </h2>
-
-      <div className="container my-5" style={{}}>
-        <Carousel
-          showArrows={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          showStatus={false}
-          autoPlay={true}
-          interval={3000}
-          stopOnHover={true}
-          transitionTime={1500}
-          useKeyboardArrows={true}
-          swipeable={true}
-          emulateTouch={true}
-          showIndicators={true}
+    <section className="founders-section mt-5 p-4">
+      <div className="container">
+        <h4
+          className="text-center"
+          style={{ color: "#a87fff", fontWeight: "600" }}
         >
-          {founderCardData.map((cardData) => (
-            <div
-              className="card-container d-flex flex-row flex-wrap  align-items-start shadow mx-auto"
-              style={{ maxWidth: "1000px", borderRadius: "8px" }}
-            >
-              <div className="card-container-left" style={{ width: "380px" }}>
-                <img
-                  className="img-responsive"
-                  src={cardData?.card?.image}
-                  alt=""
-                  style={{
-                    maxWidth: "380px",
-                    height: "400px",
-                    borderRadius: "8px 0px 0px 8px",
-                  }}
-                />
-              </div>
+          BUSINESS FOUNDATION
+        </h4>
+        <h2
+          className="fs-1 fw-bold text-black text-center"
+          style={{ marginBottom: "60px" }}
+        >
+          Meet Our Expert Team
+        </h2>
 
-              <div className="card-container-right" style={{ width: "615px" }}>
-                <div
-                  className="right-card-content"
-                  style={{ padding: "22px 26px 22px 12px" }}
-                >
-                  <h2 className="m-0">{cardData?.card?.name}</h2>
-                  <p className="fs-5 mb-2">{cardData?.card?.designation}</p>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{ delay: 3000 }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            },
+            120: {
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Pagination, Autoplay, Keyboard]}
+          className="mySwiper px-2 pt-2 pb-5"
+        >
+          <div className="mb-5">
+            {Data.map((founder) => (
+              <SwiperSlide key={founder?.card?.id}>
+                <div className="founders-card shadow mb-4">
+                  <div className="founder-profile m-0">
+                    <div className="left">
+                      <img src={founder?.card?.img} alt="founder1" />
+                    </div>
 
-                  <p
-                    className="founder-card-para"
-                    style={{
-                      textAlign: "justify",
-                      textJustify: "inter-word",
-                    }}
-                  >
-                    {cardData?.card?.about}
-                  </p>
+                    <div className="right">
+                      <p>{founder?.card?.title}</p>
+                      <span>Founder & CEO</span>
 
-                  <div className="founder-icons d-flex gap-2">
-                    <Link to={`${cardData?.card?.linkedin}`}>
-                      <MDBIcon
-                        fab
-                        icon="linkedin"
-                        size="lg"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
+                      <div className="founder-icons">
+                        <Link
+                          to={"mailTo:pariharyash1989@gmail.com"}
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: " 0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            far
+                            icon="envelope"
+                            className="founder-icon"
+                          />
+                        </Link>
+                        <Link
+                          to={"https://instagram.com/asynchronous.1"}
+                          target="_blank"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: " 0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            fab
+                            icon="instagram"
+                            className="founder-icon"
+                          />
+                        </Link>
+                        <Link
+                          to={"https://linkedin.com/in/bhagvendra-singh"}
+                          target="_blank"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: "0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            fab
+                            icon="linkedin-in"
+                            className="founder-icon"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
 
-                    <Link to={`${cardData?.card?.github}`}>
-                      <MDBIcon
-                        fab
-                        icon="github"
-                        size="lg"
-                        className="ms-1"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
-
-                    <Link to={`${cardData?.card?.instagram}`}>
-                      <MDBIcon
-                        fab
-                        icon="instagram"
-                        size="lg"
-                        className="ms-1 text-gradient"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
+                  <div className="founder-about">
+                    <p className="text-justify">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Eveniet earum dolor distinctio porro impedit consequuntur
+                      eius tempora quod officiis quae? Quidem exercitationem
+                      voluptas earum quis Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Corporis, nam.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
+              </SwiperSlide>
+            ))}
+          </div>
+        </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 
