@@ -44,7 +44,7 @@ const Services = () => {
     {
       data: {
         id: 4,
-        title: "Flutter App Development",
+        title: "Mobile App Development",
         description: `We're more than techies, we're your partners in success! Get ready for friendly guidance and constant support. Your journey is important, and we're here to make it smooth.`,
         iconName: "mobile-alt",
         iconType: "fas",

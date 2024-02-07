@@ -3,9 +3,12 @@ import Select from "react-select";
 
 const ContactForServices = () => {
   const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
+    { value: "landingPages", label: "Landing Pages" },
+    { value: "portfolioCreation", label: "Portfolio Creation" },
+    { value: "webDevelopment", label: "Web Development" },
+    { value: "mobileAppDevelopment", label: "Mobile App Development" },
+    { value: "frontendDevelopment", label: "Fronted Development" },
+    { value: "webHosting", label: "Web Hosting" },
   ];
 
   const [selectedOption, setSelectedOption] = useState([]);
@@ -13,8 +16,6 @@ const ContactForServices = () => {
   const handleSelectChange = (selected) => {
     setSelectedOption(selected);
   };
-
-  console.log(selectedOption);
 
   return (
     <div className="container p-5">
