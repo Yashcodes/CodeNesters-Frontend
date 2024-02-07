@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const ContactForServices = () => {
   const options = [
@@ -17,15 +19,44 @@ const ContactForServices = () => {
   const [phone, setPhone] = useState("");
   const [selectedServices, setSelectedServices] = useState([]);
   const [message, setMessage] = useState("");
+  const [pincode, setPincode] = useState("");
 
   const handleSelectChange = (selected) => {
     setSelectedServices(selected);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log({ name, email, phone, place, message, selectedServices });
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/service/submit",
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          name,
+          email,
+          place,
+          phone,
+          services: selectedServices,
+          message,
+          pincode,
+        }
+      );
+
+      toast.success("Form submitted Successfully");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setPlace("");
+      setPincode("");
+      setMessage("");
+      setSelectedServices([]);
+    } catch (error) {
+      toast.error("Error in submitting form");
+    }
   };
 
   return (
@@ -121,7 +152,7 @@ const ContactForServices = () => {
               </div>
 
               <div className="row flex-wrap">
-                <div className="input-message service-page-input d-flex flex-column col-md-12">
+                <div className="input-message service-page-input d-flex flex-column col-md-6">
                   <label htmlFor="message">Message</label>
                   <input
                     type="text"
@@ -129,6 +160,17 @@ const ContactForServices = () => {
                     autoComplete="off"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
+
+                <div className="input-pincode service-page-input d-flex flex-column col-md-6">
+                  <label htmlFor="pincode">Pincode</label>
+                  <input
+                    type="text"
+                    id="pincode"
+                    autoComplete="off"
+                    value={pincode}
+                    onChange={(e) => setPincode(e.target.value)}
                   />
                 </div>
               </div>
