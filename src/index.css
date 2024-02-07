@@ -9,6 +9,7 @@
 *,
 html,
 body {
+  scrollbar-width: none;
   scroll-behavior: smooth !important;
 }
 

@@ -1,14 +1,9 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import gitEvent from "../../assets/images/events/git-event.jpg";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
 import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const ProjectSection = () => {
   return (

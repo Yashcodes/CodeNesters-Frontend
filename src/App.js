@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 //! Pages
 import Home from "./pages/Home";
@@ -56,6 +57,29 @@ function App() {
         {/*//! If above routes are not found then the "*" sign will show the specified page */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+
+      <div
+        style={{ borderRadius: "50%", cursor: "pointer" }}
+        onClick={() => window.scrollTo({ top: 0, left: 0 })}
+      >
+        <MDBIcon
+          fas
+          icon="arrow-circle-up"
+          style={{
+            fontSize: "28px",
+            position: "fixed",
+            bottom: "22px",
+            right: "22px",
+            padding: "14px",
+            margin: 0,
+            borderRadius: "50%",
+            boxShadow: "none",
+          }}
+          color="white"
+          background="linearGradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)"
+          className="btn-grad"
+        />
+      </div>
     </>
   );
 }
