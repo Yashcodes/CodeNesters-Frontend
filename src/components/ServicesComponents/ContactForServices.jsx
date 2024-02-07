@@ -30,7 +30,7 @@ const ContactForServices = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/service/submit",
+        "https://code-nesters-backend.vercel.app/api/v1/service/submit",
         {
           headers: {
             "Content-Type": "application/json",
