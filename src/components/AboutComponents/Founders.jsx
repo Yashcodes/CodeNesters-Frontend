@@ -119,6 +119,7 @@ const Founders = () => {
           }}
           modules={[Pagination, Autoplay, Keyboard]}
           className="mySwiper px-2 pt-2 pb-5"
+          style={{zIndex :  "-1"}}
         >
           <div className="mb-5">
             {Data.map((founder) => (

@@ -59,7 +59,7 @@ function App() {
       </Routes>
 
       <div
-        style={{ borderRadius: "50%", cursor: "pointer" }}
+        style={{ borderRadius: "50%", cursor: "pointer", zIndex : "400" }}
         onClick={() => window.scrollTo({ top: 0, left: 0 })}
       >
         <MDBIcon
