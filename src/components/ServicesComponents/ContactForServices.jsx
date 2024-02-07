@@ -11,10 +11,21 @@ const ContactForServices = () => {
     { value: "webHosting", label: "Web Hosting" },
   ];
 
-  const [selectedOption, setSelectedOption] = useState([]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [place, setPlace] = useState("");
+  const [phone, setPhone] = useState("");
+  const [selectedServices, setSelectedServices] = useState([]);
+  const [message, setMessage] = useState("");
 
   const handleSelectChange = (selected) => {
-    setSelectedOption(selected);
+    setSelectedServices(selected);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log({ name, email, phone, place, message, selectedServices });
   };
 
   return (
@@ -36,24 +47,48 @@ const ContactForServices = () => {
               <div className="row flex-wrap">
                 <div className="input-name service-page-input d-flex flex-column col-md-6">
                   <label htmlFor="name">Name</label>
-                  <input type="text" id="name" autoComplete="off" />
+                  <input
+                    type="text"
+                    id="name"
+                    autoComplete="off"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </div>
 
                 <div className="input-email service-page-input d-flex flex-column col-md-6">
                   <label htmlFor="email">Email</label>
-                  <input type="email" id="email" autoComplete="off" />
+                  <input
+                    type="email"
+                    id="email"
+                    autoComplete="off"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </div>
               </div>
 
               <div className="row flex-wrap">
                 <div className="input-place service-page-input d-flex flex-column col-md-6">
                   <label htmlFor="place">Place</label>
-                  <input type="text" id="place" autoComplete="off" />
+                  <input
+                    type="text"
+                    id="place"
+                    autoComplete="off"
+                    value={place}
+                    onChange={(e) => setPlace(e.target.value)}
+                  />
                 </div>
 
                 <div className="input-phone service-page-input d-flex flex-column col-md-6">
                   <label htmlFor="phone">Mobile No.</label>
-                  <input type="text" id="phone" autoComplete="off" />
+                  <input
+                    type="text"
+                    id="phone"
+                    autoComplete="off"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
                 </div>
               </div>
 
@@ -61,7 +96,7 @@ const ContactForServices = () => {
                 <div className="input-services service-page-input d-flex flex-column col-md-12">
                   <label htmlFor="services">Services</label>
                   <Select
-                    defaultValue={selectedOption}
+                    defaultValue={selectedServices}
                     onChange={handleSelectChange}
                     options={options}
                     isMulti
@@ -80,7 +115,7 @@ const ContactForServices = () => {
                       }),
                     }}
                     placeholder="Select Services"
-                    value={selectedOption}
+                    value={selectedServices}
                   />
                 </div>
               </div>
@@ -88,7 +123,13 @@ const ContactForServices = () => {
               <div className="row flex-wrap">
                 <div className="input-message service-page-input d-flex flex-column col-md-12">
                   <label htmlFor="message">Message</label>
-                  <input type="text" id="message" autoComplete="off" />
+                  <input
+                    type="text"
+                    id="message"
+                    autoComplete="off"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
                 </div>
               </div>
 
@@ -100,6 +141,7 @@ const ContactForServices = () => {
                   fontSize: "14px",
                   padding: "10px 14px",
                 }}
+                onClick={handleSubmit}
               >
                 Submit
               </button>
