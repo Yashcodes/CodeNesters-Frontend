@@ -4,6 +4,8 @@ import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
+import { MDBIcon } from "mdb-react-ui-kit";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ProjectSection = () => {
   const ProjectData = [
@@ -13,7 +15,33 @@ const ProjectSection = () => {
         title: "E-Commerce Project",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem eveniet error unde quia, sed doloremque blanditiis accusamus veniam atque, et doloribus deserunt iste!",
-        rating: "4",
+        rating: [
+          {
+            id: 1,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 2,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 3,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 4,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 5,
+            icon: <FaRegStar size={"22px"} />,
+            color: "Yellow",
+          },
+        ],
       },
     },
     {
@@ -22,7 +50,25 @@ const ProjectSection = () => {
         title: "Ed-tech Website",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem eveniet error unde quia, sed doloremque blanditiis accusamus veniam atque, et doloribus deserunt iste!",
-        rating: "5",
+        rating: [
+          {
+            id: 1,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 2,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 3,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          { id: 4, icon: <FaStar size={"22px"} />, color: "Yellow" },
+          { id: 5, icon: <FaStar size={"22px"} />, color: "Yellow" },
+        ],
       },
     },
     {
@@ -31,7 +77,29 @@ const ProjectSection = () => {
         title: "Business Portfolio",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem eveniet error unde quia, sed doloremque blanditiis accusamus veniam atque, et doloribus deserunt iste!",
-        rating: "3.5",
+        rating: [
+          { id: 1, icon: <FaStar size={"22px"} />, color: "Yellow" },
+          {
+            id: 2,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 3,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 4,
+            icon: <FaStarHalfAlt size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 5,
+            icon: <FaRegStar size={"22px"} />,
+            color: "Yellow",
+          },
+        ],
       },
     },
     {
@@ -40,7 +108,29 @@ const ProjectSection = () => {
         title: "Spices Business Portfolio",
         description:
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem eveniet error unde quia, sed doloremque blanditiis accusamus veniam atque, et doloribus deserunt iste!",
-        rating: "4.5",
+        rating: [
+          { id: 1, icon: <FaStar size={"22px"} />, color: "Yellow" },
+          {
+            id: 2,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 3,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 4,
+            icon: <FaStar size={"22px"} />,
+            color: "Yellow",
+          },
+          {
+            id: 5,
+            icon: <FaStarHalfAlt size={"22px"} />,
+            color: "Yellow",
+          },
+        ],
       },
     },
   ];
@@ -65,7 +155,7 @@ const ProjectSection = () => {
           pagination={{
             clickable: true,
           }}
-          autoplay={{ delay: 3000 }}
+          // autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
           keyboard={{
             enabled: true,
             onlyInViewport: true,
@@ -125,18 +215,21 @@ const ProjectSection = () => {
                               to={"https://book.stripe.com/aEU5mb8Bt0Ea39maEE"}
                             >
                               <button className="btn contact-banner-btn">
-                                Book Now
+                                View Project
                               </button>
                             </Link>
                             <div className="event-price d-flex justify-content-between flex-wrap">
-                              <p className="m-0">
-                                Price : Rs. 19/-{" "}
-                                <span
-                                  style={{ textDecoration: "line-through" }}
-                                  className="text-danger"
-                                >
-                                  Rs. 49
-                                </span>
+                              <p className="m-0 d-flex gap-1 align-items-center">
+                                <span>Rating: </span>
+
+                                {project?.card?.rating.map((rating) => (
+                                  <span
+                                    style={{ marginBottom: "6px" }}
+                                    key={rating?.id}
+                                  >
+                                    {rating?.icon}
+                                  </span>
+                                ))}
                               </p>
                             </div>
                           </div>

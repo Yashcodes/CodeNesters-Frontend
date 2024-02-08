@@ -82,6 +82,7 @@ const Services = () => {
 
       {/* //! Using whyUs section as services section */}
       <WhyUsSectionHome
+        key={Math.random() + Date.now()}
         sectionCardData={whyUsCardData}
         sectionHeading={"OUR SERVICES"}
         headingContent={[
