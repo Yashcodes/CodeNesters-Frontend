@@ -155,7 +155,7 @@ const ProjectSection = () => {
           pagination={{
             clickable: true,
           }}
-          // autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
+          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
           keyboard={{
             enabled: true,
             onlyInViewport: true,
@@ -224,7 +224,10 @@ const ProjectSection = () => {
 
                                 {project?.card?.rating.map((rating) => (
                                   <span
-                                    style={{ marginBottom: "6px" }}
+                                    style={{
+                                      marginBottom: "6px",
+                                      color: "darkViolet",
+                                    }}
                                     key={rating?.id}
                                   >
                                     {rating?.icon}

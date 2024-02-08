@@ -9,6 +9,7 @@ import founder2 from "../../assets/images/FounderImage/founder-2.png";
 import founder3 from "../../assets/images/FounderImage/founder-3.jpg";
 import founder4 from "../../assets/images/FounderImage/founder-4.jpg";
 import founder5 from "../../assets/images/FounderImage/founder-5.jpg";
+import founder6 from "../../assets/images/FounderImage/founder-6.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
 
 const Founders = () => {
@@ -33,8 +34,8 @@ const Founders = () => {
         description: "Hey, I want to avail your services",
         img: founder2,
         email: "",
-        instagram: "",
-        linkedin: "",
+        instagram: "https://www.instagram.com/upendrarao_01/",
+        linkedin: "https://www.linkedin.com/in/upendra-rao/",
       },
     },
     {
@@ -45,7 +46,7 @@ const Founders = () => {
         description: "Hey, I want to avail your services",
         img: founder3,
         email: "ashishtrip27@gmail.com",
-        instagram: "",
+        instagram: "https://www.instagram.com/ashishtripathi_________/",
         linkedin: "https://www.linkedin.com/in/ashish-triapthi/",
       },
     },
@@ -56,31 +57,31 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder4,
-        email: "",
-        instagram: "",
-        linkedin: "",
+        email: "sohampatharkar48@gmail.com",
+        instagram: "https://www.instagram.com/sohampatharkar48/",
+        linkedin: "https://www.linkedin.com/in/soham-patharkar-547b75222/",
       },
     },
     {
       card: {
         id: 5,
-        title: "Aditya Raut",
+        title: "Anurag Verma",
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
-        img: founder2,
-        email: "",
-        instagram: "",
+        img: founder5,
+        email: "anuragverma6266361989@gmail.com",
+        instagram: "https://www.instagram.com/anurag.verma02/",
         linkedin: "",
       },
     },
     {
       card: {
         id: 6,
-        title: "Anurag Verma",
+        title: "Priyanshu Patel",
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
-        img: founder5,
-        email: "",
+        img: founder6,
+        email: "priyanshu678patel@gmail.com",
         instagram: "",
         linkedin: "",
       },
@@ -88,12 +89,12 @@ const Founders = () => {
     {
       card: {
         id: 7,
-        title: "Priyanshu Patel",
+        title: "Aditya Raut",
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
-        img: founder1,
+        img: founder2,
         email: "",
-        instagram: "",
+        instagram: "https://www.instagram.com/aditya_rt_04/",
         linkedin: "",
       },
     },
@@ -121,7 +122,7 @@ const Founders = () => {
           pagination={{
             clickable: true,
           }}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
           keyboard={{
             enabled: true,
             onlyInViewport: true,
@@ -142,7 +143,7 @@ const Founders = () => {
           }}
           modules={[Pagination, Autoplay, Keyboard]}
           className="mySwiper px-2 pt-2 pb-5"
-          style={{ zIndex: "0"}}
+          style={{ zIndex: "0" }}
         >
           <div className="mb-5">
             {Data.map((founder) => (
@@ -174,7 +175,7 @@ const Founders = () => {
                           />
                         </Link>
                         <Link
-                          to={"https://instagram.com/asynchronous.1"}
+                          to={founder?.card?.instagram}
                           target="_blank"
                           style={{
                             backgroundImage:
@@ -190,7 +191,7 @@ const Founders = () => {
                           />
                         </Link>
                         <Link
-                          to={"https://linkedin.com/in/bhagvendra-singh"}
+                          to={founder?.card?.linkedin}
                           target="_blank"
                           style={{
                             backgroundImage:
