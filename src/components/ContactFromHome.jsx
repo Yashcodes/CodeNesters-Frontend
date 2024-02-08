@@ -31,28 +31,40 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
 
                 <div className="content-right-icons mt-4">
                   <div className="instagram-icon text-white">
-                    <Link to={"https://instagram.com/codenesters"}>
+                    <Link
+                      to={"https://instagram.com/codenesters"}
+                      aria-label="CodeNesters Instagram Account"
+                    >
                       <MDBIcon fab icon="instagram" size="3x" />
                     </Link>
                     <span className="fs-5">Instagram</span>
                   </div>
 
                   <div className="linkedin-icon text-white">
-                    <Link to={"https://linkedin.com/company/codenesters"}>
+                    <Link
+                      to={"https://linkedin.com/company/codenesters"}
+                      aria-label="CodeNesters LinkedIn Account"
+                    >
                       <MDBIcon fab icon="linkedin" size="3x" />
                     </Link>
                     <span className="fs-5">LinkedIn</span>
                   </div>
 
                   <div className="whatsapp-icon text-white">
-                    <Link to="https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project.">
+                    <Link
+                      to="https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project."
+                      aria-label="CodeNesters WhatsApp"
+                    >
                       <MDBIcon fab icon="whatsapp" size="3x" />
                     </Link>
                     <span className="fs-5">WhatsApp</span>
                   </div>
 
                   <div className="email-icon text-white">
-                    <Link to="mailto:codenesters3@gmail.com">
+                    <Link
+                      to="mailto:codenesters3@gmail.com"
+                      aria-label="CodeNesters Email Address"
+                    >
                       <MDBIcon far icon="envelope" size="3x" />
                     </Link>
                     <span className="fs-5">Email</span>

@@ -93,12 +93,15 @@ const Footer = () => {
                 <div className="footer-content-list">
                   <ul>
                     <li>
-                      <Link to={""}>
+                      <Link to={""} aria-label="Phone Number">
                         <MDBIcon fas icon="phone" /> 7722814150
                       </Link>
                     </li>
                     <li>
-                      <Link to={"mailto:codenesters3@gmail.com"}>
+                      <Link
+                        to={"mailto:codenesters3@gmail.com"}
+                        aria-label="Email Address"
+                      >
                         <MDBIcon fas icon="envelope" /> codenesters3@ gmail.com
                       </Link>
                     </li>
@@ -108,12 +111,18 @@ const Footer = () => {
                         style={{ listStyle: "none", fontSize: "17px" }}
                       >
                         <li>
-                          <Link to={"https://instagram.com/codenesters"}>
+                          <Link
+                            to={"https://instagram.com/codenesters"}
+                            aria-label="Instagram Link"
+                          >
                             <MDBIcon fab icon="instagram" />
                           </Link>
                         </li>
                         <li>
-                          <Link to={"https://linkedin.com/company/codenesters"}>
+                          <Link
+                            to={"https://linkedin.com/company/codenesters"}
+                            aria-label="LinkedIn Link"
+                          >
                             <MDBIcon fab icon="linkedin" />
                           </Link>
                         </li>
