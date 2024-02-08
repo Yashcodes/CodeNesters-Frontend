@@ -87,12 +87,12 @@ const Register = () => {
   return (
     <div className="register-page container-fluid bg-gray-gradient">
       <div className="register-left col-md-4 col-sm-9">
-        <h2 className="text-gray">
+        <h2 className="" color="darkgray" style={{ fontWeight: "600" }}>
           Register to <span className="text-gradient">CodeNesters</span>
         </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-          consequatur!
+        <p className="fs-5">
+          Join our digital journey with high quality software services and
+          interactive learning guidance!
         </p>
 
         <img src={SignIn} alt="" className="img-fluid" />

@@ -70,12 +70,16 @@ const Login = () => {
     <>
       <div className="register-page container-fluid bg-gray-gradient">
         <div className="register-left col-md-4 col-sm-9">
-          <h2 className="text-gray">
+          <h2
+            className="text-gray"
+            color="darkgray"
+            style={{ fontWeight: "600" }}
+          >
             Login to <span className="text-gradient">CodeNesters</span>
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-            consequatur!
+          <p className="fs-5">
+            Already a member! Stay connected with us for future updates and get
+            benefited with our products and services.
           </p>
 
           <img src={SignIn} alt="" className="img-fluid" />
@@ -119,10 +123,7 @@ const Login = () => {
               <MDBBtn
                 className="w-100 card-btn"
                 onClick={handleSubmit}
-                disabled={
-                  email === "" ||
-                  password === ""
-                }
+                disabled={email === "" || password === ""}
               >
                 Login
               </MDBBtn>
