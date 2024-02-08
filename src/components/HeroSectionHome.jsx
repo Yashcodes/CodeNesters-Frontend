@@ -51,7 +51,7 @@ const HeroSectionHome = () => {
             alt=""
             width={"370"}
             height={"200px"}
-            loading="lazy"
+            fetch
           />
         </div>
       </div>
