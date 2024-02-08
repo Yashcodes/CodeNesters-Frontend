@@ -7,6 +7,8 @@ import "swiper/css/pagination";
 import founder1 from "../../assets/images/FounderImage/founder-1.jpg";
 import founder2 from "../../assets/images/FounderImage/founder-2.png";
 import founder3 from "../../assets/images/FounderImage/founder-3.jpg";
+import founder4 from "../../assets/images/FounderImage/founder-4.jpg";
+import founder5 from "../../assets/images/FounderImage/founder-5.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
 
 const Founders = () => {
@@ -18,6 +20,9 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder1,
+        email: "pariharyash1989@gmail.com",
+        instagram: "https://instagram.com/asynchronous.1",
+        linkedin: "https://linkedin.com/in/bhagvendra-singh",
       },
     },
     {
@@ -27,6 +32,9 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder2,
+        email: "",
+        instagram: "",
+        linkedin: "",
       },
     },
     {
@@ -36,6 +44,9 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder3,
+        email: "ashishtrip27@gmail.com",
+        instagram: "",
+        linkedin: "https://www.linkedin.com/in/ashish-triapthi/",
       },
     },
     {
@@ -44,7 +55,10 @@ const Founders = () => {
         title: "Soham Patharkar",
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
-        img: founder1,
+        img: founder4,
+        email: "",
+        instagram: "",
+        linkedin: "",
       },
     },
     {
@@ -54,6 +68,9 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder2,
+        email: "",
+        instagram: "",
+        linkedin: "",
       },
     },
     {
@@ -62,7 +79,10 @@ const Founders = () => {
         title: "Anurag Verma",
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
-        img: founder3,
+        img: founder5,
+        email: "",
+        instagram: "",
+        linkedin: "",
       },
     },
     {
@@ -72,6 +92,9 @@ const Founders = () => {
         subTitle: "Founder & CEO",
         description: "Hey, I want to avail your services",
         img: founder1,
+        email: "",
+        instagram: "",
+        linkedin: "",
       },
     },
   ];
@@ -119,7 +142,7 @@ const Founders = () => {
           }}
           modules={[Pagination, Autoplay, Keyboard]}
           className="mySwiper px-2 pt-2 pb-5"
-          style={{zIndex :  "-1"}}
+          style={{ zIndex: "0"}}
         >
           <div className="mb-5">
             {Data.map((founder) => (
@@ -136,7 +159,7 @@ const Founders = () => {
 
                       <div className="founder-icons">
                         <Link
-                          to={"mailTo:pariharyash1989@gmail.com"}
+                          to={`mailTo:${founder?.card?.email}`}
                           style={{
                             backgroundImage:
                               "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
