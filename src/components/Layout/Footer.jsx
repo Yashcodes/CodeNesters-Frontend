@@ -18,7 +18,6 @@ const Footer = () => {
                   alt="logo"
                   width={"44px"}
                   height={"44px"}
-                  title="CodeNesters Logo"
                 />
                 <span className="fw-bold">CODENESTERS</span>
               </div>

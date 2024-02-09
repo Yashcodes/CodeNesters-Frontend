@@ -101,7 +101,6 @@ const Login = () => {
             src={SignIn}
             alt="Login CodeNesters"
             className="img-fluid"
-            title="Login to CodeNesters"
             height={"auto"}
             width={"auto"}
           />
@@ -116,7 +115,6 @@ const Login = () => {
                   alt=""
                   width="34px"
                   height="34px"
-                  title="CodeNesters Logo"
                 />
               </div>
               <div className="card-head">
