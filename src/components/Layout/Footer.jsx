@@ -18,6 +18,7 @@ const Footer = () => {
                   alt="logo"
                   width={"44px"}
                   height={"44px"}
+                  title="CodeNesters Logo"
                 />
                 <span className="fw-bold">CODENESTERS</span>
               </div>
@@ -99,7 +100,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link
-                        to={"mailto:codenesters3@gmail.com"}
+                        to={"mailto:info@codenesters.in"}
                         aria-label="Email Address"
                       >
                         <MDBIcon fas icon="envelope" /> codenesters3@ gmail.com
@@ -136,7 +137,7 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="mailto:codenesters3@gmail.com">
+                          <Link to="mailto:info@codenesters.in">
                             <MDBIcon far icon="envelope" />
                           </Link>
                         </li>

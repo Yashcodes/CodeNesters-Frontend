@@ -62,7 +62,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
 
                   <div className="email-icon text-white">
                     <Link
-                      to="mailto:codenesters3@gmail.com"
+                      to="mailto:info@codenesters.in"
                       aria-label="CodeNesters Email Address"
                     >
                       <MDBIcon far icon="envelope" size="3x" />

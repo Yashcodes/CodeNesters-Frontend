@@ -35,7 +35,12 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid m-1">
           <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"}>
-            <img src={brandLogo} alt="" style={{aspectRatio : "auto"}}/>
+            <img
+              src={brandLogo}
+              alt="logo"
+              style={{ aspectRatio: "auto" }}
+              title="CodeNesters Logo"
+            />
             {window.innerWidth <= "400" ? "" : <span>CodeNesters</span>}
           </Link>
           <button
@@ -151,7 +156,9 @@ const Header = () => {
                   <ul>
                     <li className="sidebar-list">
                       <MDBIcon fas icon="user" />
-                      <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>Profile</Link>
+                      <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>
+                        Profile
+                      </Link>
                     </li>
                     <li className="sidebar-list">
                       <MDBIcon fas icon="book" />
