@@ -18,12 +18,6 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (location.pathname === "/login") {
-  //     document.title = "Login - CodeNesters";
-  //   }
-  // }, [location]);
-
   useEffect(() => {
     if (localStorage.getItem("auth")) {
       navigate("/");
@@ -79,8 +73,7 @@ const Login = () => {
           name="description"
           content="Login to CodeNesters | Already a member! Stay connected with us for future updates and get benefited with our products and services."
         />
-        {/* <link rel="canonical" href="https://www.codenesters.in/login" /> */}
-        <link rel="canonical" href="http://localhost:3000/login" />
+        <link rel="canonical" href="https://www.codenesters.in/login" />
       </Helmet>
 
       <div className="register-page container-fluid bg-gray-gradient">
@@ -110,12 +103,7 @@ const Login = () => {
           <div className="register-card shadow-lg">
             <div className="register-card-header my-3">
               <div className="register-card-img">
-                <img
-                  src={Brand}
-                  alt=""
-                  width="34px"
-                  height="34px"
-                />
+                <img src={Brand} alt="" width="34px" height="34px" />
               </div>
               <div className="card-head">
                 <h2>CodeNesters</h2>

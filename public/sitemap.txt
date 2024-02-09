@@ -1,1 +1,3 @@
 https://www.codenesters.in/
+https://www.codenesters.in/login
+https://www.codenesters.in/register
