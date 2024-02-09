@@ -8,18 +8,21 @@ import "./index.css";
 import Root from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
+import { HelmetProvider } from "react-helmet-async";
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
 const App = (
-  <AuthProvider>
-    <Router>
-      <React.StrictMode>
-        <Root />
-      </React.StrictMode>
-    </Router>
-  </AuthProvider>
+  <HelmetProvider>
+    <AuthProvider>
+      <Router>
+        <React.StrictMode>
+          <Root />
+        </React.StrictMode>
+      </Router>
+    </AuthProvider>
+  </HelmetProvider>
 );
 
 if (container.hasChildNodes()) {

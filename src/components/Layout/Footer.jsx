@@ -150,7 +150,7 @@ const Footer = () => {
         </div>
         <hr />
         <span className="copyright text-center d-block px-1">
-          © Copyright CodeNesters. All Rights Reserved 2023
+          Copyright © 2024 CodeNesters All Rights Reserved
         </span>
       </footer>
     </>

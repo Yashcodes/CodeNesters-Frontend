@@ -135,7 +135,7 @@ const Home = () => {
         sectionHeading={"WHY CODENESTERS?"}
         headingContent={[
           "Making project development",
-          <br />,
+          <br key={Math.random() + Date.now()} />,
           " easier and convenient",
         ]}
       />
