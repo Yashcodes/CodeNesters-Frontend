@@ -11,12 +11,12 @@ const ContactBanner = () => {
             <div className="row">
               <div className="banner-info">
                 <div className="banner-text text-center">
-                  <p
+                  <h1
                     className="white fw-bold fs-1"
                     style={{ fontSize: "2rem" }}
                   >
                     We are here for you!
-                  </p>
+                  </h1>
                   <p>
                     Empower your digital presence. Your success journey starts
                     with a simple click. <br />

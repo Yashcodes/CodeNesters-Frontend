@@ -11,6 +11,7 @@ const AppointForm = () => {
   const [pincode, setPincode] = useState("");
   const [message, setMessage] = useState("");
 
+  // eslint-disable-next-line
   const [userData, setUserData] = useState({});
 
   const handleSubmit = async (e) => {
@@ -51,12 +52,12 @@ const AppointForm = () => {
   return (
     <>
       <section className="appointment" id="appointment">
-        <p
+        <h2
           className="section-heading appoint-head"
           style={{ color: "#a87fff" }}
         >
           Get an Appointment
-        </p>
+        </h2>
         <div className="container mb-4">
           <div className="row">
             <div className="col-md-6">
@@ -146,7 +147,7 @@ const AppointForm = () => {
             <div className="col-md-6">
               <h3 className="why-appoint-head">Why Connect With Us</h3>
               <div className="why-appoint-cont my-4">
-                <h5 style={{ color: "rgb(65 64 64)" }}>24/7 Hours Available</h5>
+                <h4 className="fs-5" style={{ color: "rgb(65 64 64)" }}>24/7 Hours Available</h4>
                 <p className="para-color why-appoint-text">
                   Need assistance at any time? We're here for you 24/7, ensuring
                   support and guidance whenever you require it.

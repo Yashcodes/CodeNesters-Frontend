@@ -39,6 +39,8 @@ const Header = () => {
               src={brandLogo}
               alt="logo"
               style={{ aspectRatio: "auto" }}
+              width={"44px"}
+              height={"44px"}
             />
             {window.innerWidth <= "400" ? "" : <span>CodeNesters</span>}
           </Link>

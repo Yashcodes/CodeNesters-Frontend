@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/AuthStyles/Register.css";
 import Brand from "../../assets/images/brandLogo.png";
 import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";

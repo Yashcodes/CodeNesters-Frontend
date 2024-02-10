@@ -29,7 +29,7 @@ const ContactForServices = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://code-nesters-backend.vercel.app/api/v1/service/submit",
         {
           headers: {

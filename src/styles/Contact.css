@@ -555,7 +555,7 @@
 .banner-text h1 {
   font-family: "Rubik", sans-serif;
   font-size: 35px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding-bottom: 15px;
 }
 
@@ -598,7 +598,7 @@
 .section-heading {
   color: rgb(9, 102, 100);
   text-align: center;
-  margin: 44px 0px;
+  margin: 48px 0px;
   font-weight: 600;
   font-size: 2rem;
 }

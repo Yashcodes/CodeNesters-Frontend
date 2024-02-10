@@ -102,7 +102,7 @@ const Footer = () => {
                         to={"mailto:info@codenesters.in"}
                         aria-label="Email Address"
                       >
-                        <MDBIcon fas icon="envelope" /> codenesters3@ gmail.com
+                        <MDBIcon fas icon="envelope" /> info@codenesters.in
                       </Link>
                     </li>
                     <li>
@@ -115,7 +115,10 @@ const Footer = () => {
                             to={"https://instagram.com/codenesters"}
                             aria-label="Instagram Link"
                           >
-                            <MDBIcon fab icon="instagram" />
+                            <MDBIcon fab icon="instagram" aria-label="hii" />
+                            <span style={{ display: "none" }}>
+                              Visit our Instagram profile
+                            </span>
                           </Link>
                         </li>
                         <li>
@@ -124,6 +127,9 @@ const Footer = () => {
                             aria-label="LinkedIn Link"
                           >
                             <MDBIcon fab icon="linkedin" />
+                            <span style={{ display: "none" }}>
+                              Visit our LinkedIn profile
+                            </span>
                           </Link>
                         </li>
                         <li>
@@ -133,11 +139,17 @@ const Footer = () => {
                             }
                           >
                             <MDBIcon fab icon="whatsapp" />
+                            <span style={{ display: "none" }}>
+                              Contact us on WhatsApp
+                            </span>
                           </Link>
                         </li>
                         <li>
                           <Link to="mailto:info@codenesters.in">
                             <MDBIcon far icon="envelope" />
+                            <span style={{ display: "none" }}>
+                              Reach us through email
+                            </span>
                           </Link>
                         </li>
                       </ul>
