@@ -137,6 +137,7 @@ const Footer = () => {
                             to={
                               "https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project."
                             }
+                            aria-label="WhatsApp CodeNesters"
                           >
                             <MDBIcon fab icon="whatsapp" />
                             <span style={{ display: "none" }}>
@@ -145,7 +146,10 @@ const Footer = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="mailto:info@codenesters.in">
+                          <Link
+                            to="mailto:info@codenesters.in"
+                            aria-label="Email CodeNesters"
+                          >
                             <MDBIcon far icon="envelope" />
                             <span style={{ display: "none" }}>
                               Reach us through email
