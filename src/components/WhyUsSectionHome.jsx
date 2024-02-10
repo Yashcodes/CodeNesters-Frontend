@@ -12,15 +12,15 @@ const WhyUsSectionHome = ({
     <>
       <section className="py-5 whyUsSection">
         <div className="container p-5">
-          <h4
-            className="text-center"
+          <h2
+            className="text-center fs-4"
             style={{ color: "#a87fff", fontWeight: "600" }}
           >
             {sectionHeading}
-          </h4>
-          <h2 className="fs-1 text-black fw-bold whyUsHeading text-center">
-            {headingContent}
           </h2>
+          <h3 className="fs-1 text-black fw-bold whyUsHeading text-center">
+            {headingContent}
+          </h3>
 
           <div className="whyUsCardContainer">
             {sectionCardData.map((cardData) => (

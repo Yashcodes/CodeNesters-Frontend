@@ -17,10 +17,10 @@ const HeroSectionHome = () => {
     <div className="main-container">
       <div className="hero-section container ">
         <div className="left-hero-section text-start col-md-6">
-          <h2 className="hero-head text-start">
+          <h1 className="hero-head text-start">
             Code <span className="text-gradient">Nesters</span>
             <p>Think | Code | Create | Deploy</p>
-          </h2>
+          </h1>
 
           <p className="mb-0 text-justify" style={{ fontSize: "19px" }}>
             The best software company in raipur engaged in creating the backbone

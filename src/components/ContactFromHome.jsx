@@ -13,7 +13,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
             <div className="contact-home-content container">
               <div className="content-left">
                 <span className="mt-4">{heading}</span>
-                <h3 className="my-3">{mainContent}</h3>
+                <h4 className="fs-3 my-3">{mainContent}</h4>
                 <p className="my-2">{subContent}</p>
                 <div className="contact-left-phone d-flex align-items-center gap-2 mt-2 mb-3">
                   <MDBIcon fas icon="mobile-alt" />
@@ -36,6 +36,9 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                       aria-label="CodeNesters Instagram Account"
                     >
                       <MDBIcon fab icon="instagram" size="3x" />
+                      <span style={{ display: "none" }}>
+                        Visit our Instagram profile
+                      </span>
                     </Link>
                     <span className="fs-5">Instagram</span>
                   </div>
@@ -46,6 +49,9 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                       aria-label="CodeNesters LinkedIn Account"
                     >
                       <MDBIcon fab icon="linkedin" size="3x" />
+                      <span style={{ display: "none" }}>
+                        Visit our LinkedIn profile
+                      </span>
                     </Link>
                     <span className="fs-5">LinkedIn</span>
                   </div>
@@ -56,6 +62,9 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                       aria-label="CodeNesters WhatsApp"
                     >
                       <MDBIcon fab icon="whatsapp" size="3x" />
+                      <span style={{ display: "none" }}>
+                        Contact us on WhatsApp
+                      </span>
                     </Link>
                     <span className="fs-5">WhatsApp</span>
                   </div>
@@ -66,6 +75,9 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                       aria-label="CodeNesters Email Address"
                     >
                       <MDBIcon far icon="envelope" size="3x" />
+                      <span style={{ display: "none" }}>
+                        Reach us through email
+                      </span>
                     </Link>
                     <span className="fs-5">Email</span>
                   </div>

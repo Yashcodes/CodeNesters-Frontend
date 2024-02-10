@@ -6,13 +6,13 @@ const Testimonial = ({ title, caption, Data }) => {
     <>
       <section className="section-2 mt-5" id="testimonial">
         <div className="container">
-          <h4
-            className="text-center"
+          <h2
+            className="text-center fs-4"
             style={{ color: "#a87fff", fontWeight: "600"}}
           >
             {title.toUpperCase()}
-          </h4>
-          <h2 className="fs-1 fw-bold text-black text-center" style={{marginBottom : "60px"}}>{caption}</h2>
+          </h2>
+          <h3 className="fs-1 fw-bold text-black text-center" style={{marginBottom : "60px"}}>{caption}</h3>
           <p className="border-btm" />
           <div className="row mb-5 testimonial-gap">
             {Data.map((cardData) => (
@@ -25,6 +25,8 @@ const Testimonial = ({ title, caption, Data }) => {
                       alt=""
                       className="profile"
                       loading="lazy"
+                      width={"150px"}
+                      height={"150px"}
                     />
                     <div className="pt-3 text-uppercase name fw-bold">
                       {cardData?.card?.title}

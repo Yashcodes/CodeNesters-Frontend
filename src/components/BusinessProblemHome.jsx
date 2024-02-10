@@ -10,11 +10,11 @@ const BusinessProblemHome = () => {
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">
-              <h4 className="prob-main-head">BUSINESS SOLUTION</h4>
-              <h2 className="fs-1 fw-bold text-black">
+              <h2 className="fs-4 prob-main-head">BUSINESS SOLUTION</h2>
+              <h3 className="fs-1 fw-bold text-black">
                 We are expert people with great <br />
                 business solutions
-              </h2>
+              </h3>
             </div>
 
             <div className="business-prob-cards">

@@ -7,6 +7,7 @@ import BusinessProblemHome from "../components/BusinessProblemHome";
 import ContactFromHome from "../components/ContactFromHome";
 import { useLocation } from "react-router-dom";
 import client1 from "../assets/images/Anu/img11.webp";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const location = useLocation();
@@ -126,6 +127,19 @@ const Home = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>CodeNesters - Think | Code | Create | Deploy</title>
+        <meta
+          name="keywords"
+          content="CodeNesters, best software company, software company in raipur, best software company in raipur, CodeNesters.in, codenesters shivanand nagar, codenesters raipur, codenesters india, digital services, web development, website, web app, seo, coding, coding courses, website design, landing pages, portfolio, business portfolio,"
+        />
+        <meta
+          name="description"
+          content="Best Software Company | Software company in raipur engaged in creating the backbone of your digital presence | We develop business portfolio, landing pages, websites and apps"
+        />
+        <link rel="canonical" href="https://www.codenesters.in/" />
+      </Helmet>
+
       {/* //! Hero Section  */}
       <HeroSectionHome />
 

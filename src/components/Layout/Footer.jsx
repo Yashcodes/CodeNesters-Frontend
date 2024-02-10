@@ -38,7 +38,7 @@ const Footer = () => {
             <div className="" id="content-2">
               <div className="footer-content-2">
                 <div className="content-2-head">
-                  <h6 className="fw-bold">MENU</h6>
+                  <span className=" fs-6 fw-bold">MENU</span>
                 </div>
 
                 <div className="footer-content-list">
@@ -63,7 +63,7 @@ const Footer = () => {
             <div className="" id="content-3">
               <div className="footer-content-3">
                 <div className="content-3-head">
-                  <h6 className="fw-bold">POLICIES</h6>
+                  <span className="fs-6 fw-bold">POLICIES</span>
                 </div>
 
                 <div className="footer-content-list">
@@ -87,7 +87,7 @@ const Footer = () => {
             <div className="" id="content-4">
               <div className="footer-content-4">
                 <div className="content-4-head">
-                  <h6 className="fw-bold">GET IN TOUCH</h6>
+                  <span className="fs-6 fw-bold">GET IN TOUCH</span>
                 </div>
 
                 <div className="footer-content-list">
