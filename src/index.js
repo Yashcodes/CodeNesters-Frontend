@@ -9,19 +9,22 @@ import Root from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
 import { HelmetProvider } from "react-helmet-async";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
 const App = (
   <HelmetProvider>
-    <AuthProvider>
-      <Router>
-        <React.StrictMode>
-          <Root />
-        </React.StrictMode>
-      </Router>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <Router>
+          <React.StrictMode>
+            <Root />
+          </React.StrictMode>
+        </Router>
+      </AuthProvider>
+    </ThemeProvider>
   </HelmetProvider>
 );
 
