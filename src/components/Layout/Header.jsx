@@ -98,12 +98,17 @@ const Header = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            style={{
-              borderRadius: "8px",
-              backgroundImage:
-                "linear-gradient(to right, rgb(140 76 155) -28%, rgb(148 63 211) -4%, rgb(133 82 133) 106%)",
-              "&:hover" : ""
-            }}
+            style={
+              themeMode === "light"
+                ? { background: "none" }
+                : themeMode === "dark"
+                ? {
+                    borderRadius: "8px",
+                    backgroundImage:
+                      "linear-gradient(to right, rgb(140 76 155) -28%, rgb(148 63 211) -4%, rgb(133 82 133) 106%)",
+                  }
+                : { background: "none" }
+            }
           >
             <span
               className="navbar-toggler-icon"

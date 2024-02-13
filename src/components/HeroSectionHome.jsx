@@ -44,7 +44,7 @@ const HeroSectionHome = () => {
             }
           : {
               backgroundImage:
-                "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                "linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%)",
             }
       }
     >
