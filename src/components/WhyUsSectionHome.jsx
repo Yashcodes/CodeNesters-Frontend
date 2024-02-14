@@ -2,15 +2,31 @@ import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 
 import "../styles/WhyUsSectionHome.css";
+import { useTheme } from "../context/ThemeContext";
 
 const WhyUsSectionHome = ({
   sectionCardData,
   sectionHeading,
   headingContent,
 }) => {
+  const { themeMode } = useTheme();
+
   return (
     <>
-      <section className="py-5 whyUsSection">
+      <section
+        className="py-5 whyUsSection"
+        style={
+          themeMode === "light"
+            ? {}
+            : themeMode === "dark"
+            ? {
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                color: "white",
+              }
+            : {}
+        }
+      >
         <div className="container p-5">
           <h2
             className="text-center fs-4"
@@ -18,7 +34,16 @@ const WhyUsSectionHome = ({
           >
             {sectionHeading}
           </h2>
-          <h3 className="fs-1 text-black fw-bold whyUsHeading text-center">
+          <h3
+            className="fs-1 fw-bold whyUsHeading text-center"
+            style={
+              themeMode === "light"
+                ? { color: "black" }
+                : themeMode === "dark"
+                ? { color: "white" }
+                : { color: "black" }
+            }
+          >
             {headingContent}
           </h3>
 
@@ -26,7 +51,25 @@ const WhyUsSectionHome = ({
             {sectionCardData.map((cardData) => (
               <div
                 className="whyUsCard"
-                style={cardData?.data?.cardInlineStyle}
+                style={
+                  themeMode === "light"
+                    ? {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                      }
+                    : themeMode === "dark"
+                    ? {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
+                      }
+                    : {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                      }
+                }
                 key={cardData?.data?.id}
               >
                 <div

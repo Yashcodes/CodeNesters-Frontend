@@ -206,7 +206,7 @@ const Header = () => {
                     fas
                     icon={themeIcon()}
                     size="2x"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", transition: "all 2s ease-out" }}
                   />
                 </label>
                 <MDBSwitch
