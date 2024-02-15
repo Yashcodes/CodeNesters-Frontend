@@ -4,11 +4,28 @@ import { Link } from "react-router-dom";
 import brandLogo from "../../assets/images/brandLogo.png";
 
 import "../../components/Layout/styles/Footer.css";
+import { useTheme } from "../../context/ThemeContext";
 
 const Footer = () => {
+  const { themeMode } = useTheme();
+  
   return (
     <>
-      <footer className="footer" id="footer">
+      <footer
+        className="footer"
+        id="footer"
+        style={
+          themeMode === "light"
+            ? {}
+            : themeMode === "dark"
+            ? {
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                color: "white",
+              }
+            : {}
+        }
+      >
         <div className="container footer-container">
           <div className="footer-left" id="content-1">
             <div className="footer-content-1">

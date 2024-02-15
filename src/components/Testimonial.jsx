@@ -16,7 +16,7 @@ const Testimonial = ({ title, caption, Data }) => {
             : themeMode === "dark"
             ? {
                 backgroundImage:
-                  "radial-gradient(circle at 50% 50%, rgb(28 1 37) 0%, rgb(12, 3, 17) 115%)",
+                  "radial-gradient(circle at 50% 50%, rgb(25 1 33) 0%, rgb(12, 3, 17) 115%)",
               }
             : {}
         }

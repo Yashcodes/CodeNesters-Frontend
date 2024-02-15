@@ -70,7 +70,8 @@ const Header = () => {
             : themeMode === "dark"
             ? {
                 background: "none",
-                backgroundColor: "black",
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(11 4 15) 91%, rgb(0, 0, 0) 113%)",
                 boxShadow: "rgb(105 101 101 / 51%) 0px 1px 14px 1px",
               }
             : {
@@ -193,7 +194,18 @@ const Header = () => {
                   onClick={handleShow}
                 />
               ) : (
-                <button className={`btn register-btn text-white fs-6`}>
+                <button
+                  className={`btn register-btn text-white fs-6`}
+                  style={
+                    themeMode === "light"
+                      ? {}
+                      : themeMode === "dark"
+                      ? {
+                          outline: "none",
+                        }
+                      : {}
+                  }
+                >
                   <Link to={"/register"} className="text-white">
                     Register
                   </Link>
