@@ -167,7 +167,7 @@ const Home = () => {
       {/* //! Testimonial  */}
       <Testimonial
         title="OUR REVIEWS"
-        caption="SEE WHAT OUR CLIENTS SAY"
+        caption="See what our clients say"
         Data={HomeTestimonialData}
       />
     </Layout>
