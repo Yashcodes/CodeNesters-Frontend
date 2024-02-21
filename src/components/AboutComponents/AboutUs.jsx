@@ -1,10 +1,26 @@
 import React from "react";
 import founder1 from "../../assets/images/Profile/profile_photo.jpg";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 
 const AboutUs = () => {
+  const { themeMode } = useTheme();
+
   return (
-    <div className="container-fluid about-us-bg">
+    <div
+      className="container-fluid about-us-bg"
+      style={
+        themeMode === "light"
+          ? {}
+          : themeMode === "dark"
+          ? {
+              backgroundImage:
+                "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+              color: "white",
+            }
+          : {}
+      }
+    >
       <div className="container py-5">
         <div
           className="about-us-container d-flex justify-content-center align-items-center"
@@ -26,7 +42,18 @@ const AboutUs = () => {
           </div>
 
           <div className="about-right p-2" style={{ maxWidth: "600px" }}>
-            <h1 className="text-black">About Us</h1>
+            <h1
+              className=""
+              style={
+                themeMode === "light"
+                  ? { color: "rgba(9, 9, 9, 0.842)" }
+                  : themeMode === "dark"
+                  ? { color: "white" }
+                  : { color: "rgba(9, 9, 9, 0.842)" }
+              }
+            >
+              About Us
+            </h1>
 
             <h5 style={{ textAlign: "justify", textJustify: "inter-word" }}>
               Welcome to the CodeNesters! Join us for better growth and

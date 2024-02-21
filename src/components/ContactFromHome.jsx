@@ -3,15 +3,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "../styles/ContactFromHome.css";
+import { useTheme } from "../context/ThemeContext";
 
 const ContactFromHome = ({ heading, mainContent, subContent }) => {
+  const { themeMode } = useTheme();
+
   return (
     <>
       <div className="container-fluid contact-home-bg">
         <div className="contact-home">
           <div className="p-0 d-flex justify-content-center align-items-center contact-home-content-parent">
             <div className="contact-home-content container">
-              <div className="content-left">
+              <div
+                className="content-left"
+                style={
+                  themeMode === "light"
+                    ? {}
+                    : themeMode === "dark"
+                    ? {
+                        backgroundImage:
+                          "radial-gradient(circle at 50% 50%, rgb(19 2 25) 97%, rgb(6, 2, 7) 115%)",
+                        color: "white",
+                      }
+                    : {}
+                }
+              >
                 <span className="mt-4">{heading}</span>
                 <h4 className="fs-3 my-3">{mainContent}</h4>
                 <p className="my-2">{subContent}</p>

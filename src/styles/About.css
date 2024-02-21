@@ -40,7 +40,7 @@
 .about-us-content {
   text-align: justify;
   text-justify: inter-word;
-  line-height: 24px;
+  line-height: 26px;
   margin: 12px 0px;
 }
 
@@ -57,7 +57,7 @@
 /*! Founders Section */
 
 .founders-section {
-  min-height: 650px;
+  min-height: 645px;
   width: 100%;
 }
 

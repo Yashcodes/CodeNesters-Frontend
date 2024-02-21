@@ -23,6 +23,7 @@ import CancellationAndRefund from "./pages/CancellationAndRefund";
 import Events from "./pages/Events";
 import Course from "./pages/Course";
 import Services from "./pages/Services";
+import Event from "./pages/Event"
 
 function App() {
   return (
@@ -46,8 +47,9 @@ function App() {
           element={<CancellationAndRefund />}
         />
         <Route path="/services" element={<Services />} />
+        <Route path="/event/:slug" element={<Event />} />
 
-        {/* //! Protected Routes for Users  */}
+        {/* //! Protected Routes for Users */}
         <Route path="/dashboard" element={<Private />}>
           <Route path="user/profile/:userid" element={<Profile />} />
           <Route path="user/courses" element={<MyCourses />} />

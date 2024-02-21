@@ -1,39 +1,24 @@
 import React, { useState } from "react";
-import Select from "react-select";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
 
-const ContactForServices = () => {
+const EventRegistrationForm = () => {
   const { themeMode } = useTheme();
-
-  const options = [
-    { value: "landingPages", label: "Landing Pages" },
-    { value: "portfolioCreation", label: "Portfolio Creation" },
-    { value: "webDevelopment", label: "Web Development" },
-    { value: "mobileAppDevelopment", label: "Mobile App Development" },
-    { value: "frontendDevelopment", label: "Fronted Development" },
-    { value: "webHosting", label: "Web Hosting" },
-  ];
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [place, setPlace] = useState("");
   const [phone, setPhone] = useState("");
-  const [selectedServices, setSelectedServices] = useState([]);
-  const [message, setMessage] = useState("");
+  const [event, setEvent] = useState("Git and GitHub");
   const [pincode, setPincode] = useState("");
-
-  const handleSelectChange = (selected) => {
-    setSelectedServices(selected);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await axios.post(
-        "https://code-nesters-backend.vercel.app/api/v1/service/submit",
+        "https://code-nesters-backend.vercel.app/api/v1/event/register-event",
         {
           headers: {
             "Content-Type": "application/json",
@@ -43,8 +28,7 @@ const ContactForServices = () => {
           email,
           place,
           phone,
-          services: selectedServices,
-          message,
+          event,
           pincode,
         }
       );
@@ -55,8 +39,6 @@ const ContactForServices = () => {
       setPhone("");
       setPlace("");
       setPincode("");
-      setMessage("");
-      setSelectedServices([]);
     } catch (error) {
       toast.error("Error in submitting form");
     }
@@ -71,34 +53,26 @@ const ContactForServices = () => {
 
   const formInputStyle =
     themeMode === "light"
-      ? {}
+      ? {
+          background: "none",
+        }
       : themeMode === "dark"
       ? {
           color: "white",
           background: "none",
         }
-      : {};
+      : {
+          background: "none",
+        };
 
   return (
-    <div
-      style={
-        themeMode === "light"
-          ? {}
-          : themeMode === "dark"
-          ? {
-              backgroundImage:
-                "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
-              color: "white",
-            }
-          : {}
-      }
-    >
+    <div>
       <div className="container p-5">
         <h4
           className="text-center"
           style={{ color: "#a87fff", fontWeight: "600" }}
         >
-          WANT TO CONNECT?
+          Wait is over? Register Now
         </h4>
         <h2
           className="fs-1 fw-bold whyUsHeading text-center mb-5"
@@ -110,7 +84,7 @@ const ContactForServices = () => {
               : { color: "rgba(9, 9, 9, 0.842)" }
           }
         >
-          Let's customize your digital <br /> journey together
+          Let's embark your knowledge <br /> and skills
         </h2>
 
         <div className="container w-100 p-0">
@@ -178,81 +152,15 @@ const ContactForServices = () => {
                 </div>
 
                 <div className="row flex-wrap">
-                  <div className="input-services service-page-input d-flex flex-column col-md-12">
-                    <label htmlFor="services" style={formLabelStyle}>
-                      Services
-                    </label>
-                    <Select
-                      defaultValue={selectedServices}
-                      onChange={handleSelectChange}
-                      options={options}
-                      isMulti
-                      isSearchable
-                      className="services-select"
-                      styles={
-                        themeMode === "light"
-                          ? {
-                              control: (baseStyles, state) => ({
-                                ...baseStyles,
-                                border: 0,
-                                borderBottom: "2px solid darkviolet",
-                                borderRadius: 0,
-                                boxShadow: "none",
-                                ":hover": {
-                                  borderBottomColor: "darkviolet",
-                                },
-                                background: "none",
-                              }),
-                            }
-                          : themeMode === "dark"
-                          ? {
-                              control: (baseStyles, state) => ({
-                                ...baseStyles,
-                                background: "none",
-                                border: "none",
-                                borderBottom: "2px solid darkviolet",
-                                borderRadius: 0,
-                                boxShadow: "none",
-                                ":hover": {
-                                  borderBottomColor: "darkviolet",
-                                },
-                              }),
-                              option: (provided, state) => ({
-                                ...provided,
-                                backgroundColor: "black",
-                              }),
-                            }
-                          : {
-                              control: (baseStyles, state) => ({
-                                ...baseStyles,
-                                border: 0,
-                                borderBottom: "2px solid darkviolet",
-                                borderRadius: 0,
-                                boxShadow: "none",
-                                ":hover": {
-                                  borderBottomColor: "darkviolet",
-                                },
-                                background: "none",
-                              }),
-                            }
-                      }
-                      placeholder="Select Services"
-                      value={selectedServices}
-                    />
-                  </div>
-                </div>
-
-                <div className="row flex-wrap">
-                  <div className="input-message service-page-input d-flex flex-column col-md-6">
-                    <label htmlFor="message" style={formLabelStyle}>
-                      Message
+                  <div className="input-services service-page-input d-flex flex-column col-md-6">
+                    <label htmlFor="event" style={formLabelStyle}>
+                      Event
                     </label>
                     <input
                       type="text"
                       id="message"
                       autoComplete="off"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
+                      value={event}
                       style={formInputStyle}
                     />
                   </div>
@@ -293,4 +201,4 @@ const ContactForServices = () => {
   );
 };
 
-export default ContactForServices;
+export default EventRegistrationForm;

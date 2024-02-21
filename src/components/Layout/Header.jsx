@@ -81,11 +81,11 @@ const Header = () => {
         }
       >
         <div className="container-fluid m-1">
-          <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"}>
+          <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"} style={{gap : "6px"}}>
             <img
               src={brandLogo}
               alt="logo"
-              style={{ aspectRatio: "auto" }}
+              style={{ aspectRatio: "auto", marginRight : "4px" }}
               width={"44px"}
               height={"44px"}
             />

@@ -11,8 +11,11 @@ import founder4 from "../../assets/images/FounderImage/founder-4.jpg";
 import founder5 from "../../assets/images/FounderImage/founder-5.jpg";
 import founder6 from "../../assets/images/FounderImage/founder-6.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
+import { useTheme } from "../../context/ThemeContext";
 
 const Founders = () => {
+  const { themeMode } = useTheme();
+
   const Data = [
     {
       card: {
@@ -101,7 +104,20 @@ const Founders = () => {
   ];
 
   return (
-    <section className="founders-section mt-5 p-4">
+    <section
+      className="founders-section py-5 px-4"
+      style={
+        themeMode === "light"
+          ? {}
+          : themeMode === "dark"
+          ? {
+              backgroundImage:
+                "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+              color: "white",
+            }
+          : {}
+      }
+    >
       <div className="container">
         <h4
           className="text-center"
@@ -110,8 +126,14 @@ const Founders = () => {
           BUSINESS FOUNDATION
         </h4>
         <h2
-          className="fs-1 fw-bold text-black text-center"
-          style={{ marginBottom: "60px" }}
+          className="fs-1 fw-bold text-center mb-5"
+          style={
+            themeMode === "light"
+              ? { color: "rgba(9, 9, 9, 0.842)" }
+              : themeMode === "dark"
+              ? { color: "white" }
+              : { color: "rgba(9, 9, 9, 0.842)" }
+          }
         >
           Meet Our Expert Team
         </h2>
@@ -119,9 +141,6 @@ const Founders = () => {
         <Swiper
           slidesPerView={2}
           spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
           autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
           keyboard={{
             enabled: true,
@@ -147,15 +166,42 @@ const Founders = () => {
         >
           <div className="mb-5">
             {Data.map((founder) => (
-              <SwiperSlide key={founder?.card?.id}>
-                <div className="founders-card shadow mb-4">
+              <SwiperSlide
+                key={founder?.card?.id}
+                className=""
+                style={
+                  themeMode === "light"
+                    ? {borderRadius : "14px"}
+                    : themeMode === "dark"
+                    ? {
+                        backgroundImage:
+                          "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                        color: "white",
+                        borderRadius : "14px"
+                      }
+                    : {borderRadius : "14px"}
+                }
+              >
+                <div className="founders-card shadow px-0 py-4">
                   <div className="founder-profile m-0">
                     <div className="left">
                       <img src={founder?.card?.img} alt="founder1" />
                     </div>
 
                     <div className="right">
-                      <p>{founder?.card?.title}</p>
+                      <p
+                        style={
+                          themeMode === "light"
+                            ? { color: "black" }
+                            : themeMode === "dark"
+                            ? { color: "#a87fff" }
+                            : { color: "black" }
+                        }
+                      >
+                        {founder?.card?.title}
+                      </p>
                       <span>Founder & CEO</span>
 
                       <div className="founder-icons">
@@ -211,7 +257,7 @@ const Founders = () => {
                   </div>
 
                   <div className="founder-about">
-                    <p className="text-justify">
+                    <p className="text-justify m-0">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Eveniet earum dolor distinctio porro impedit consequuntur
                       eius tempora quod officiis quae? Quidem exercitationem

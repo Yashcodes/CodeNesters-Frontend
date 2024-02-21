@@ -4,16 +4,21 @@ import CourseImage from "../../assets/images/contact/c1.jpg";
 import slugify from "slugify";
 import axios from "axios";
 import Loading from "../../Utils/Loading";
+import toast from "react-hot-toast";
 
 const CourseSection = () => {
   const [courses, setCourses] = useState([]);
 
   const getAllCourses = useCallback(async () => {
-    const response = await axios.get(
-      "https://code-nesters-backend.vercel.app/api/v1/course/get-all-courses"
-    );
+    try {
+      const response = await axios.get(
+        "https://code-nesters-backend.vercel.app/api/v1/course/get-all-courses"
+      );
 
-    setCourses(response.data.courses);
+      setCourses(response.data.courses);
+    } catch (error) {
+      toast.error("Unable to list courses")
+    }
   }, []);
 
   useEffect(() => {

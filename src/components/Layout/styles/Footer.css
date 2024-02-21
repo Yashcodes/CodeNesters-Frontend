@@ -41,7 +41,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   margin-bottom: 8px;
 }
 
