@@ -17,7 +17,7 @@ const CourseSection = () => {
 
       setCourses(response.data.courses);
     } catch (error) {
-      toast.error("Unable to list courses")
+      toast.error("Unable to list courses");
     }
   }, []);
 
@@ -30,10 +30,14 @@ const CourseSection = () => {
       <h4
         className="text-center mx-1"
         style={{ color: "#a87fff", fontWeight: "600" }}
+        data-aos="fade-up"
       >
         COURSES AND TRAININGS
       </h4>
-      <h2 className="fs-1 fw-bold text-black text-center mx-1">
+      <h2
+        className="fs-1 fw-bold text-black text-center mx-1"
+        data-aos="fade-up"
+      >
         Learn and grow your skills <br /> with our courses
       </h2>
 
@@ -41,7 +45,7 @@ const CourseSection = () => {
         <div className="row d-flex flex-wrap flex-row my-5">
           {courses.length !== 0 ? (
             courses?.map((course) => (
-              <div className="col-md-4 my-2" key={course?._id}>
+              <div className="col-md-4 my-2" key={course?._id}  data-aos={course?.aos}>
                 <div className="course-card border shadow">
                   <div className="card-img course-card-img img-fluid">
                     <img

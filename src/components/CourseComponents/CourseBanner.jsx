@@ -9,6 +9,7 @@ const CourseBanner = () => {
         <div className="course-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="course-banner-left align-self-center d-flex flex-column"
+            data-aos="fade-right"
             style={{ maxWidth: "700px" }}
           >
             <p className="text-black fw-bold">
@@ -27,7 +28,7 @@ const CourseBanner = () => {
             </div>
           </div>
 
-          <div className="course-banner-right">
+          <div className="course-banner-right" data-aos="fade-left">
             <img src={CourseBannerImg} alt="" />
           </div>
         </div>
