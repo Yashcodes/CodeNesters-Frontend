@@ -31,6 +31,7 @@ const ServiceBanner = () => {
         <div className="service-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="service-banner-left align-self-center d-flex flex-column"
+            data-aos="fade-right"
             style={{ maxWidth: "700px" }}
           >
             <p
@@ -58,8 +59,8 @@ const ServiceBanner = () => {
             </div>
           </div>
 
-          <div className="service-banner-right">
-            <img src={serviceBannerImg} alt="" />
+          <div className="service-banner-right" data-aos="fade-left">
+            <img src={serviceBannerImg} alt="CodeNesters service" />
           </div>
         </div>
       </div>

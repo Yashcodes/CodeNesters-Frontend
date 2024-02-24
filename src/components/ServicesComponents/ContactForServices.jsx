@@ -97,6 +97,7 @@ const ContactForServices = () => {
         <h4
           className="text-center"
           style={{ color: "#a87fff", fontWeight: "600" }}
+          data-aos="fade-up"
         >
           WANT TO CONNECT?
         </h4>
@@ -109,6 +110,7 @@ const ContactForServices = () => {
               ? { color: "white" }
               : { color: "rgba(9, 9, 9, 0.842)" }
           }
+          data-aos="fade-up"
         >
           Let's customize your digital <br /> journey together
         </h2>

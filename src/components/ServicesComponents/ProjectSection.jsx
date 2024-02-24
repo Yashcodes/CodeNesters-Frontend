@@ -156,6 +156,7 @@ const ProjectSection = () => {
           <h4
             className="text-center"
             style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
             OUR PROJECTS
           </h4>
@@ -168,6 +169,7 @@ const ProjectSection = () => {
                 ? { color: "white" }
                 : { color: "rgba(9, 9, 9, 0.842)" }
             }
+            data-aos="fade-up"
           >
             Discover our portfolio featuring <br />
             real projects and impactful solutions

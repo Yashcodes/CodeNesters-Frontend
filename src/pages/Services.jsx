@@ -17,6 +17,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
         iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
+        aos: "fade-right",
       },
     },
     {
@@ -28,6 +29,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
         iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
+        aos: "fade-down",
       },
     },
     {
@@ -39,6 +41,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid cyan" },
         iconInlineStyle: { backgroundColor: "cyan" },
+        aos: "fade-left",
       },
     },
     {
@@ -50,6 +53,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
         iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
+        aos: "fade-right",
       },
     },
     {
@@ -61,6 +65,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
         iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
+        aos: "fade-up",
       },
     },
     {
@@ -72,6 +77,7 @@ const Services = () => {
         iconType: "fas",
         cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
         iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
+        aos: "fade-left",
       },
     },
   ];
