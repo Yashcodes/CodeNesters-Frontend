@@ -28,6 +28,7 @@ const Home = () => {
         content:
           "I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.",
         image: client1,
+        aos: "fade-right",
       },
     },
     {
@@ -39,6 +40,7 @@ const Home = () => {
           "I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.",
         image:
           "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        aos: "zoom-in",
       },
     },
     {
@@ -50,6 +52,7 @@ const Home = () => {
           "I made bacck the purchase price in just 48 hours! Thank you for making it pain less, pleasant. The service was execellent. I will refer everyone I know.",
         image:
           "https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        aos: "fade-left",
       },
     },
   ];
@@ -66,6 +69,7 @@ const Home = () => {
         iconType: "fas",
         cardInlineStyle: "6px solid rgb(251, 125, 245)",
         iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
+        aos: "fade-right",
       },
     },
     {
@@ -77,6 +81,7 @@ const Home = () => {
         iconType: "fas",
         cardInlineStyle: "6px solid rgb(89, 191, 255)",
         iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
+        aos: "fade-down",
       },
     },
     {
@@ -88,6 +93,7 @@ const Home = () => {
         iconType: "fas",
         cardInlineStyle: "6px solid cyan",
         iconInlineStyle: { backgroundColor: "cyan" },
+        aos: "fade-left",
       },
     },
     {
@@ -99,6 +105,7 @@ const Home = () => {
         iconType: "far",
         cardInlineStyle: "6px solid rgb(59, 240, 197)",
         iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
+        aos: "fade-right",
       },
     },
     {
@@ -110,6 +117,7 @@ const Home = () => {
         iconType: "fas",
         cardInlineStyle: "6px solid rgb(234, 232, 111)",
         iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
+        aos: "fade-up",
       },
     },
     {
@@ -121,6 +129,7 @@ const Home = () => {
         iconType: "fas",
         cardInlineStyle: "6px solid rgb(244, 86, 141)",
         iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
+        aos: "fade-left",
       },
     },
   ];

@@ -10,6 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
+import 'aos/dist/aos.css';
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);

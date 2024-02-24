@@ -25,11 +25,13 @@ const Testimonial = ({ title, caption, Data }) => {
           <h2
             className="text-center fs-4"
             style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
             {title.toUpperCase()}
           </h2>
           <h3
             className="fs-1 fw-bold text-center"
+            data-aos="fade-up"
             style={
               themeMode === "light"
                 ? { color: "black", marginBottom: "60px" }
@@ -54,7 +56,11 @@ const Testimonial = ({ title, caption, Data }) => {
             }
           >
             {Data.map((cardData) => (
-              <div className="col-lg-4" key={cardData?.card?.id}>
+              <div
+                className="col-lg-4"
+                key={cardData?.card?.id}
+                data-aos={cardData?.card?.aos}
+              >
                 <div className="card">
                   <div
                     className="face front-face"

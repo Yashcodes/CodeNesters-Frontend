@@ -1,6 +1,5 @@
 import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
-
 import "../styles/WhyUsSectionHome.css";
 import { useTheme } from "../context/ThemeContext";
 
@@ -31,6 +30,7 @@ const WhyUsSectionHome = ({
           <h2
             className="text-center fs-4"
             style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
             {sectionHeading}
           </h2>
@@ -43,6 +43,7 @@ const WhyUsSectionHome = ({
                 ? { color: "white" }
                 : { color: "black" }
             }
+            data-aos="fade-up"
           >
             {headingContent}
           </h3>
@@ -51,6 +52,7 @@ const WhyUsSectionHome = ({
             {sectionCardData.map((cardData) => (
               <div
                 className="whyUsCard"
+                data-aos={cardData?.data?.aos}
                 style={
                   themeMode === "light"
                     ? {

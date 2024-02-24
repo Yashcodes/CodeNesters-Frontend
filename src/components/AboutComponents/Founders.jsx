@@ -184,7 +184,7 @@ const Founders = () => {
                     : {borderRadius : "14px"}
                 }
               >
-                <div className="founders-card shadow px-0 py-4">
+                <div className="founders-card shadow px-2 py-4">
                   <div className="founder-profile m-0">
                     <div className="left">
                       <img src={founder?.card?.img} alt="founder1" />

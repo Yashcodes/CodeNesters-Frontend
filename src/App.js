@@ -23,9 +23,18 @@ import CancellationAndRefund from "./pages/CancellationAndRefund";
 import Events from "./pages/Events";
 import Course from "./pages/Course";
 import Services from "./pages/Services";
-import Event from "./pages/Event"
+import Event from "./pages/Event";
+import { useEffect } from "react";
+import AOS from "aos";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Toaster />
@@ -61,7 +70,7 @@ function App() {
       </Routes>
 
       <div
-        style={{ borderRadius: "50%", cursor: "pointer", zIndex : "1" }}
+        style={{ borderRadius: "50%", cursor: "pointer", zIndex: "1" }}
         onClick={() => window.scrollTo({ top: 0, left: 0 })}
       >
         <MDBIcon

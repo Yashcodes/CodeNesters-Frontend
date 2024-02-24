@@ -13,6 +13,20 @@ body {
   scroll-behavior: smooth !important;
 }
 
+@media only screen and (max-width: 768px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .text-justify {
   text-align: justify;
   text-justify: inter-word;

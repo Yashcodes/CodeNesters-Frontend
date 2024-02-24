@@ -9,13 +9,6 @@ const HeroSectionHome = () => {
 
   const { themeMode } = useTheme();
 
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //   });
-  //   AOS.refresh();
-  // }, []);
-
   const buttonThemeStyle =
     themeMode === "light"
       ? {
@@ -49,7 +42,7 @@ const HeroSectionHome = () => {
       }
     >
       <div className="hero-section container ">
-        <div className="left-hero-section text-start col-md-6">
+        <div className="left-hero-section text-start col-md-6" data-aos="fade-right">
           <h1
             className="hero-head text-start"
             style={
@@ -89,7 +82,7 @@ const HeroSectionHome = () => {
             </button>
           </div>
         </div>
-        <div className="right-hero-section col-md-6">
+        <div className="right-hero-section col-md-6" data-aos="fade-left">
           <img
             className="img-fluid"
             src={Hero}

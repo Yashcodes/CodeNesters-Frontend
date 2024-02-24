@@ -37,7 +37,9 @@ const BusinessProblemHome = () => {
         <div className="container">
           <div className="business-prob-container">
             <div className="business-problem-head text-center">
-              <h2 className="fs-4 prob-main-head">BUSINESS SOLUTION</h2>
+              <h2 className="fs-4 prob-main-head" data-aos="fade-up">
+                BUSINESS SOLUTION
+              </h2>
               <h3
                 className="fs-1 fw-bold"
                 style={
@@ -47,6 +49,7 @@ const BusinessProblemHome = () => {
                     ? { color: "white" }
                     : { color: "black" }
                 }
+                data-aos="fade-up"
               >
                 We are expert people with great <br />
                 business solutions
@@ -56,6 +59,7 @@ const BusinessProblemHome = () => {
             <div className="business-prob-cards">
               <div
                 className="prob-card"
+                data-aos="fade-right"
                 id="prob-card-1"
                 style={
                   themeMode === "light"
@@ -115,6 +119,7 @@ const BusinessProblemHome = () => {
               <div
                 className="prob-card"
                 id="prob-card-2"
+                data-aos="zoom-in"
                 style={
                   themeMode === "light"
                     ? {
@@ -171,6 +176,7 @@ const BusinessProblemHome = () => {
               <div
                 className="prob-card"
                 id="prob-card-2"
+                data-aos="fade-left"
                 style={
                   themeMode === "light"
                     ? {

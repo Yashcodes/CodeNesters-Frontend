@@ -16,6 +16,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
             <div className="contact-home-content container">
               <div
                 className="content-left"
+                data-aos="zoom-in"
                 style={
                   themeMode === "light"
                     ? {}
@@ -46,7 +47,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                 </span>
 
                 <div className="content-right-icons mt-4">
-                  <div className="instagram-icon text-white">
+                  <div className="instagram-icon text-white" data-aos="zoom-in">
                     <Link
                       to={"https://instagram.com/codenesters"}
                       aria-label="CodeNesters Instagram Account"
@@ -59,7 +60,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                     <span className="fs-5">Instagram</span>
                   </div>
 
-                  <div className="linkedin-icon text-white">
+                  <div className="linkedin-icon text-white" data-aos="zoom-in">
                     <Link
                       to={"https://linkedin.com/company/codenesters"}
                       aria-label="CodeNesters LinkedIn Account"
@@ -72,7 +73,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                     <span className="fs-5">LinkedIn</span>
                   </div>
 
-                  <div className="whatsapp-icon text-white">
+                  <div className="whatsapp-icon text-white" data-aos="zoom-in">
                     <Link
                       to="https://api.whatsapp.com/send?phone=7722814150&text=Hey, there! I want to book an appointment for my project."
                       aria-label="CodeNesters WhatsApp"
@@ -85,7 +86,7 @@ const ContactFromHome = ({ heading, mainContent, subContent }) => {
                     <span className="fs-5">WhatsApp</span>
                   </div>
 
-                  <div className="email-icon text-white">
+                  <div className="email-icon text-white" data-aos="zoom-in">
                     <Link
                       to="mailto:info@codenesters.in"
                       aria-label="CodeNesters Email Address"
