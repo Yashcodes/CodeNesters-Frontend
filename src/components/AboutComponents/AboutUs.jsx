@@ -26,7 +26,7 @@ const AboutUs = () => {
           className="about-us-container d-flex justify-content-center align-items-center"
           style={{ gap: "44px" }}
         >
-          <div className="about-left">
+          <div className="about-left" data-aos="fade-right">
             <img
               src={founder1}
               alt=""
@@ -41,7 +41,11 @@ const AboutUs = () => {
             />
           </div>
 
-          <div className="about-right p-2" style={{ maxWidth: "600px" }}>
+          <div
+            className="about-right p-2"
+            style={{ maxWidth: "600px" }}
+            data-aos="fade-left"
+          >
             <h1
               className=""
               style={

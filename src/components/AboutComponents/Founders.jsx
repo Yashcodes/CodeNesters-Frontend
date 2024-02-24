@@ -122,6 +122,7 @@ const Founders = () => {
         <h4
           className="text-center"
           style={{ color: "#a87fff", fontWeight: "600" }}
+          data-aos="fade-up"
         >
           BUSINESS FOUNDATION
         </h4>
@@ -134,6 +135,7 @@ const Founders = () => {
               ? { color: "white" }
               : { color: "rgba(9, 9, 9, 0.842)" }
           }
+          data-aos="fade-up"
         >
           Meet Our Expert Team
         </h2>
@@ -171,7 +173,7 @@ const Founders = () => {
                 className=""
                 style={
                   themeMode === "light"
-                    ? {borderRadius : "14px"}
+                    ? { borderRadius: "14px" }
                     : themeMode === "dark"
                     ? {
                         backgroundImage:
@@ -179,9 +181,9 @@ const Founders = () => {
                         boxShadow:
                           "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
                         color: "white",
-                        borderRadius : "14px"
+                        borderRadius: "14px",
                       }
-                    : {borderRadius : "14px"}
+                    : { borderRadius: "14px" }
                 }
               >
                 <div className="founders-card shadow px-2 py-4">

@@ -30,6 +30,7 @@ const AboutBanner = () => {
         <div className="about-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="about-banner-left align-self-center d-flex flex-column"
+            data-aos="fade-right"
             style={{ maxWidth: "700px" }}
           >
             <p
@@ -58,8 +59,8 @@ const AboutBanner = () => {
             </div>
           </div>
 
-          <div className="about-banner-right">
-            <img src={AboutBannerImg} alt="" />
+          <div className="about-banner-right" data-aos="fade-left">
+            <img src={AboutBannerImg} alt="CodeNesters about img1" />
           </div>
         </div>
       </div>
