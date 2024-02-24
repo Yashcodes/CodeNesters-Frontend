@@ -60,7 +60,7 @@ const AppointForm = () => {
         </h2>
         <div className="container mb-4">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-right">
               <form id="ft-form" acceptCharset="UTF-8">
                 <fieldset>
                   <legend className="appoint-form-head">For person</legend>
@@ -144,7 +144,7 @@ const AppointForm = () => {
               </form>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-left">
               <h3 className="why-appoint-head">Why Connect With Us</h3>
               <div className="why-appoint-cont my-4">
                 <h4 className="fs-5" style={{ color: "rgb(65 64 64)" }}>24/7 Hours Available</h4>

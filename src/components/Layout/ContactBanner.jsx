@@ -10,7 +10,7 @@ const ContactBanner = () => {
           <div className="container">
             <div className="row">
               <div className="banner-info">
-                <div className="banner-text text-center">
+                <div className="banner-text text-center" data-aos="zoom-in">
                   <h1
                     className="white fw-bold fs-1"
                     style={{ fontSize: "2rem" }}
