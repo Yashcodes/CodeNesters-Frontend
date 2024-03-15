@@ -26,6 +26,7 @@ import Services from "./pages/Services";
 import Event from "./pages/Event";
 import { useEffect } from "react";
 import AOS from "aos";
+import ChangePassword from "./pages/User/ChangePassword";
 
 function App() {
   useEffect(() => {
@@ -46,7 +47,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/courses/:id" element={<Course />} />
+        <Route path="/courses/course/:id" element={<Course />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -63,6 +64,10 @@ function App() {
           <Route path="user/profile/:userid" element={<Profile />} />
           <Route path="user/courses" element={<MyCourses />} />
           <Route path="user/settings" element={<Settings />} />
+          <Route
+            path="user/profile/:userid/change-password"
+            element={<ChangePassword />}
+          />
         </Route>
 
         {/*//! If above routes are not found then the "*" sign will show the specified page */}

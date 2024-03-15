@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loading from "../Utils/Loading";
 
 const Course = () => {
-  const [course, seteCourse] = useState({});
+  const [course, setCourse] = useState({});
 
   const { id } = useParams();
   console.log(id);
@@ -13,7 +14,7 @@ const Course = () => {
       `https://code-nesters-backend.vercel.app/api/v1/course/get-course/${id}`
     );
 
-    seteCourse(response?.data?.course);
+    setCourse(response?.data?.course);
   }, [id]);
 
   useEffect(() => {
@@ -21,12 +22,18 @@ const Course = () => {
   }, [getCourse]);
 
   return (
-    <div>
-      <h1>{course?.courseName}</h1>
-      <p>{course?.courseContent}</p>
-      <p>{course?.coursePriceDiscount}</p>
-      <p>{course?.courseDiscountedPrice}</p>
-    </div>
+    <>
+      {Object.keys(course).length !== 0 ? (
+        <div>
+          <h1>{course?.courseName}</h1>
+          <p>{course?.courseContent}</p>
+          <p>{course?.coursePriceDiscount}</p>
+          <p>{course?.courseDiscountedPrice}</p>
+        </div>
+      ) : (
+        <Loading />
+      )}
+    </>
   );
 };
 

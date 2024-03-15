@@ -1,14 +1,37 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
+import { useAuth } from "../../context/Auth";
+import { Link } from "react-router-dom";
+import UserMenu from "../../components/UserDashboardComponents/UserMenu";
 
 const Profile = () => {
+  const [auth] = useAuth();
+
   return (
     <Layout>
-      <h1>User Profile</h1>
-      <input type="file" onChange={""} />
-      <button onClick={""}>Upload</button>
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <UserMenu />
+          </div>
+          <div className="col-8">
+            <h1>My Profile</h1>
+            <div>
+              <ul>
+                <li>Name: {auth?.user?.name}</li>
+                <li>Email: {auth?.user?.email}</li>
+                <li>Password: {"***********"}</li>
 
-      <img src={""} alt="" width={"100px"} height={"100px"} />
+                <Link
+                  to={`/dashboard/user/profile/${auth?.user?._id}/change-password`}
+                >
+                  <sub>Change my password</sub>
+                </Link>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
