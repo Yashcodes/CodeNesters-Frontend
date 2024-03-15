@@ -182,17 +182,6 @@ const Register = () => {
               </MDBBtn>
             </div>
 
-            <div className="divider-text text-center mb-2">or</div>
-
-            <div className="register-with-google mb-3">
-              <MDBBtn className="w-100 card-btn" onClick={""}>
-                SignUp with Google
-                <span>
-                  <MDBIcon fab icon="google" className="mx-2" size="lg" />
-                </span>
-              </MDBBtn>
-            </div>
-
             <div className="login-option mb-3">
               <p className="text-center">
                 Do you already have an account?
