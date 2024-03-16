@@ -27,6 +27,8 @@ import Event from "./pages/Event";
 import { useEffect } from "react";
 import AOS from "aos";
 import ChangePassword from "./pages/User/ChangePassword";
+import ForgotPassword from "./pages/Auth/ForgotPassword";
+import ResetPassword from "./pages/Auth/ResetPassword";
 
 function App() {
   useEffect(() => {
@@ -58,6 +60,8 @@ function App() {
         />
         <Route path="/services" element={<Services />} />
         <Route path="/event/:slug" element={<Event />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:id/:token" element={<ResetPassword />} />
 
         {/* //! Protected Routes for Users */}
         <Route path="/dashboard" element={<Private />}>

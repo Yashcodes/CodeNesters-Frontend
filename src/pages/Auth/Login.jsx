@@ -143,10 +143,16 @@ const Login = () => {
               </MDBBtn>
             </div>
 
-            <div className="login-option mb-3">
-              <p className="text-center">
+            <div className="login-option mb-1">
+              <p className="text-center mb-0">
                 Don't have an account?
                 <Link to={"/register"}> Create Account</Link>
+              </p>
+            </div>
+
+            <div className="forgot-pass-option mb-3">
+              <p className="text-center">
+                <Link to={"/forgot-password"}>Forgot Password?</Link>
               </p>
             </div>
           </div>
