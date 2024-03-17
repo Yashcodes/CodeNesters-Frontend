@@ -2,17 +2,16 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { useAuth } from "../../context/Auth";
 import { Link } from "react-router-dom";
-import UserMenu from "../../components/UserDashboardComponents/UserMenu";
 
 const Profile = () => {
   const [auth] = useAuth();
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container p-5">
         <div className="row">
           <div className="col-4">
-            <UserMenu />
+           
           </div>
           <div className="col-8">
             <h1>My Profile</h1>

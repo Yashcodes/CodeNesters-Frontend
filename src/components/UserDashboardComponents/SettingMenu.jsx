@@ -9,7 +9,7 @@ const UserMenu = () => {
     <div>
       <ul>
         <li>
-          <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>Profile</Link>
+          <Link to={`/dashboard/user/settings`}>Edit Profile</Link>
         </li>
 
         <li>
