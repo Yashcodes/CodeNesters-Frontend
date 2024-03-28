@@ -67,7 +67,7 @@ const EventRegistrationForm = () => {
 
   return (
     <div>
-      <div className="container p-5">
+      <div className="container pt-5 pb-3">
         <h4
           className="text-center"
           style={{ color: "#a87fff", fontWeight: "600" }}

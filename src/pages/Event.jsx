@@ -14,7 +14,7 @@ const Event = () => {
   return (
     <Layout>
       <div
-        className="p-5"
+        className="p-3"
         style={
           themeMode === "light"
             ? {
@@ -98,7 +98,7 @@ const Event = () => {
             </div>
           </div>
 
-          <div className="event-page-description p-3 mt-3">
+          <div className="event-page-description mt-3">
             <h2>About Version Controlling</h2>
 
             <ul
@@ -128,7 +128,7 @@ const Event = () => {
             </ul>
           </div>
 
-          <div className="event-page-form-register p-3">
+          <div className="event-page-form-register">
             {/* <h2 className="mb-4">Register for Event</h2> */}
 
             <EventRegistrationForm />

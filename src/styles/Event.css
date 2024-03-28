@@ -12,3 +12,13 @@
   flex-wrap: wrap;
   gap: 22px;
 }
+
+.event-page-description {
+  padding: 16px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .event-page-description {
+    padding: 16px 0px;
+  }
+}
