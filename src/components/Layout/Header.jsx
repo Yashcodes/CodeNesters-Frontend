@@ -81,11 +81,15 @@ const Header = () => {
         }
       >
         <div className="container-fluid m-1">
-          <Link className="navbar-brand fs-2 fw-bold text-white" to={"/"} style={{gap : "6px"}}>
+          <Link
+            className="navbar-brand fs-2 fw-bold text-white"
+            to={"/"}
+            style={{ gap: "6px" }}
+          >
             <img
               src={brandLogo}
               alt="logo"
-              style={{ aspectRatio: "auto", marginRight : "4px" }}
+              style={{ aspectRatio: "auto", marginRight: "4px" }}
               width={"44px"}
               height={"44px"}
             />
@@ -187,12 +191,24 @@ const Header = () => {
 
             <div className="d-flex gap-3 align-items-center">
               {auth?.user ? (
-                <img
+                /* <img
                   src={""}
                   alt=""
                   className="user-profile"
                   onClick={handleShow}
-                />
+                />*/
+                <div
+                  style={{
+                    padding: "3px 16px",
+                    background: "black",
+                    borderRadius: "50%",
+                    margin: "2px",
+                    backgroundColor: "rgb(140 20 187)",
+                  }}
+                  onClick={handleShow}
+                >
+                  <span className="user-profile">{(auth?.user?.name)[0]}</span>
+                </div>
               ) : (
                 <button
                   className={`btn register-btn text-white fs-6`}
