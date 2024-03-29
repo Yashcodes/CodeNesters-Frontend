@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import gitEvent from "../assets/images/events/git-event.jpg";
 import { Link } from "react-router-dom";
+import slugify from "slugify"
 
 const Events = () => {
   return (
@@ -35,9 +36,9 @@ const Events = () => {
 
                 <div className="event-register d-flex align-items-center justify-content-between flex-wrap">
                   <div className="left d-flex align-items-center gap-3 flex-wrap">
-                    <Link to={"https://book.stripe.com/aEU5mb8Bt0Ea39maEE"}>
+                    <Link to={`/event/${slugify("Git and GitHub").toLowerCase()}`}>
                       <button className="btn contact-banner-btn">
-                        Book Now
+                        Know More
                       </button>
                     </Link>
                     <div className="event-price d-flex justify-content-between flex-wrap">

@@ -1,0 +1,89 @@
+.service-container {
+  padding: 0;
+  background-image: linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%);
+}
+
+.service-banner-section {
+  min-height: 700px;
+  color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+.service-banner-right img {
+  width: 100%;
+  height: 450px;
+}
+
+.service-banner-left p {
+  font-size: 2.8rem;
+  line-height: 50px;
+}
+
+.service-banner-left {
+  padding: 0px 2vw;
+}
+
+@media only screen and (max-width: 400px) {
+  .service-banner-left p {
+    font-size: 11vw;
+  }
+
+  .service-banner-section {
+    gap: 0px !important;
+  }
+}
+
+/*! Project Testimonial */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-container {
+  height: auto;
+  max-width: 1200px;
+  margin: 0;
+  margin: auto;
+  /* text-align: center; */
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+/*! Contact form for services */
+
+.service-page-input input {
+  padding: 6px 4px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid darkviolet;
+  caret-color: rgb(127, 9, 187);
+  font-size: 18px;
+  color: rgb(53, 61, 69);
+}
+
+.service-page-input input:focus {
+  border-color: darkviolet;
+}
+
+.service-page-input label {
+  color: black;
+  font-size: 18px;
+}

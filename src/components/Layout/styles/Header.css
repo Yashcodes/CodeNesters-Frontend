@@ -47,11 +47,15 @@
 }
 
 .user-profile {
-  display: inline-block !important ;
-  width: 44px;
-  height: 44px;
+  /* display: inline-block !important ; */
+  /* width: 44px;
+  height: 44px; */
   border-radius: 50%;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 28px;
+  /* background-color: #6e48aa;
+  background-color: #9d50bb; */
 }
 
 /*! OffCanvas  */

@@ -1,0 +1,91 @@
+.profile-content > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content input {
+  padding: 4px 6px;
+}
+
+.edit-profile-container h1 {
+  color: rgb(33, 33, 33);
+  font-weight: 500;
+}
+
+.edit-profile-container .profile-content label,
+.change-password-section label {
+  font-size: 18px;
+  color: rgb(23, 22, 22);
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.edit-profile-container .profile-content input,
+.edit-profile-container .profile-content textarea,
+.change-password-section input {
+  padding: 4px 8px;
+  outline: none;
+  background: rgb(232 210 255 / 62%);
+  border: 2px solid #bb95f7;
+  font-size: 18px;
+  color: rgb(68, 67, 67);
+  margin-top: 0;
+  caret-color: rgb(127, 9, 187);
+  width: 100%;
+  border-radius: 4px;
+}
+
+.update-profile , .update-password{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 4px;
+}
+
+.update-profile-btn {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  padding: 8px 22px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 6px;
+  outline: 1px solid white;
+  border: none;
+  text-transform: capitalize;
+}
+
+.update-profile-btn:hover {
+  background-position: right center;
+}
+
+.update-pass-btn button {
+  background-image: linear-gradient(
+    to right,
+    #9d50bb 0%,
+    #6e48aa 51%,
+    #9d50bb 100%
+  );
+  padding: 8px 22px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 6px;
+  outline: 1px solid white;
+  border: none;
+  text-transform: capitalize;
+}
+
+.update-pass-btn button:hover {
+  background-position: right center;
+}

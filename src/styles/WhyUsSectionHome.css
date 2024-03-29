@@ -21,6 +21,8 @@
   transition-timing-function: linear;
 }
 
+/* rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 21px 3px */
+
 .whyUsCard:hover {
   transform: scale(1.05) !important;
 }
@@ -51,7 +53,7 @@
 }
 
 .whyUsSection {
-  background: url(../assets/images/home/bg-section.jpg);
+  background: url(../assets/images/home/bg-section.webp);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;

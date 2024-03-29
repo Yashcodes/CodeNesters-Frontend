@@ -1,174 +1,279 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import founder1 from "../../assets/images/FounderImage/founder1.jpeg";
-import img from "../../assets/images/FounderImage/founder-1.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Keyboard, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
+import founder1 from "../../assets/images/FounderImage/founder-1.jpg";
+import founder2 from "../../assets/images/FounderImage/founder-2.png";
+import founder3 from "../../assets/images/FounderImage/founder-3.jpg";
+import founder4 from "../../assets/images/FounderImage/founder-4.jpg";
+import founder5 from "../../assets/images/FounderImage/founder-5.jpg";
+import founder6 from "../../assets/images/FounderImage/founder-6.jpg";
 import { MDBIcon } from "mdb-react-ui-kit";
+import { useTheme } from "../../context/ThemeContext";
 
 const Founders = () => {
-  const founderCardData = [
+  const { themeMode } = useTheme();
+
+  const Data = [
     {
       card: {
-        name: "Yash Parihar",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
+        id: 1,
+        title: "Bhagvendra Singh Parihar",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder1,
+        email: "pariharyash1989@gmail.com",
         instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: founder1,
+        linkedin: "https://linkedin.com/in/bhagvendra-singh",
       },
     },
-
     {
       card: {
-        name: "Jalla Upendra Rao",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
-        instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: img,
+        id: 2,
+        title: "Jalla Upendra Rao",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder2,
+        email: "",
+        instagram: "https://www.instagram.com/upendrarao_01/",
+        linkedin: "https://www.linkedin.com/in/upendra-rao/",
       },
     },
-
     {
       card: {
-        name: "Yash Parihar",
-        designation: "Founder, CodeNesters",
-        about: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Possimus cumque expedita dolorum provident velit ullam sunt,
-      quae veritatis doloremque vero libero voluptates dignissimos
-      similique reprehenderit corporis natus reiciendis? Ipsam,
-      perferendis. Lorem ipsum dolor sit amet consectetur,
-      adipisicing elit. Consequatur distinctio provident
-      voluptatibus facilis voluptates hic, facere eos sed soluta
-      dolorum incidunt, perspiciatis ipsa molestias adipisci minus
-      vero illum fugit repellat!`,
-        linkedin: "https://linkedin.com/in/bhagvendra-singh",
-        instagram: "https://instagram.com/asynchronous.1",
-        github: "https://github.com/Yashcodes",
-        image: founder1,
+        id: 3,
+        title: "Ashish Tripathi",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder3,
+        email: "ashishtrip27@gmail.com",
+        instagram: "https://www.instagram.com/ashishtripathi_________/",
+        linkedin: "https://www.linkedin.com/in/ashish-triapthi/",
+      },
+    },
+    {
+      card: {
+        id: 4,
+        title: "Soham Patharkar",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder4,
+        email: "sohampatharkar48@gmail.com",
+        instagram: "https://www.instagram.com/sohampatharkar48/",
+        linkedin: "https://www.linkedin.com/in/soham-patharkar-547b75222/",
+      },
+    },
+    {
+      card: {
+        id: 5,
+        title: "Anurag Verma",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder5,
+        email: "anuragverma6266361989@gmail.com",
+        instagram: "https://www.instagram.com/anurag.verma02/",
+        linkedin: "",
+      },
+    },
+    {
+      card: {
+        id: 6,
+        title: "Priyanshu Patel",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder6,
+        email: "priyanshu678patel@gmail.com",
+        instagram: "",
+        linkedin: "",
+      },
+    },
+    {
+      card: {
+        id: 7,
+        title: "Aditya Raut",
+        subTitle: "Founder & CEO",
+        description: "Hey, I want to avail your services",
+        img: founder2,
+        email: "",
+        instagram: "https://www.instagram.com/aditya_rt_04/",
+        linkedin: "",
       },
     },
   ];
 
   return (
-    <div className="founder-section-bg p-5">
-      <h4
-        className="text-center"
-        style={{ color: "#a87fff", fontWeight: "600" }}
-      >
-        BUSINESS FOUNDATION
-      </h4>
-      <h2 className="fs-1 fw-bold text-black text-center">
-        Meet Our Expert Team
-      </h2>
-
-      <div className="container my-5" style={{}}>
-        <Carousel
-          showArrows={true}
-          infiniteLoop={true}
-          showThumbs={false}
-          showStatus={false}
-          autoPlay={true}
-          interval={3000}
-          stopOnHover={true}
-          transitionTime={1500}
-          useKeyboardArrows={true}
-          swipeable={true}
-          emulateTouch={true}
-          showIndicators={true}
+    <section
+      className="founders-section py-5 px-4"
+      style={
+        themeMode === "light"
+          ? {}
+          : themeMode === "dark"
+          ? {
+              backgroundImage:
+                "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+              color: "white",
+            }
+          : {}
+      }
+    >
+      <div className="container">
+        <h4
+          className="text-center"
+          style={{ color: "#a87fff", fontWeight: "600" }}
+          data-aos="fade-up"
         >
-          {founderCardData.map((cardData) => (
-            <div
-              className="card-container d-flex flex-row flex-wrap  align-items-start shadow mx-auto"
-              style={{ maxWidth: "1000px", borderRadius: "8px" }}
-            >
-              <div className="card-container-left" style={{ width: "380px" }}>
-                <img
-                  className="img-responsive"
-                  src={cardData?.card?.image}
-                  alt=""
-                  style={{
-                    maxWidth: "380px",
-                    height: "400px",
-                    borderRadius: "8px 0px 0px 8px",
-                  }}
-                />
-              </div>
+          BUSINESS FOUNDATION
+        </h4>
+        <h2
+          className="fs-1 fw-bold text-center mb-5"
+          style={
+            themeMode === "light"
+              ? { color: "rgba(9, 9, 9, 0.842)" }
+              : themeMode === "dark"
+              ? { color: "white" }
+              : { color: "rgba(9, 9, 9, 0.842)" }
+          }
+          data-aos="fade-up"
+        >
+          Meet Our Expert Team
+        </h2>
 
-              <div className="card-container-right" style={{ width: "615px" }}>
-                <div
-                  className="right-card-content"
-                  style={{ padding: "22px 26px 22px 12px" }}
-                >
-                  <h2 className="m-0">{cardData?.card?.name}</h2>
-                  <p className="fs-5 mb-2">{cardData?.card?.designation}</p>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={30}
+          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 2,
+            },
+            992: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 1,
+            },
+            120: {
+              slidesPerView: 1,
+            },
+          }}
+          modules={[Pagination, Autoplay, Keyboard]}
+          className="mySwiper px-2 pt-2 pb-5"
+          style={{ zIndex: "0" }}
+        >
+          <div className="mb-5">
+            {Data.map((founder) => (
+              <SwiperSlide
+                key={founder?.card?.id}
+                className=""
+                style={
+                  themeMode === "light"
+                    ? { borderRadius: "14px" }
+                    : themeMode === "dark"
+                    ? {
+                        backgroundImage:
+                          "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                        color: "white",
+                        borderRadius: "14px",
+                      }
+                    : { borderRadius: "14px" }
+                }
+              >
+                <div className="founders-card shadow px-2 py-4">
+                  <div className="founder-profile m-0">
+                    <div className="left">
+                      <img src={founder?.card?.img} alt="founder1" />
+                    </div>
 
-                  <p
-                    className="founder-card-para"
-                    style={{
-                      textAlign: "justify",
-                      textJustify: "inter-word",
-                    }}
-                  >
-                    {cardData?.card?.about}
-                  </p>
+                    <div className="right">
+                      <p
+                        style={
+                          themeMode === "light"
+                            ? { color: "black" }
+                            : themeMode === "dark"
+                            ? { color: "#a87fff" }
+                            : { color: "black" }
+                        }
+                      >
+                        {founder?.card?.title}
+                      </p>
+                      <span>Founder & CEO</span>
 
-                  <div className="founder-icons d-flex gap-2">
-                    <Link to={`${cardData?.card?.linkedin}`}>
-                      <MDBIcon
-                        fab
-                        icon="linkedin"
-                        size="lg"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
+                      <div className="founder-icons">
+                        <Link
+                          to={`mailTo:${founder?.card?.email}`}
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: " 0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            far
+                            icon="envelope"
+                            className="founder-icon"
+                          />
+                        </Link>
+                        <Link
+                          to={founder?.card?.instagram}
+                          target="_blank"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: " 0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            fab
+                            icon="instagram"
+                            className="founder-icon"
+                          />
+                        </Link>
+                        <Link
+                          to={founder?.card?.linkedin}
+                          target="_blank"
+                          style={{
+                            backgroundImage:
+                              "linear-gradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)",
+                            padding: "0px 7px 0px 7px",
+                            borderRadius: "4px",
+                          }}
+                        >
+                          <MDBIcon
+                            fab
+                            icon="linkedin-in"
+                            className="founder-icon"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
 
-                    <Link to={`${cardData?.card?.github}`}>
-                      <MDBIcon
-                        fab
-                        icon="github"
-                        size="lg"
-                        className="ms-1"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
-
-                    <Link to={`${cardData?.card?.instagram}`}>
-                      <MDBIcon
-                        fab
-                        icon="instagram"
-                        size="lg"
-                        className="ms-1 text-gradient"
-                        style={{ color: "rgb(115 54 245)" }}
-                      />
-                    </Link>
+                  <div className="founder-about">
+                    <p className="text-justify m-0">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Eveniet earum dolor distinctio porro impedit consequuntur
+                      eius tempora quod officiis quae? Quidem exercitationem
+                      voluptas earum quis Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Corporis, nam.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
+              </SwiperSlide>
+            ))}
+          </div>
+        </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

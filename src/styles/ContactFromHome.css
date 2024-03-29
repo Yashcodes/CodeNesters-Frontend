@@ -1,5 +1,5 @@
 .contact-home-bg {
-  background-image: url(../assets/images/contact/c4.webp);
+  background-image: url(../assets/images/contact/c4.jpg);
   min-height: 500;
   width: 100%;
   background-attachment: fixed;
@@ -29,7 +29,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 80px;
 }
 
@@ -51,7 +50,7 @@
 
 .instagram-icon,
 .linkedin-icon,
-.telegram-icon,
+.whatsapp-icon,
 .email-icon {
   display: flex;
   align-items: center;
@@ -62,7 +61,7 @@
 
 .instagram-icon > a,
 .linkedin-icon > a,
-.telegram-icon > a,
+.whatsapp-icon > a,
 .email-icon > a {
   color: white;
 }

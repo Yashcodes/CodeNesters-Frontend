@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import CourseBannerImg from "../../assets/images/course/coursebanner (2).svg";
 import { Link } from "react-router-dom";
 
 const CourseBanner = () => {
   return (
     <>
-      <div className="course-container container-fluid pt-5">
+      <div className="course-container container-fluid pt-5 px-2">
         <div className="course-banner-section d-flex align-items-center justify-content-center gap-5 flex-wrap">
           <div
             className="course-banner-left align-self-center d-flex flex-column"
+            data-aos="fade-right"
             style={{ maxWidth: "700px" }}
           >
             <p className="text-black fw-bold">
@@ -27,7 +28,7 @@ const CourseBanner = () => {
             </div>
           </div>
 
-          <div className="course-banner-right">
+          <div className="course-banner-right" data-aos="fade-left">
             <img src={CourseBannerImg} alt="" />
           </div>
         </div>

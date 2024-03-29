@@ -40,23 +40,8 @@
 .about-us-content {
   text-align: justify;
   text-justify: inter-word;
-  line-height: 24px;
+  line-height: 26px;
   margin: 12px 0px;
-}
-
-.founders-card {
-  width: 100% !important;
-  height: auto !important;
-}
-
-.founder-img {
-  width: 75% !important;
-  max-height: 150px !important;
-}
-
-.founder-icons a img {
-  max-width: 20px;
-  max-height: 20px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -69,22 +54,64 @@
   }
 }
 
-.carousel .slide {
-  background: none;
+/*! Founders Section */
+
+.founders-section {
+  min-height: 645px;
+  width: 100%;
 }
 
-.carousel .control-dots .dot {
-  background-color: #a87fff !important;
+.founders-card {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 18px;
 }
 
-.founder-section-bg {
-  background-image: linear-gradient(
-    198deg,
-    #ede9f7aa 0%,
-    rgb(241, 233, 233) 100%
-  );
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
-.carousel .carousel-slider .control-arrow {
-  color: #a87fff !important;
+.founder-profile .left img {
+  border-radius: 50%;
+  max-height: 130px;
+} 
+
+.founder-profile .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-profile .right p {
+  margin: 0;
+  color: rgb(30, 29, 29);
+  font-weight: bold;
+}
+
+.founder-profile .right span {
+  font-style: italic;
+}
+
+.founder-profile .right .founder-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0px 0px 0px;
+}
+
+.founder-profile .right .founder-icons .founder-icon{
+  font-size: 14px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.founder-about {
+  padding: 6px;
+}
+
+.founder-about p {
+  font-size: 16px;
 }

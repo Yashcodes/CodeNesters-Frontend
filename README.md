@@ -1,10 +1,30 @@
-# Getting Started with Create React App
+# Welcome to CodeNesters's Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visit our [website](https://codenesters.in) to experience amazing services
 
-## Available Scripts
+## Learn how to contribute to this respository
 
-In the project directory, you can run:
+1. Fork the repository by clicking on the fork button in the top right corner of this page
+
+2. Clone your forked repository onto your local machine using `git clone https://github.com/<your-username>/<repo_name>.git`
+
+3. Navigate to the project directory using `cd CodeNesters`
+
+4. Add the original repository as a remote called "upstream" using `git remote add upstream https://github.com/Yashcodes/CodeNesters-Frontend.git`
+
+5. To pull the latest code from the main repository, use `git checkout master` and then `git pull upstream master`. This ensures that you are working off the most recent version of the project
+
+6. Create a new branch for your feature or fix using `git checkout -b <branch_name>`. If you're fixing a bug, include fixes in the branch name (e.g., `fix-bug-x`)
+
+7. Make your changes and commit them using `git add .` (to stage all changed files) and `git commit -m "Your detailed commit message"` (to make a commit with a descriptive message). It is important to provide a detailed message explaining your changes
+
+8. Push your changes back to your forked repository using `git push origin <branch_name>`
+
+9. Go to the GitHub website and click on the "New Pull Request" button. Select your branch from the dropdown menu next to "base:", and choose "master" from the dropdown menu next to "compare:". Click "Create Pull Request"
+
+10. A member of the team will review your request and may ask for modifications. Once they approve your request, it will be merged into the main repository
+
+## Learn how to run the project
 
 ### `npm start`
 
@@ -14,11 +34,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -27,44 +42,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

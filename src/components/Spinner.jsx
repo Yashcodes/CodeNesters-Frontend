@@ -11,7 +11,7 @@ const Spinner = ({path = ""}) => {
       setCount((preValue) => --preValue);
     }, 1000);
 
-    count === 0 && navigate(`/${path}`, {
+    count === 0 && navigate(`/login`, {
         state : location.pathname
     });
 

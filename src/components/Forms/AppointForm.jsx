@@ -11,6 +11,7 @@ const AppointForm = () => {
   const [pincode, setPincode] = useState("");
   const [message, setMessage] = useState("");
 
+  // eslint-disable-next-line
   const [userData, setUserData] = useState({});
 
   const handleSubmit = async (e) => {
@@ -43,8 +44,6 @@ const AppointForm = () => {
       setAddress("");
       setPincode("");
       setMessage("");
-
-      console.log(userData);
     } catch (error) {
       toast.error("Error in submitting form");
     }
@@ -53,15 +52,15 @@ const AppointForm = () => {
   return (
     <>
       <section className="appointment" id="appointment">
-        <p
+        <h2
           className="section-heading appoint-head"
           style={{ color: "#a87fff" }}
         >
           Get an Appointment
-        </p>
+        </h2>
         <div className="container mb-4">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-right">
               <form id="ft-form" acceptCharset="UTF-8">
                 <fieldset>
                   <legend className="appoint-form-head">For person</legend>
@@ -135,34 +134,40 @@ const AppointForm = () => {
                 </fieldset>
 
                 <div className="btns">
-                  <button className="btn btn-primary appoint-submit-btn" onClick={handleSubmit}>
+                  <button
+                    className="btn btn-primary appoint-submit-btn"
+                    onClick={handleSubmit}
+                  >
                     Submit
                   </button>
                 </div>
               </form>
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-6" data-aos="fade-left">
               <h3 className="why-appoint-head">Why Connect With Us</h3>
               <div className="why-appoint-cont my-4">
-                <h5>24/7 Hours Available</h5>
+                <h4 className="fs-5" style={{ color: "rgb(65 64 64)" }}>24/7 Hours Available</h4>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est aspernatur eum.
+                  Need assistance at any time? We're here for you 24/7, ensuring
+                  support and guidance whenever you require it.
                 </p>
               </div>
               <div className="why-appoint-cont">
-                <h5>Experienced Staff Available</h5>
+                <h5 style={{ color: "rgb(65 64 64)" }}>
+                  Experienced Staff Available
+                </h5>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est.
+                  Our team brings years of expertise to the table, assuring
+                  top-notch service and reliable solutions for your needs.
                 </p>
               </div>
               <div className="why-appoint-cont my-4">
-                <h5>Low Fees &amp; Price</h5>
+                <h5 style={{ color: "rgb(65 64 64)" }}>Low Fees &amp; Price</h5>
                 <p className="para-color why-appoint-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptas expedita eligendi est aspernatur eum.
+                  Get premium solutions without the premium price tag. We
+                  believe in making excellence accessible through
+                  budget-friendly services at CodeNesters.
                 </p>
               </div>
             </div>

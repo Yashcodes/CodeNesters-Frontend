@@ -1,98 +1,170 @@
 import React from "react";
-import client1 from "../assets/images/Anu/img11.jpg";
 import "../styles/Testimonial.css";
+import { useTheme } from "../context/ThemeContext";
 
-const Testimonial = () => {
+const Testimonial = ({ title, caption, Data }) => {
+  const { themeMode } = useTheme();
+
   return (
     <>
-      <section className="section-2" id="testimonial">
+      <section
+        className="section-2 pt-5"
+        id="testimonial"
+        style={
+          themeMode === "light"
+            ? {}
+            : themeMode === "dark"
+            ? {
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(25 1 33) 0%, rgb(12, 3, 17) 115%)",
+              }
+            : {}
+        }
+      >
         <div className="container">
           <h2
-            className="text-uppercase text-dark mb-3 text-center"
-           
+            className="text-center fs-4"
+            style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
-            See what our clients say
+            {title.toUpperCase()}
           </h2>
-          <p className="testimonialHeadText" >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            tempore temporibus <br />
-            nemo mollitia esse, inventore magni quaerat.
-          </p>
+          <h3
+            className="fs-1 fw-bold text-center"
+            data-aos="fade-up"
+            style={
+              themeMode === "light"
+                ? { color: "black", marginBottom: "60px" }
+                : themeMode === "dark"
+                ? { color: "white", marginBottom: "60px" }
+                : { color: "black", marginBottom: "60px" }
+            }
+          >
+            {caption}
+          </h3>
           <p className="border-btm" />
-          <div className="row mb-5 testimonial-gap">
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="face front-face">
-                  <img
-                    // src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
-                    src={client1}
-                    alt=""
-                    className="profile"
-                  />
-                  <div className="pt-3 text-uppercase name fw-bold">
-                    Anushka Baghel
+          <div
+            className="row mb-5 testimonial-gap"
+            style={
+              themeMode === "light"
+                ? {}
+                : themeMode === "dark"
+                ? {
+                    color: "white",
+                  }
+                : {}
+            }
+          >
+            {Data.map((cardData) => (
+              <div
+                className="col-lg-4"
+                key={cardData?.card?.id}
+                data-aos={cardData?.card?.aos}
+              >
+                <div className="card">
+                  <div
+                    className="face front-face"
+                    style={
+                      themeMode === "light"
+                        ? {}
+                        : themeMode === "dark"
+                        ? {
+                            border: "none",
+                          }
+                        : {}
+                    }
+                  >
+                    <img
+                      src={cardData?.card?.image}
+                      alt=""
+                      className="profile"
+                      loading="lazy"
+                      width={"150px"}
+                      height={"150px"}
+                    />
+                    <div
+                      className="pt-3 text-uppercase name fw-bold"
+                      style={
+                        themeMode === "light"
+                          ? {}
+                          : themeMode === "dark"
+                          ? {
+                              color: "#a87fff",
+                            }
+                          : {}
+                      }
+                    >
+                      {cardData?.card?.title}
+                    </div>
+                    <div
+                      className="designation"
+                      style={
+                        themeMode === "light"
+                          ? {}
+                          : themeMode === "dark"
+                          ? {
+                              color: "white",
+                            }
+                          : {}
+                      }
+                    >
+                      {cardData?.card?.subTitle}
+                    </div>
                   </div>
-                  <div className="designation">Content Writer, Journalist</div>
-                </div>
-                <div className="face back-face">
-                  <span className="fas fa-quote-left" />
-                  <div className="testimonial">
-                    I made bacck the purchase price in just 48 hours! Thank you
-                    for making it pain less, pleasant. The service was
-                    execellent. I will refer everyone I know.
+                  <div
+                    className="face back-face"
+                    style={
+                      themeMode === "light"
+                        ? {}
+                        : themeMode === "dark"
+                        ? {
+                            border: "none",
+                          }
+                        : {}
+                    }
+                  >
+                    <span
+                      className="fas fa-quote-left"
+                      style={
+                        themeMode === "light"
+                          ? {}
+                          : themeMode === "dark"
+                          ? {
+                              color: "white",
+                            }
+                          : {}
+                      }
+                    />
+                    <div
+                      className="testimonial"
+                      style={
+                        themeMode === "light"
+                          ? {}
+                          : themeMode === "dark"
+                          ? {
+                              color: "white",
+                            }
+                          : {}
+                      }
+                    >
+                      {cardData?.card?.content}
+                    </div>
+                    <span
+                      className="fas fa-quote-right"
+                      style={
+                        themeMode === "light"
+                          ? {}
+                          : themeMode === "dark"
+                          ? {
+                              color: "white",
+                            }
+                          : {}
+                      }
+                    />
                   </div>
-                  <span className="fas fa-quote-right" />
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="face front-face">
-                  <img
-                    src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                    alt=""
-                    className="profile"
-                  />
-                  <div className="pt-3 text-uppercase name fw-bold">
-                    Jeffery Kennan
-                  </div>
-                  <div className="designation">Full Stack Developer</div>
-                </div>
-                <div className="face back-face">
-                  <span className="fas fa-quote-left" />
-                  <div className="testimonial">
-                    Really good, you have saved our business! I made bacck the
-                    purchase price in just 48 hours! man, this thing is getting
-                    better and better as I learn more about it.
-                  </div>
-                  <span className="fas fa-quote-right" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="card">
-                <div className="face front-face">
-                  <img
-                    src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                    className="profile"
-                  />
-                  <div className="pt-3 text-uppercase name fw-bold">
-                    Issac Maxwell
-                  </div>
-                  <div className="designation">Finance Director</div>
-                </div>
-                <div className="face back-face">
-                  <span className="fas fa-quote-left" />
-                  <div className="testimonial">
-                    Account keeper is the most valuable business research we
-                    have EVER purchased. Without electrician, we would ahave
-                    gone bankrupt by now.
-                  </div>
-                  <span className="fas fa-quote-right" />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

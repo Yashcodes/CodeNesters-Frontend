@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Rubik:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -9,7 +9,22 @@
 *,
 html,
 body {
+  scrollbar-width: none;
   scroll-behavior: smooth !important;
+}
+
+@media only screen and (max-width: 768px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .text-justify {

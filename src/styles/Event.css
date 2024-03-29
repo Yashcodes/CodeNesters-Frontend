@@ -1,0 +1,24 @@
+/* .event-page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 22px;
+} */
+
+.event-page-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.event-page-description {
+  padding: 16px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .event-page-description {
+    padding: 16px 0px;
+  }
+}

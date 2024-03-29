@@ -1,99 +1,78 @@
 import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
-
 import "../styles/WhyUsSectionHome.css";
+import { useTheme } from "../context/ThemeContext";
 
-const WhyUsSectionHome = () => {
-  const whyUsCardData = [
-    {
-      data: {
-        title: "Development",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "bug",
-        iconType: "fas",
-
-        cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
-        iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
-      },
-    },
-    {
-      data: {
-        title: "Maintenance",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "tools",
-        iconType: "fas",
-        cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
-        iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
-      },
-    },
-    {
-      data: {
-        title: "Affordable",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "hand-holding-usd",
-        iconType: "fas",
-        cardInlineStyle: { borderBottom: "6px solid cyan" },
-        iconInlineStyle: { backgroundColor: "cyan" },
-      },
-    },
-    {
-      data: {
-        title: "Support",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "question-circle",
-        iconType: "far",
-        cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
-        iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
-      },
-    },
-    {
-      data: {
-        title: "Real-world Projects",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "users-cog",
-        iconType: "fas",
-        cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
-        iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
-      },
-    },
-    {
-      data: {
-        title: "Career Assistance",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-        ipsum adipisci unde pariatur eligendi voluptas, vel in`,
-        iconName: "bug",
-        iconType: "fas",
-        cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
-        iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
-      },
-    },
-  ];
+const WhyUsSectionHome = ({
+  sectionCardData,
+  sectionHeading,
+  headingContent,
+}) => {
+  const { themeMode } = useTheme();
 
   return (
     <>
-      <section className="py-5 whyUsSection">
+      <section
+        className="py-5 whyUsSection"
+        style={
+          themeMode === "light"
+            ? {}
+            : themeMode === "dark"
+            ? {
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                color: "white",
+              }
+            : {}
+        }
+      >
         <div className="container p-5">
-          <h4
-            className="text-center"
+          <h2
+            className="text-center fs-4"
             style={{ color: "#a87fff", fontWeight: "600" }}
+            data-aos="fade-up"
           >
-            WHY CODENESTERS?
-          </h4>
-          <h2 className="fs-1 text-black fw-bold whyUsHeading text-center">
-            Making project development <br /> easier and convenient
+            {sectionHeading}
           </h2>
+          <h3
+            className="fs-1 fw-bold whyUsHeading text-center"
+            style={
+              themeMode === "light"
+                ? { color: "black" }
+                : themeMode === "dark"
+                ? { color: "white" }
+                : { color: "black" }
+            }
+            data-aos="fade-up"
+          >
+            {headingContent}
+          </h3>
 
           <div className="whyUsCardContainer">
-            {whyUsCardData.map((cardData) => (
+            {sectionCardData.map((cardData) => (
               <div
                 className="whyUsCard"
-                style={cardData?.data?.cardInlineStyle}
-                key={Date.now() + Math.random()}
+                data-aos={cardData?.data?.aos}
+                style={
+                  themeMode === "light"
+                    ? {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                      }
+                    : themeMode === "dark"
+                    ? {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
+                      }
+                    : {
+                        borderBottom: cardData?.data?.cardInlineStyle,
+                        boxShadow:
+                          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                      }
+                }
+                key={cardData?.data?.id}
               >
                 <div
                   className="icon"
