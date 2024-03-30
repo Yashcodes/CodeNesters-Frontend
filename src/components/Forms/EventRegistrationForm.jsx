@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
+import { useAuth } from "../../context/Auth";
 
 const EventRegistrationForm = () => {
   const { themeMode } = useTheme();
+  const [auth] = useAuth();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,9 +14,41 @@ const EventRegistrationForm = () => {
   const [phone, setPhone] = useState("");
   const [event, setEvent] = useState("Git and GitHub");
   const [pincode, setPincode] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // const getRegistrations = useCallback(async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "http://localhost:5000/api/v1/event/get-event-registrations",
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           Authorization: auth?.authToken,
+  //         },
+  //       }
+  //     );
+
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, [auth?.authToken]);
+
+  // useEffect(() => {
+  //   if (auth?.authToken) {
+  //     getRegistrations();
+  //   }
+  // }, [auth?.authToken, getRegistrations]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setLoading(true);
+    // if (loading) {
+    //   // document.getElementById("eventSubmitBtn").innerText = "Submitting..!";
+    // } else {
+    //   // document.getElementById("eventSubmitBtn").innerText = "Submit";
+    // }
 
     try {
       await axios.post(
@@ -33,6 +67,7 @@ const EventRegistrationForm = () => {
         }
       );
 
+      setLoading(false);
       toast.success("Form submitted Successfully");
       setName("");
       setEmail("");
@@ -41,8 +76,21 @@ const EventRegistrationForm = () => {
       setPincode("");
     } catch (error) {
       toast.error("Error in submitting form");
+      setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (loading) {
+      let a = document.getElementById("eventSubmitBtn");
+      a.innerText = "Submitting...!";
+      a.style.opacity = 0.75;
+    } else {
+      let a = document.getElementById("eventSubmitBtn");
+      a.innerText = "Submit";
+      a.style.opacity = 1;
+    }
+  }, [loading]);
 
   const formLabelStyle =
     themeMode === "light"
@@ -162,6 +210,7 @@ const EventRegistrationForm = () => {
                       autoComplete="off"
                       value={event}
                       style={formInputStyle}
+                      readOnly
                     />
                   </div>
 
@@ -189,6 +238,8 @@ const EventRegistrationForm = () => {
                     padding: "10px 14px",
                   }}
                   onClick={handleSubmit}
+                  disabled={loading}
+                  id="eventSubmitBtn"
                 >
                   Submit
                 </button>

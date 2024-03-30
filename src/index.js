@@ -20,9 +20,9 @@ const App = (
     <ThemeProvider>
       <AuthProvider>
         <Router>
-          <React.StrictMode>
+          {/* <React.StrictMode> */}
             <Root />
-          </React.StrictMode>
+          {/* </React.StrictMode> */}
         </Router>
       </AuthProvider>
     </ThemeProvider>

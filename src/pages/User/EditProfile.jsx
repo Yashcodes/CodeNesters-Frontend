@@ -18,22 +18,26 @@ const EditProfile = () => {
 
   //! Getting the user details
   const getUser = useCallback(async () => {
-    const { data } = await axios.get(
-      "https://code-nesters-backend.vercel.app/api/v1/auth/get-user",
-      {
-        method: "GET",
-        headers: {
-          Authorization: auth?.authToken,
-        },
-      }
-    );
+    try {
+      const { data } = await axios.get(
+        "https://code-nesters-backend.vercel.app/api/v1/auth/get-user",
+        {
+          method: "GET",
+          headers: {
+            Authorization: auth?.authToken,
+          },
+        }
+      );
 
-    setLoading(false);
-    setName(data?.user?.name);
-    setEmail(data?.user?.email);
-    setDescription(data?.user?.description);
-    setUsername(data?.user?.username);
-    setPhone(data?.user?.phone);
+      setLoading(false);
+      setName(data?.user?.name);
+      setEmail(data?.user?.email);
+      setDescription(data?.user?.description);
+      setUsername(data?.user?.username);
+      setPhone(data?.user?.phone);
+    } catch (error) {
+      toast.error("Error occured. Please reload 😟");
+    }
   }, [auth]);
 
   useEffect(() => {
