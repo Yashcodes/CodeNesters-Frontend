@@ -44,11 +44,6 @@ const EventRegistrationForm = () => {
     e.preventDefault();
 
     setLoading(true);
-    // if (loading) {
-    //   // document.getElementById("eventSubmitBtn").innerText = "Submitting..!";
-    // } else {
-    //   // document.getElementById("eventSubmitBtn").innerText = "Submit";
-    // }
 
     try {
       await axios.post(

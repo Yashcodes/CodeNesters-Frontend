@@ -29,6 +29,8 @@ import AOS from "aos";
 import ChangePassword from "./pages/User/ChangePassword";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
+import AdminRoute from "./components/Routes/AdminRoute";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 function App() {
   useEffect(() => {
@@ -70,6 +72,17 @@ function App() {
           <Route path="user/settings" element={<Settings />} />
           <Route
             path="user/profile/:userid/change-password"
+            element={<ChangePassword />}
+          />
+        </Route>
+
+        {/* //! Protected Routes for Users */}
+        <Route path="/dashboard" element={<AdminRoute />}>
+          <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/profile/:userid" element={<Profile />} />
+          <Route path="admin/settings" element={<Settings />} />
+          <Route
+            path="admin/profile/:userid/change-password"
             element={<ChangePassword />}
           />
         </Route>

@@ -10,9 +10,7 @@ const Profile = () => {
     <Layout>
       <div className="container p-5">
         <div className="row">
-          <div className="col-4">
-           
-          </div>
+          <div className="col-4"></div>
           <div className="col-8">
             <h1>My Profile</h1>
             <div>
@@ -22,7 +20,11 @@ const Profile = () => {
                 <li>Password: {"***********"}</li>
 
                 <Link
-                  to={`/dashboard/user/profile/${auth?.user?._id}/change-password`}
+                  to={
+                    auth?.user?.email === "ashish@gmail.com"
+                      ? `/dashboard/admin/profile/${auth?.user?._id}/change-password`
+                      : `/dashboard/user/profile/${auth?.user?._id}/change-password`
+                  }
                 >
                   <sub>Change my password</sub>
                 </Link>

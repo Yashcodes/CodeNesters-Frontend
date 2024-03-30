@@ -9,12 +9,24 @@ const UserMenu = () => {
     <div>
       <ul>
         <li>
-          <Link to={`/dashboard/user/settings`}>Edit Profile</Link>
+          <Link
+            to={
+              auth?.user?.email === "ashish@gmail.com"
+                ? `/dashboard/admin/settings`
+                : `/dashboard/user/settings`
+            }
+          >
+            Edit Profile
+          </Link>
         </li>
 
         <li>
           <Link
-            to={`/dashboard/user/profile/${auth?.user?._id}/change-password`}
+            to={
+              auth?.user?.email === "ashish@gmail.com"
+                ? `/dashboard/admin/profile/${auth?.user?._id}/change-password`
+                : `/dashboard/user/profile/${auth?.user?._id}/change-password`
+            }
           >
             Password
           </Link>

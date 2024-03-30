@@ -7,6 +7,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { MDBIcon, MDBSwitch } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
+import { MdSpaceDashboard } from "react-icons/md";
 // import { useFirebase } from "../../context/Firebase";
 
 const Header = () => {
@@ -261,36 +262,77 @@ const Header = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <div className="offCanvasBody">
-                  <ul>
-                    <li className="sidebar-list">
-                      <MDBIcon fas icon="user" />
-                      <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>
-                        Profile
-                      </Link>
-                    </li>
-                    <li className="sidebar-list">
-                      <MDBIcon fas icon="book" />
-                      <Link to={"/dashboard/user/courses"}>My Courses</Link>
-                    </li>
-                    <li className="sidebar-list">
-                      <MDBIcon fas icon="cog" />
-                      <Link to={"/dashboard/user/settings"}>Settings</Link>
-                    </li>
-                    <hr />
-                    <li>
-                      <button className="btn sidebar-btn fs-6">
+                {auth?.user?.email === "ashish@gmail.com" ? (
+                  <div className="offCanvasBody">
+                    <ul>
+                      <li className="sidebar-list">
+                        <MdSpaceDashboard />
+                        <Link to={`/dashboard/admin`}>Dashboard</Link>
+                      </li>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="user" />
                         <Link
-                          to={"/"}
-                          className="text-white d-flex flex-row align-items-center gap-2"
-                          onClick={handleLogout}
+                          to={`/dashboard/admin/profile/${auth?.user?._id}`}
+                          style={{ marginLeft: "3px" }}
                         >
-                          Sign Out <MDBIcon fas icon="sign-out-alt" />
+                          Profile
                         </Link>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                      </li>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="cog" />
+                        <Link
+                          to={"/dashboard/admin/settings"}
+                          style={{ marginLeft: "2px" }}
+                        >
+                          Settings
+                        </Link>
+                      </li>
+                      <hr />
+                      <li>
+                        <button className="btn sidebar-btn fs-6">
+                          <Link
+                            to={"/"}
+                            className="text-white d-flex flex-row align-items-center gap-2"
+                            onClick={handleLogout}
+                          >
+                            Sign Out <MDBIcon fas icon="sign-out-alt" />
+                          </Link>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                ) : (
+                  <div className="offCanvasBody">
+                    <ul>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="user" />
+                        <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>
+                          Profile
+                        </Link>
+                      </li>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="book" />
+                        <Link to={"/dashboard/user/courses"}>My Courses</Link>
+                      </li>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="cog" />
+                        <Link to={"/dashboard/user/settings"}>Settings</Link>
+                      </li>
+                      <hr />
+                      <li>
+                        <button className="btn sidebar-btn fs-6">
+                          <Link
+                            to={"/"}
+                            className="text-white d-flex flex-row align-items-center gap-2"
+                            onClick={handleLogout}
+                          >
+                            Sign Out <MDBIcon fas icon="sign-out-alt" />
+                          </Link>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </Offcanvas.Body>
             </Offcanvas>
           </div>
