@@ -54,6 +54,7 @@ const AdminMenu = () => {
             onMouseEnter={() => handleMouseEnter(1)}
           >
             <MenuItem
+              component={<Link to={"/dashboard/admin/events/get-event-registrations"} />}
               style={getStyle(2)}
               onMouseEnter={() => handleMouseEnter(2)}
             >
