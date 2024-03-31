@@ -1,12 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
-import { useAuth } from "../../context/Auth";
 
 const EventRegistrationForm = () => {
   const { themeMode } = useTheme();
-  const [auth] = useAuth();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,30 +13,6 @@ const EventRegistrationForm = () => {
   const [event, setEvent] = useState("Git and GitHub");
   const [pincode, setPincode] = useState("");
   const [loading, setLoading] = useState(false);
-
-  // const getRegistrations = useCallback(async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "http://localhost:5000/api/v1/event/get-event-registrations",
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Authorization: auth?.authToken,
-  //         },
-  //       }
-  //     );
-
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, [auth?.authToken]);
-
-  // useEffect(() => {
-  //   if (auth?.authToken) {
-  //     getRegistrations();
-  //   }
-  // }, [auth?.authToken, getRegistrations]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,6 +43,7 @@ const EventRegistrationForm = () => {
       setPhone("");
       setPlace("");
       setPincode("");
+      setEvent("Git and GitHub");
     } catch (error) {
       toast.error("Error in submitting form");
       setLoading(false);

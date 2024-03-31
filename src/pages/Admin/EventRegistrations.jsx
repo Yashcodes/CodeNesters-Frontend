@@ -10,7 +10,7 @@ const EventRegistrations = () => {
   const getRegistrations = useCallback(async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/v1/event/get-event-registrations",
+        "https://code-nesters-backend.vercel.app/api/v1/event/get-event-registrations",
         {
           method: "GET",
           headers: {
@@ -26,8 +26,8 @@ const EventRegistrations = () => {
   }, [auth?.authToken]);
 
   useEffect(() => {
-    if (auth?.user) getRegistrations();
-  }, [auth?.user, getRegistrations]);
+    if (auth?.authToken) getRegistrations();
+  }, [auth?.authToken, getRegistrations]);
 
   return (
     <div>
