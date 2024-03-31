@@ -1,0 +1,18 @@
+.adminMenuList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.adminMenuList ul li {
+  padding: 8px 12px;
+}
+
+.adminMenuList ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.adminSidebar {
+  height: 75vh;
+}

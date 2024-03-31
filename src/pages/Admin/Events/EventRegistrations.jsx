@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
-import { useAuth } from "../../context/Auth";
+import { useAuth } from "../../../context/Auth";
 import toast from "react-hot-toast";
 
 const EventRegistrations = () => {

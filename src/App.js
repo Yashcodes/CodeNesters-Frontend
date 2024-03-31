@@ -31,6 +31,7 @@ import ForgotPassword from "./pages/Auth/ForgotPassword";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
+import EventRegistrations from "./pages/Admin/Events/EventRegistrations";
 
 function App() {
   useEffect(() => {
@@ -84,6 +85,10 @@ function App() {
           <Route
             path="admin/profile/:userid/change-password"
             element={<ChangePassword />}
+          />
+          <Route
+            path="admin/events/get-event-registrations"
+            element={<EventRegistrations />}
           />
         </Route>
 
