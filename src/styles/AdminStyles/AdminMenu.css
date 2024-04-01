@@ -12,7 +12,13 @@
   text-decoration: none;
   color: black;
 }
-
+.adminMenu {
+  width: 400px;
+}
 .adminSidebar {
-  height: 75vh;
+  height: 80vh;
+}
+
+.ps-sidebar-container {
+  border-radius: 4px !important;
 }

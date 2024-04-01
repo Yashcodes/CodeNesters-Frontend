@@ -1,0 +1,12 @@
+.eventRegistrationCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.eventRegistrationCards .eventRegistrationCard {
+  border: 1px solid gray;
+  padding: 22px;
+  width: 380px;
+  max-height: 300px;
+}

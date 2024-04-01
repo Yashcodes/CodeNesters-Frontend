@@ -4,6 +4,7 @@ import { useAuth } from "../../../context/Auth";
 import toast from "react-hot-toast";
 import Layout from "../../../components/Layout/Layout";
 import AdminMenu from "../../../components/AdminDashboardComponents/AdminMenu";
+import "../../../styles/AdminStyles/EventRegistrations.css";
 
 const EventRegistrations = () => {
   const [auth] = useAuth();
@@ -33,18 +34,34 @@ const EventRegistrations = () => {
 
   return (
     <Layout>
-      <div className="bg-gray-gradient" style={{ minHeight: "80vh" }}>
+      <div className="bg-gray-gradient">
         <div className="container-fluid">
-          <div className="row setting-layout">
-            <div className="col-md-2 p-0">
-              <AdminMenu />
-            </div>
-            <div className="col-md-10">
+          <div className="row gap-5 d-flex flex-wrap">
+            <AdminMenu />
+
+            <div
+              className="col-md-9 p-3"
+              style={{
+                maxHeight: "80vh",
+                overflowY: "auto",
+              }}
+            >
               <h1>Event Registrations</h1>
 
-              {registrations.map((registration) => (
-                <p key={registration?._id}>{registration?.name}</p>
-              ))}
+              <div className="eventRegistrationCards">
+                {registrations.map((registration) => (
+                  <div
+                    className="eventRegistrationCard"
+                    key={registration?._id}
+                  >
+                    <p className="mt-0">Name : {registration?.name}</p>
+                    <p>Email : {registration?.email}</p>
+                    <p>Phone : {registration?.phone}</p>
+                    <p>Place : {registration?.place}</p>
+                    <span>Pincode : {registration?.pincode}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
