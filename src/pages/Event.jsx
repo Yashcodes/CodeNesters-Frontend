@@ -4,12 +4,10 @@ import event from "../assets/images/events/git-event.jpg";
 import "../styles/Event.css";
 import { useTheme } from "../context/ThemeContext";
 import EventRegistrationForm from "../components/Forms/EventRegistrationForm";
-import { useParams } from "react-router-dom";
+import Gallery from "../components/PhotoGallery/Gallery";
 
 const Event = () => {
   const { themeMode } = useTheme();
-  const params  = useParams();
-  console.log(params.slug)
 
   return (
     <Layout>
@@ -133,6 +131,7 @@ const Event = () => {
 
             <EventRegistrationForm />
           </div>
+          <Gallery />
         </div>
       </div>
     </Layout>

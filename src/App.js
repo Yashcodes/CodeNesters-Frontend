@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { MDBIcon } from "mdb-react-ui-kit";
+import { Chat } from "@aidbase/chat";
 
 //! Pages
 import Home from "./pages/Home";
@@ -32,6 +33,8 @@ import ResetPassword from "./pages/Auth/ResetPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import EventRegistrations from "./pages/Admin/Events/EventRegistrations";
+import { useTheme } from "./context/ThemeContext";
+import { useAuth } from "./context/Auth";
 
 function App() {
   useEffect(() => {
@@ -40,6 +43,9 @@ function App() {
     });
     AOS.refresh();
   }, []);
+
+  const { themeMode } = useTheme();
+  const [auth] = useAuth();
 
   return (
     <>
@@ -116,6 +122,29 @@ function App() {
           color="white"
           background="linearGradient(to right,#9d50bb 0%,#6e48aa 51%,#9d50bb 100%)"
           className="btn-grad"
+        />
+      </div>
+
+      <div style={{ position: "fixed", bottom: "88px", right: "22px" }}>
+        <Chat
+          chatbotID="X4clXeTSu_tZkgQli885g"
+          theme={
+            themeMode === "light"
+              ? "light"
+              : themeMode === "dark"
+              ? "dark"
+              : "light"
+          }
+          orientation="right"
+          headline="Have Any Doubt?"
+          description="Want to know more about our platform!"
+          placeholder="Type your message here..."
+          maxHeight="44rem"
+          username={auth?.user?.name}
+          userID={auth?.user?._id}
+          context={`
+        The user you are talking to is ${auth?.user?.name}. Greet them by name and help them by providing some faqs with links that your have for codenesters`}
+          profileImageURL="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=sph"
         />
       </div>
     </>
