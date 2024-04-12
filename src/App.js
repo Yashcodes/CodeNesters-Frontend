@@ -32,8 +32,6 @@ import ResetPassword from "./pages/Auth/ResetPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import EventRegistrations from "./pages/Admin/Events/EventRegistrations";
-import { useTheme } from "./context/ThemeContext";
-import { useAuth } from "./context/Auth";
 import ChatBot from "./components/ChatBot";
 
 function App() {

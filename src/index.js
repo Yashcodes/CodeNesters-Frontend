@@ -10,7 +10,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProvider } from "./context/Auth";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import { UserProfileProvider } from "./context/UserProfileContext";
 
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
@@ -19,11 +20,13 @@ const App = (
   <HelmetProvider>
     <ThemeProvider>
       <AuthProvider>
-        <Router>
-          {/* <React.StrictMode> */}
+        <UserProfileProvider>
+          <Router>
+            {/* <React.StrictMode> */}
             <Root />
-          {/* </React.StrictMode> */}
-        </Router>
+            {/* </React.StrictMode> */}
+          </Router>
+        </UserProfileProvider>
       </AuthProvider>
     </ThemeProvider>
   </HelmetProvider>
@@ -34,4 +37,3 @@ if (container.hasChildNodes()) {
 } else {
   root.render(App);
 }
- 

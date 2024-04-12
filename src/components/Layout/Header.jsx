@@ -8,11 +8,13 @@ import { MDBIcon, MDBSwitch } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
 import { MdSpaceDashboard } from "react-icons/md";
+import { useUserProfile } from "../../context/UserProfileContext";
 // import { useFirebase } from "../../context/Firebase";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [show, setShow] = useState(false);
+  const { profileUrl } = useUserProfile();
 
   //! Theme Context
   const { themeMode, darkTheme, lightTheme } = useTheme();
@@ -192,23 +194,24 @@ const Header = () => {
 
             <div className="d-flex gap-3 align-items-center">
               {auth?.user ? (
-                /* <img
-                  src={""}
-                  alt=""
-                  className="user-profile"
-                  onClick={handleShow}
-                />*/
                 <div
                   style={{
-                    padding: "3px 16px",
                     background: "black",
                     borderRadius: "50%",
                     margin: "2px",
                     backgroundColor: "rgb(140 20 187)",
+                    width: "50px",
+                    height: "50px",
                   }}
                   onClick={handleShow}
                 >
-                  <span className="user-profile">{(auth?.user?.name)[0]}</span>
+                  {/* <span className="user-profile">{(auth?.user?.name)[0]}</span> */}
+                  <img
+                    src={profileUrl}
+                    alt=""
+                    className="user-profile"
+                    onClick={handleShow}
+                  />
                 </div>
               ) : (
                 <button
