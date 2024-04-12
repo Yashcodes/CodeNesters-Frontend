@@ -23,7 +23,7 @@ const ChatBot = () => {
         description="Want to know more about our platform!"
         placeholder="Type your message here..."
         maxHeight="44rem"
-        initialMessage={`Hi  👋 
+        initialMessage={`Hi👋 
       I'm the AI Assistant.
 
       How can I help you today?`}
@@ -36,7 +36,5 @@ const ChatBot = () => {
     </div>
   );
 };
-
-ChatBot._isStatic = true;
 
 export default ChatBot;

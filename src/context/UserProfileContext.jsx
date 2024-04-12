@@ -19,7 +19,7 @@ export const UserProfileProvider = (props) => {
   const getProfileUrl = useCallback(async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/user/getObjectUrl",
+        "http://code-nesters-backend.vercel.app/api/v1/user/getObjectUrl",
         {
           key: "image.jpg",
         },
@@ -32,12 +32,11 @@ export const UserProfileProvider = (props) => {
         }
       );
 
-      console.log(data);
       setProfileUrl(data?.url);
     } catch (error) {
       toast.error("Error getting profile");
     }
-  }, [auth, auth?.authToken]);
+  }, [auth?.authToken]);
 
   useEffect(() => {
     getProfileUrl();

@@ -3,40 +3,18 @@ import Layout from "../../components/Layout/Layout";
 import { useAuth } from "../../context/Auth";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useUserProfile } from "../../context/UserProfileContext";
 
 const Profile = () => {
   const [auth] = useAuth();
-  const [url, setUrl] = useState("");
-
-  const getProfileUrl = useCallback(async () => {
-    const { data } = await axios.post(
-      "http://localhost:5000/api/v1/user/getObjectUrl",
-      {
-        key: "image.jpg",
-      },
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: auth?.authToken,
-        },
-      }
-    );
-
-    console.log(data);
-    setUrl(data?.url);
-  }, [auth?.authToken]);
-
-  useEffect(() => {
-    getProfileUrl();
-  }, [getProfileUrl]);
+  const { profileUrl } = useUserProfile();
 
   return (
     <Layout>
       <div className="container p-5">
         <div className="row">
           <div className="col-4">
-            <img src={url} alt="" />
+            <img src={profileUrl} alt="" />
           </div>
           <div className="col-8">
             <h1>My Profile</h1>
