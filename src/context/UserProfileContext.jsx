@@ -5,7 +5,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { useAuth } from "./Auth";
 import axios from "axios";
 import toast from "react-hot-toast";
 
@@ -19,7 +18,7 @@ export const UserProfileProvider = (props) => {
   const getProfileUrl = useCallback(async () => {
     try {
       const { data } = await axios.post(
-        "http://code-nesters-backend.vercel.app/api/v1/user/getObjectUrl",
+        "http://localhost:5000/api/v1/user/getObjectUrl",
         {
           key: "image.jpg",
         },

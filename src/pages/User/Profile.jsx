@@ -1,8 +1,7 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { useAuth } from "../../context/Auth";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useUserProfile } from "../../context/UserProfileContext";
 
 const Profile = () => {
