@@ -53,11 +53,11 @@ const Register = () => {
           authToken: data.authToken,
         });
 
+        window.location.reload();
         toast.success(data.message);
 
         localStorage.setItem("auth", JSON.stringify(data));
         navigate("/");
-        // window.location.reload();
       } else {
         console.log(data);
         toast.error(data.message);

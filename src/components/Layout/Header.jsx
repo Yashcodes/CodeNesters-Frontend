@@ -254,7 +254,7 @@ const Header = () => {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
                   <div className="sidebar-profile d-flex align-items-center gap-2">
-                    <img src={""} alt="" className="user-profile" />
+                    <img src={profileUrl} alt="" className="user-profile" />
 
                     <div className="profile-info p-0">
                       <p className="profile-name m-0"> {auth?.user?.name} </p>

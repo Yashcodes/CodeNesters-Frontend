@@ -48,11 +48,11 @@ const Login = () => {
           authToken: data.authToken,
         });
 
+        window.location.reload();
         toast.success(data.message);
 
         localStorage.setItem("auth", JSON.stringify(data));
         navigate(location.state || "/");
-        // window.location.reload();
       } else {
         toast.error(data.message);
       }
