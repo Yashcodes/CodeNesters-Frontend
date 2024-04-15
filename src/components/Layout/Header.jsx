@@ -35,7 +35,6 @@ const Header = () => {
     localStorage.removeItem("auth");
 
     toast.success("Logged Out Successfully");
-    window.location.reload();
   };
 
   const handleThemeChange = (e) => {

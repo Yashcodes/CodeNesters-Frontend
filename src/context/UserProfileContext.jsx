@@ -18,7 +18,7 @@ export const UserProfileProvider = (props) => {
   const getProfileUrl = useCallback(async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/user/getObjectUrl",
+        "https://code-nesters-backend.vercel.app/api/v1/user/getObjectUrl",
         {
           key: "image.jpg",
         },
@@ -38,11 +38,11 @@ export const UserProfileProvider = (props) => {
   }, [auth?.authToken]);
 
   useEffect(() => {
-    getProfileUrl();
-  }, [getProfileUrl]);
+    if (auth) getProfileUrl();
+  }, [auth, getProfileUrl]);
 
   return (
-    <UserProfileContext.Provider value={{ profileUrl }}>
+    <UserProfileContext.Provider value={{ profileUrl, getProfileUrl }}>
       {props.children}
     </UserProfileContext.Provider>
   );
