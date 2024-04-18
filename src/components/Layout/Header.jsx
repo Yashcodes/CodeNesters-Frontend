@@ -206,10 +206,17 @@ const Header = () => {
                 >
                   {/* <span className="user-profile">{(auth?.user?.name)[0]}</span> */}
                   <img
-                    src={profileUrl}
+                    src={
+                      profileUrl ||
+                      "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=sph"
+                    }
                     alt=""
                     className="user-profile"
                     onClick={handleShow}
+                    onError={(e) =>
+                      (e.target.src =
+                        "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=sph")
+                    }
                   />
                 </div>
               ) : (
@@ -254,7 +261,18 @@ const Header = () => {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
                   <div className="sidebar-profile d-flex align-items-center gap-2">
-                    <img src={profileUrl} alt="" className="user-profile" />
+                    <img
+                      src={
+                        profileUrl ||
+                        "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=sph"
+                      }
+                      alt=""
+                      className="user-profile"
+                      onError={(e) =>
+                        (e.target.src =
+                          "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712707200&semt=sph")
+                      }
+                    />
 
                     <div className="profile-info p-0">
                       <p className="profile-name m-0"> {auth?.user?.name} </p>
