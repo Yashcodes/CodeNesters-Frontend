@@ -181,6 +181,7 @@ const Profile = () => {
                         type="text"
                         className="social-link-input"
                         value={userData?.user?.instagram}
+                        readOnly
                       />
                     </div>
 
@@ -194,6 +195,7 @@ const Profile = () => {
                         type="text"
                         className="social-link-input"
                         value={userData?.user?.linkedin}
+                        readOnly
                       />
                     </div>
 
@@ -207,6 +209,7 @@ const Profile = () => {
                         type="text"
                         className="social-link-input"
                         value={userData?.user?.github}
+                        readOnly
                       />
                     </div>
                   </div>
