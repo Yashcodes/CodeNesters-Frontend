@@ -13,6 +13,9 @@ const EditProfile = () => {
   const [email, setEmail] = useState(auth?.user?.email);
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [github, setGithub] = useState("");
+  const [linkedin, setLinkedin] = useState("");
 
   const [loading, setLoading] = useState(true);
 
@@ -50,7 +53,16 @@ const EditProfile = () => {
     try {
       const { data } = await axios.put(
         "https://code-nesters-backend.vercel.app/api/v1/auth/update-user-profile",
-        { name, email, username, description, phone },
+        {
+          name,
+          email,
+          username,
+          description,
+          phone,
+          instagram,
+          github,
+          linkedin,
+        },
         {
           method: "PUT",
           headers: {
@@ -138,6 +150,42 @@ const EditProfile = () => {
               id="editDesc"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              onClick={handleInputChange}
+              readOnly
+            />
+          </div>
+
+          <div className="edit-profile-phone mt-3">
+            <label htmlFor="editPhone">Instagram</label>
+            <input
+              type="text"
+              id="editInstagramLink"
+              value={instagram}
+              onChange={(e) => setInstagram(e.target.value)}
+              onClick={handleInputChange}
+              readOnly
+            />
+          </div>
+
+          <div className="edit-profile-phone mt-3">
+            <label htmlFor="editPhone">GitHub</label>
+            <input
+              type="text"
+              id="editGithubLink"
+              value={github}
+              onChange={(e) => setGithub(e.target.value)}
+              onClick={handleInputChange}
+              readOnly
+            />
+          </div>
+
+          <div className="edit-profile-phone mt-3">
+            <label htmlFor="editPhone">LinkedIn</label>
+            <input
+              type="text"
+              id="editLinkedinLink"
+              value={linkedin}
+              onChange={(e) => setLinkedin(e.target.value)}
               onClick={handleInputChange}
               readOnly
             />

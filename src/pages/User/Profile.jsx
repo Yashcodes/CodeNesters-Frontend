@@ -175,7 +175,11 @@ const Profile = () => {
                       <span className="social-link-icon">
                         <GrInstagram />
                       </span>
-                      <input type="text" className="social-link-input" />
+                      <input
+                        type="text"
+                        className="social-link-input"
+                        value={userData?.user?.instagram}
+                      />
                     </div>
 
                     <div className="col-md-12 social-link-container gap-2">
