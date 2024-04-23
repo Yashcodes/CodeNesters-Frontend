@@ -38,6 +38,9 @@ const EditProfile = () => {
       setDescription(data?.user?.description);
       setUsername(data?.user?.username);
       setPhone(data?.user?.phone);
+      setInstagram(data?.user?.instagram);
+      setGithub(data?.user?.github);
+      setLinkedin(data?.user?.linkedin);
     } catch (error) {
       toast.error("Error occured. Please reload 😟");
     }

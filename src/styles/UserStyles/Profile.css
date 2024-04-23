@@ -51,7 +51,7 @@
   font-weight: 500;
 }
 
-.social-link-icon {
+.social-link-icon a{
   font-size: 24px;
   color: #7b56ca;
   padding: 2px 4px;

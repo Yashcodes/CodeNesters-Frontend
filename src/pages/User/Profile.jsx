@@ -173,7 +173,9 @@ const Profile = () => {
                   <div className="row info-row px-3 mb-2 d-flex gap-2 flex-column justify-content-between flex-wrap">
                     <div className="col-md-12 social-link-container gap-2">
                       <span className="social-link-icon">
-                        <GrInstagram />
+                        <Link to={userData?.user?.instagram} target="_blank">
+                          <GrInstagram />
+                        </Link>
                       </span>
                       <input
                         type="text"
@@ -184,16 +186,28 @@ const Profile = () => {
 
                     <div className="col-md-12 social-link-container gap-2">
                       <span className="social-link-icon">
-                        <SiLinkedin />
+                        <Link to={userData?.user?.linkedin} target="_blank">
+                          <SiLinkedin />
+                        </Link>
                       </span>
-                      <input type="text" className="social-link-input" />
+                      <input
+                        type="text"
+                        className="social-link-input"
+                        value={userData?.user?.linkedin}
+                      />
                     </div>
 
                     <div className="col-md-12 social-link-container gap-2">
                       <span className="social-link-icon">
-                        <BsGithub size={"26px"} />
+                        <Link to={userData?.user?.github} target="_blank">
+                          <BsGithub size={"26px"} />
+                        </Link>
                       </span>
-                      <input type="text" className="social-link-input" />
+                      <input
+                        type="text"
+                        className="social-link-input"
+                        value={userData?.user?.github}
+                      />
                     </div>
                   </div>
                 </div>
