@@ -37,6 +37,7 @@ import { useAuth } from "./context/Auth";
 import ChatBot from "./components/ChatBot";
 import ContactUsEnquiries from "./pages/Admin/Contacts/ContactUsEnquiries";
 import GetServiceEnquiry from "./pages/Admin/Services/GetServiceEnquiry";
+import GetAllUsers from "./pages/Admin/Users/GetAllUsers";
 
 function App() {
   useEffect(() => {
@@ -105,6 +106,10 @@ function App() {
           <Route
             path="admin/services/get-service-enquiries"
             element={<GetServiceEnquiry />}
+          />
+          <Route
+            path="admin/users/get-all-users"
+            element={<GetAllUsers />}
           />
         </Route>
 

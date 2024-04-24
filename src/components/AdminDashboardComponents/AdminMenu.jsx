@@ -172,6 +172,9 @@ const AdminMenu = () => {
           onMouseEnter={() => handleMouseEnter(13)}
         >
           <MenuItem
+            component={
+              <Link to={"/dashboard/admin/users/get-all-users"} />
+            }
             style={getStyle(14)}
             onMouseEnter={() => handleMouseEnter(14)}
           >
