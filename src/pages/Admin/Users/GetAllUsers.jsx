@@ -13,7 +13,7 @@ const GetAllUsers = () => {
   const getAllUsers = useCallback(async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/v1/auth/get-all-users",
+        "https://code-nesters-backend.vercel.app/api/v1/auth/get-all-users",
         {
           method: "GET",
           headers: {

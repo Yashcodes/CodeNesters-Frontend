@@ -31,7 +31,7 @@ const ContactUsEnquiries = () => {
   const handleDeleteEnquiry = async (id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:5000/api/v1/contact/delete-contact-enquiry/${id}`,
+        `https://code-nesters-backend.vercel.app/api/v1/contact/delete-contact-enquiry/${id}`,
         {
           method: "DELETE",
           headers: {
