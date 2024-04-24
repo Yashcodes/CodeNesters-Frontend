@@ -109,6 +109,9 @@ const AdminMenu = () => {
           onMouseEnter={() => handleMouseEnter(5)}
         >
           <MenuItem
+            component={
+              <Link to={"/dashboard/admin/services/get-service-enquiries"} />
+            }
             style={getStyle(6)}
             onMouseEnter={() => handleMouseEnter(6)}
           >

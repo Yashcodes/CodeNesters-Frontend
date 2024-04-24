@@ -36,6 +36,7 @@ import { useTheme } from "./context/ThemeContext";
 import { useAuth } from "./context/Auth";
 import ChatBot from "./components/ChatBot";
 import ContactUsEnquiries from "./pages/Admin/Contacts/ContactUsEnquiries";
+import GetServiceEnquiry from "./pages/Admin/Services/GetServiceEnquiry";
 
 function App() {
   useEffect(() => {
@@ -100,6 +101,10 @@ function App() {
           <Route
             path="admin/contacts/get-contact-enquiries"
             element={<ContactUsEnquiries />}
+          />
+          <Route
+            path="admin/services/get-service-enquiries"
+            element={<GetServiceEnquiry />}
           />
         </Route>
 
