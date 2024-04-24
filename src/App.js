@@ -35,6 +35,7 @@ import EventRegistrations from "./pages/Admin/Events/EventRegistrations";
 import { useTheme } from "./context/ThemeContext";
 import { useAuth } from "./context/Auth";
 import ChatBot from "./components/ChatBot";
+import ContactUsEnquiries from "./pages/Admin/Contacts/ContactUsEnquiries";
 
 function App() {
   useEffect(() => {
@@ -96,6 +97,10 @@ function App() {
             path="admin/events/get-event-registrations"
             element={<EventRegistrations />}
           />
+          <Route
+            path="admin/contacts/get-contact-enquiries"
+            element={<ContactUsEnquiries />}
+          />
         </Route>
 
         {/*//! If above routes are not found then the "*" sign will show the specified page */}
@@ -125,7 +130,7 @@ function App() {
         />
       </div>
 
-     <ChatBot/>
+      <ChatBot />
     </>
   );
 }

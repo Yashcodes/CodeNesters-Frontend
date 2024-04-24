@@ -38,7 +38,7 @@ const AdminMenu = () => {
       }
     };
 
-    handleResize(); 
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
@@ -178,7 +178,9 @@ const AdminMenu = () => {
 
         {/* //! Menu for Contact Enquiry */}
         <MenuItem
-          component={<Link to="" />}
+          component={
+            <Link to={"/dashboard/admin/contacts/get-contact-enquiries"} />
+          }
           style={getStyle(15)}
           onMouseEnter={() => handleMouseEnter(15)}
           icon={<BiSolidContact size={"20px"} />}
