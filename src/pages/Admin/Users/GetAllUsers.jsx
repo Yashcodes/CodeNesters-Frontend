@@ -23,30 +23,31 @@ const GetAllUsers = () => {
       );
 
       setUsers(data?.users);
+      toast.error("Users fetched successfully");
     } catch (error) {
       toast.error("Error while getting registration");
     }
   }, [auth?.authToken]);
 
-//   const handleDeleteEnquiry = async (id) => {
-//     try {
-//       const { data } = await axios.delete(
-//         `http://localhost:5000/api/v1/service/delete-services-enquiry/${id}`,
-//         {
-//           method: "DELETE",
-//           headers: {
-//             "Content-Type": "application/json",
-//             Authorization: auth?.authToken,
-//           },
-//         }
-//       );
+  //   const handleDeleteEnquiry = async (id) => {
+  //     try {
+  //       const { data } = await axios.delete(
+  //         `http://localhost:5000/api/v1/service/delete-services-enquiry/${id}`,
+  //         {
+  //           method: "DELETE",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             Authorization: auth?.authToken,
+  //           },
+  //         }
+  //       );
 
-//       getAllUsers();
-//       toast.success("Enquiry deleted successfully");
-//     } catch (error) {
-//       toast.error("Error while deleting enquiry");
-//     }
-//   };
+  //       getAllUsers();
+  //       toast.success("Enquiry deleted successfully");
+  //     } catch (error) {
+  //       toast.error("Error while deleting enquiry");
+  //     }
+  //   };
 
   useEffect(() => {
     if (auth?.user) getAllUsers();

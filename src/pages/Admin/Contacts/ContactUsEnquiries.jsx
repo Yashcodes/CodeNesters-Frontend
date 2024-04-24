@@ -23,6 +23,7 @@ const ContactUsEnquiries = () => {
       );
 
       setEnquiries(data?.contacts);
+      toast.success("Equiries fetched successfully");
     } catch (error) {
       toast.error("Error while getting registration");
     }

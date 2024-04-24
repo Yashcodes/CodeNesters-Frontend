@@ -23,6 +23,7 @@ const GetServiceEnquiry = () => {
       );
 
       setEnquiries(data?.serviceRequests);
+      toast.success("Enquiries fetched successfully");
     } catch (error) {
       toast.error("Error while getting registration");
     }
@@ -70,10 +71,7 @@ const GetServiceEnquiry = () => {
 
               <div className="eventRegistrationCards">
                 {enquiries.map((enquiry) => (
-                  <div
-                    className="eventRegistrationCard"
-                    key={enquiry?._id}
-                  >
+                  <div className="eventRegistrationCard" key={enquiry?._id}>
                     <p className="mt-0">Name : {enquiry?.name}</p>
                     <p>Email : {enquiry?.email}</p>
                     <p>Phone : {enquiry?.phone}</p>
