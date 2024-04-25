@@ -23,7 +23,7 @@ const GetAllUsers = () => {
       );
 
       setUsers(data?.users);
-      toast.error("Users fetched successfully");
+      toast.success("Users fetched successfully");
     } catch (error) {
       toast.error("Error while getting registration");
     }

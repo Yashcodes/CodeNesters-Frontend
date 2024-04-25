@@ -156,6 +156,9 @@ const AdminMenu = () => {
           </MenuItem>
 
           <MenuItem
+            component={
+              <Link to={"/dashboard/admin/courses/get-all-courses"} />
+            }
             style={getStyle(12)}
             onMouseEnter={() => handleMouseEnter(12)}
           >
@@ -172,9 +175,7 @@ const AdminMenu = () => {
           onMouseEnter={() => handleMouseEnter(13)}
         >
           <MenuItem
-            component={
-              <Link to={"/dashboard/admin/users/get-all-users"} />
-            }
+            component={<Link to={"/dashboard/admin/users/get-all-users"} />}
             style={getStyle(14)}
             onMouseEnter={() => handleMouseEnter(14)}
           >

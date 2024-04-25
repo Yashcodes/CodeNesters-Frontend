@@ -32,12 +32,11 @@ import ResetPassword from "./pages/Auth/ResetPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import EventRegistrations from "./pages/Admin/Events/EventRegistrations";
-import { useTheme } from "./context/ThemeContext";
-import { useAuth } from "./context/Auth";
 import ChatBot from "./components/ChatBot";
 import ContactUsEnquiries from "./pages/Admin/Contacts/ContactUsEnquiries";
 import GetServiceEnquiry from "./pages/Admin/Services/GetServiceEnquiry";
 import GetAllUsers from "./pages/Admin/Users/GetAllUsers";
+import GetAllCourses from "./pages/Admin/Courses/GetAllCourses";
 
 function App() {
   useEffect(() => {
@@ -46,9 +45,6 @@ function App() {
     });
     AOS.refresh();
   }, []);
-
-  const { themeMode } = useTheme();
-  const [auth] = useAuth();
 
   return (
     <>
@@ -110,6 +106,10 @@ function App() {
           <Route
             path="admin/users/get-all-users"
             element={<GetAllUsers />}
+          />
+          <Route
+            path="admin/courses/get-all-courses"
+            element={<GetAllCourses />}
           />
         </Route>
 
