@@ -149,6 +149,9 @@ const AdminMenu = () => {
           </MenuItem>
 
           <MenuItem
+           component={
+              <Link to={"/dashboard/admin/courses/create-course"} />
+            }
             style={getStyle(11)}
             onMouseEnter={() => handleMouseEnter(11)}
           >

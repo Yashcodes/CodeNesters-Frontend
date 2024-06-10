@@ -37,6 +37,7 @@ import ContactUsEnquiries from "./pages/Admin/Contacts/ContactUsEnquiries";
 import GetServiceEnquiry from "./pages/Admin/Services/GetServiceEnquiry";
 import GetAllUsers from "./pages/Admin/Users/GetAllUsers";
 import GetAllCourses from "./pages/Admin/Courses/GetAllCourses";
+import CreateCourse from "./pages/Admin/Courses/CreateCourse";
 
 function App() {
   useEffect(() => {
@@ -110,6 +111,10 @@ function App() {
           <Route
             path="admin/courses/get-all-courses"
             element={<GetAllCourses />}
+          />
+          <Route
+            path="admin/courses/create-course"
+            element={<CreateCourse />}
           />
         </Route>
 
