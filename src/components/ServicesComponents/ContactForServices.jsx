@@ -4,17 +4,15 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
 
-const ContactForServices = () => {
+const ContactForServices = ({
+  options,
+  heading,
+  subHeading,
+  optionsLabel,
+  formSubmitApi,
+  requestKey
+}) => {
   const { themeMode } = useTheme();
-
-  const options = [
-    { value: "landingPages", label: "Landing Pages" },
-    { value: "portfolioCreation", label: "Portfolio Creation" },
-    { value: "webDevelopment", label: "Web Development" },
-    { value: "mobileAppDevelopment", label: "Mobile App Development" },
-    { value: "frontendDevelopment", label: "Fronted Development" },
-    { value: "webHosting", label: "Web Hosting" },
-  ];
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,24 +28,22 @@ const ContactForServices = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(selectedServices);
 
     try {
-      await axios.post(
-        "https://code-nesters-backend.vercel.app/api/v1/service/submit",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+      await axios.post(`https://code-nesters-backend.vercel.app/api/v1/${formSubmitApi}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-          name,
-          email,
-          place,
-          phone,
-          services: selectedServices,
-          message,
-          pincode,
-        }
-      );
+        name,
+        email,
+        place,
+        phone,
+        [requestKey] : selectedServices,
+        message,
+        pincode,
+      });
 
       toast.success("Form submitted Successfully");
       setName("");
@@ -99,7 +95,7 @@ const ContactForServices = () => {
           style={{ color: "#a87fff", fontWeight: "600" }}
           data-aos="fade-up"
         >
-          WANT TO CONNECT?
+          {heading}
         </h4>
         <h2
           className="fs-1 fw-bold whyUsHeading text-center mb-5"
@@ -112,7 +108,7 @@ const ContactForServices = () => {
           }
           data-aos="fade-up"
         >
-          Let's customize your digital <br /> journey together
+          {subHeading}
         </h2>
 
         <div className="container w-100 p-0">
@@ -182,7 +178,7 @@ const ContactForServices = () => {
                 <div className="row flex-wrap">
                   <div className="input-services service-page-input d-flex flex-column col-md-12">
                     <label htmlFor="services" style={formLabelStyle}>
-                      Services
+                      {optionsLabel}
                     </label>
                     <Select
                       defaultValue={selectedServices}
@@ -238,7 +234,7 @@ const ContactForServices = () => {
                               }),
                             }
                       }
-                      placeholder="Select Services"
+                      placeholder={optionsLabel}
                       value={selectedServices}
                     />
                   </div>

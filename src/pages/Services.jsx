@@ -82,6 +82,15 @@ const Services = () => {
     },
   ];
 
+  const options = [
+    { value: "landingPages", label: "Landing Pages" },
+    { value: "portfolioCreation", label: "Portfolio Creation" },
+    { value: "webDevelopment", label: "Web Development" },
+    { value: "mobileAppDevelopment", label: "Mobile App Development" },
+    { value: "frontendDevelopment", label: "Fronted Development" },
+    { value: "webHosting", label: "Web Hosting" },
+  ];
+
   return (
     <Layout>
       <ServiceBanner />
@@ -99,7 +108,18 @@ const Services = () => {
 
       <ProjectSection />
 
-      <ContactForServices />
+      <ContactForServices
+        options={options}
+        heading={"WANT TO CONNECT?"}
+        subHeading={[
+          "Let's customize your digital",
+          <br key={Math.random() + Date.now()} />,
+          "journey together",
+        ]}
+        optionsLabel={"Select Services"}
+        formSubmitApi={"service/submit"}
+        requestKey={"services"}
+      />
     </Layout>
   );
 };
