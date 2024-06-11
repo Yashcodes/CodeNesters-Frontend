@@ -38,6 +38,7 @@ import GetServiceEnquiry from "./pages/Admin/Services/GetServiceEnquiry";
 import GetAllUsers from "./pages/Admin/Users/GetAllUsers";
 import GetAllCourses from "./pages/Admin/Courses/GetAllCourses";
 import CreateCourse from "./pages/Admin/Courses/CreateCourse";
+import GetCourseEnquiries from "./pages/Admin/Courses/GetCourseEnquiries";
 
 function App() {
   useEffect(() => {
@@ -104,10 +105,7 @@ function App() {
             path="admin/services/get-service-enquiries"
             element={<GetServiceEnquiry />}
           />
-          <Route
-            path="admin/users/get-all-users"
-            element={<GetAllUsers />}
-          />
+          <Route path="admin/users/get-all-users" element={<GetAllUsers />} />
           <Route
             path="admin/courses/get-all-courses"
             element={<GetAllCourses />}
@@ -115,6 +113,10 @@ function App() {
           <Route
             path="admin/courses/create-course"
             element={<CreateCourse />}
+          />
+          <Route
+            path="admin/courses/get-course-enquiries"
+            element={<GetCourseEnquiries />}
           />
         </Route>
 

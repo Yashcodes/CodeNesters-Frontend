@@ -142,6 +142,9 @@ const AdminMenu = () => {
           onMouseEnter={() => handleMouseEnter(9)}
         >
           <MenuItem
+           component={
+              <Link to={"/dashboard/admin/courses/get-course-enquiries"} />
+            }
             style={getStyle(10)}
             onMouseEnter={() => handleMouseEnter(10)}
           >
