@@ -11,7 +11,7 @@ const UserMenu = () => {
         <li>
           <Link
             to={
-              auth?.user?.email === "ashish@gmail.com"
+              auth?.user?.email === "pariharyash1989@gmail.com"
                 ? `/dashboard/admin/settings`
                 : `/dashboard/user/settings`
             }
@@ -23,7 +23,7 @@ const UserMenu = () => {
         <li>
           <Link
             to={
-              auth?.user?.email === "ashish@gmail.com"
+              auth?.user?.email === "pariharyash1989@gmail.com"
                 ? `/dashboard/admin/profile/${auth?.user?._id}/change-password`
                 : `/dashboard/user/profile/${auth?.user?._id}/change-password`
             }

@@ -282,7 +282,7 @@ const Header = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                {auth?.user?.email === "ashish@gmail.com" ? (
+                {auth?.user?.email === "pariharyash1989@gmail.com" ? (
                   <div className="offCanvasBody">
                     <ul>
                       <li className="sidebar-list">

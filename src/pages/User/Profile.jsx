@@ -219,7 +219,7 @@ const Profile = () => {
               <div className="user-profile-btns d-flex gap-3 align-items-center">
                 <Link
                   to={
-                    auth?.user?.email === "ashish@gmail.com"
+                    auth?.user?.email === "pariharyash1989@gmail.com"
                       ? `/dashboard/admin/profile/${auth?.user?._id}/change-password`
                       : `/dashboard/user/profile/${auth?.user?._id}/change-password`
                   }
@@ -231,7 +231,7 @@ const Profile = () => {
 
                 <Link
                   to={
-                    auth?.user?.email === "ashish@gmail.com"
+                    auth?.user?.email === "pariharyash1989@gmail.com"
                       ? `/dashboard/admin/settings`
                       : `/dashboard/user/settings`
                   }
