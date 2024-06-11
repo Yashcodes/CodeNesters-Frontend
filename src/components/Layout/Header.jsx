@@ -313,7 +313,10 @@ const Header = () => {
                           <Link
                             to={"/"}
                             className="text-white d-flex flex-row align-items-center gap-2"
-                            onClick={handleLogout}
+                            onClick={() => {
+                              handleLogout();
+                              handleClose();
+                            }}
                           >
                             Sign Out <MDBIcon fas icon="sign-out-alt" />
                           </Link>
