@@ -146,6 +146,14 @@ const Home = () => {
           name="description"
           content="Best Software Company | Software company in raipur engaged in creating the backbone of your digital presence | We develop business portfolio, landing pages, websites and apps"
         />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/drzrhwe1x/image/upload/v1720105027/users/xbfjhsg4vizn9gszvnd0.png"
+        />
+        <meta property="og:url" content="https://codenesters.in/" />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:title" content="Your Website Title" /> */}
+        {/* <meta property="og:description" content="Description of your website" /> */}
         <link rel="canonical" href="https://www.codenesters.in/" />
       </Helmet>
 
