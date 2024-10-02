@@ -2,8 +2,9 @@ import { MDBIcon } from "mdb-react-ui-kit";
 import React from "react";
 import "../styles/WhyUsSectionHome.css";
 import { useTheme } from "../context/ThemeContext";
+import "../styles/TrainingHome.css";
 
-const WhyUsSectionHome = ({
+const TrainingHome = ({
   sectionCardData,
   sectionHeading,
   headingContent,
@@ -48,10 +49,10 @@ const WhyUsSectionHome = ({
             {headingContent}
           </h3>
 
-          <div className="whyUsCardContainer">
+          <div className="trainingHomeCardContainer">
             {sectionCardData.map((cardData) => (
               <div
-                className="whyUsCard"
+                className="trainingHomeCard"
                 data-aos={cardData?.data?.aos}
                 style={
                   themeMode === "light"
@@ -113,4 +114,4 @@ const WhyUsSectionHome = ({
   );
 };
 
-export default WhyUsSectionHome;
+export default TrainingHome;
