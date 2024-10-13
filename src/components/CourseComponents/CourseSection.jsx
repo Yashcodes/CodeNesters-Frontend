@@ -5,7 +5,7 @@ import Loading from "../../Utils/Loading";
 import toast from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
 
-const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
+const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
   const [courses, setCourses] = useState([]);
   const { themeMode } = useTheme();
 
@@ -16,7 +16,6 @@ const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
       );
 
       setCourses(response.data.courses);
-      // console.log(courses);
     } catch (error) {
       toast.error("Unable to list courses");
     }
@@ -64,42 +63,39 @@ const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
         </h3>
 
         <div className="courseCardContainer">
-          {sectionCardData.map((cardData) => (
+          {courses.map((course, index) => (
             <div
               className="courseCard"
-              data-aos={cardData?.data?.aos}
+              data-aos={cardAnimation[index].aos}
               style={
                 themeMode === "light"
                   ? {
-                      borderBottom: cardData?.data?.cardInlineStyle,
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
                     }
                   : themeMode === "dark"
                   ? {
-                      borderBottom: cardData?.data?.cardInlineStyle,
                       boxShadow:
                         "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
                     }
                   : {
-                      borderBottom: cardData?.data?.cardInlineStyle,
                       boxShadow:
                         "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
                     }
               }
-              key={cardData?.data?.id}
+              key={course?._id}
             >
               <div className="">
                 <img
                   className="rounded img-fluid"
-                  src={cardData?.data?.image}
+                  src={course?.courseImage}
                   height={"150px"}
                   alt=""
                 />
               </div>
 
               <div className="card-head">
-                <h4>{cardData?.data?.title}</h4>
+                <h4>{course?.courseName}</h4>
               </div>
 
               <div className="card-content">
@@ -116,7 +112,7 @@ const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
                       : {}
                   }
                 >
-                  {cardData?.data?.description}
+                  {course?.courseContent}
                 </p>
               </div>
 
@@ -133,7 +129,7 @@ const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
 
                       <div className="card-price">
                         <span className="m-0 text-gradient">
-                          Rs. {"1999"}
+                          Rs. {course?.coursePrice}
                           <p
                             className="text-decoration-line-through d-inline"
                             style={{
@@ -142,7 +138,7 @@ const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
                               color: "gray",
                             }}
                           >
-                            Rs. {"1999"}
+                            Rs. {course?.courseDiscountedPrice}
                           </p>
                         </span>
                       </div>

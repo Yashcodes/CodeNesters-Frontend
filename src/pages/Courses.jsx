@@ -21,73 +21,24 @@ const Courses = () => {
     { value: "phpWithMysql", label: "PHP with MySQL" },
   ];
 
-  const courseCardData = [
+  const cardAnimation = [
     {
-      data: {
-        id: 1,
-        title: "MERN Stack Development",
-        description: `Master the full-stack development with MongoDB, Express.js, React, and Node.js to build powerful web applications.`,
-        // cardInlineStyle: { borderBottom: "6px solid rgb(251, 125, 245)" },
-        // iconInlineStyle: { backgroundColor: "rgb(251, 125, 245)" },
-        aos: "fade-right",
-        image: mernCourse,
-      },
+      aos: "fade-right",
     },
     {
-      data: {
-        id: 2,
-        title: "Flutter App Development",
-        description: `Learn to create stunning cross-platform mobile apps with Flutter, from simple UI components to complex backend integration.`,
-        // cardInlineStyle: { borderBottom: "6px solid rgb(89, 191, 255)" },
-        // iconInlineStyle: { backgroundColor: "rgb(89, 191, 255)" },
-        aos: "fade-down",
-        image: flutterCourse,
-      },
+      aos: "fade-down",
     },
     {
-      data: {
-        id: 3,
-        title: "DevOps and Cloud",
-        description: `Get hands-on experience in automating deployments, scaling infrastructure, and managing cloud environments like AWS.`,
-        // cardInlineStyle: { borderBottom: "6px solid cyan" },
-        // iconInlineStyle: { backgroundColor: "cyan" },
-        aos: "fade-left",
-        image: devopsCourse,
-      },
+      aos: "fade-left",
     },
     {
-      data: {
-        id: 4,
-        title: "C++ Programming",
-        description: `Build a solid foundation in C++ programming, covering everything from basic syntax to advanced object-oriented principles.`,
-        // cardInlineStyle: { borderBottom: "6px solid rgb(59, 240, 197)" },
-        // iconInlineStyle: { backgroundColor: "rgb(59, 240, 197)" },
-        aos: "fade-right",
-        image: cppCourse,
-      },
+      aos: "fade-right",
     },
     {
-      data: {
-        id: 5,
-        title: "NodeJS Development",
-        description: `Delve into server-side programming with Node.js, mastering APIs, real-time applications, and backend integration for modern solutions.`,
-        // cardInlineStyle: { borderBottom: "6px solid rgb(234, 232, 111)" },
-        // iconInlineStyle: { backgroundColor: "rgb(234, 232, 111)" },
-        aos: "fade-up",
-        image: nodejsCourse,
-      },
+      aos: "fade-up",
     },
     {
-      data: {
-        id: 6,
-        title: "PHP with MySQL",
-        description: `Develop dynamic web applications by integrating PHP with MySQL, learning how to structure databases and build scalable projects.`,
-
-        // cardInlineStyle: { borderBottom: "6px solid rgb(244, 86, 141)" },
-        // iconInlineStyle: { backgroundColor: "rgb(244, 86, 141)" },
-        aos: "fade-left",
-        image: phpCourse,
-      },
+      aos: "fade-left",
     },
   ];
 
@@ -98,13 +49,13 @@ const Courses = () => {
 
       {/* //! What are the courses we offer  */}
       <CourseSection
-        sectionCardData={courseCardData}
         sectionHeading={"COURSES AND TRAININGS"}
         headingContent={[
           "Learn and grow your skills with our",
           <br key={Math.random() + Date.now()} />,
           "courses and trainings",
         ]}
+        cardAnimation={cardAnimation}
       />
 
       <ContactForServices
