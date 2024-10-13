@@ -131,20 +131,20 @@ const Header = () => {
               </li>
               <li className="nav-item mx-1">
                 <Link
-                  to={"/about"}
-                  className="nav-link active"
-                  aria-current="page"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="nav-item mx-1">
-                <Link
                   to={"/services"}
                   className="nav-link active"
                   aria-current="page"
                 >
                   Services
+                </Link>
+              </li>
+              <li className="nav-item mx-1">
+                <Link
+                  to={"/courses"}
+                  className="nav-link active"
+                  aria-current="page"
+                >
+                  Courses
                 </Link>
               </li>
               <li className="nav-item mx-1">
@@ -163,12 +163,12 @@ const Header = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Careers
+                  Company
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to={"/courses"} className="dropdown-item">
-                      Courses
+                    <Link to={"/about"} className="dropdown-item">
+                      About
                     </Link>
                   </li>
                   <li>

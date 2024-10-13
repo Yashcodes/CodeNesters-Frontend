@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CourseImage from "../../assets/images/contact/c1.jpg";
-import slugify from "slugify";
 import axios from "axios";
 import Loading from "../../Utils/Loading";
 import toast from "react-hot-toast";
+import { useTheme } from "../../context/ThemeContext";
 
-const CourseSection = () => {
+const CourseSection = ({ sectionHeading, headingContent, sectionCardData }) => {
   const [courses, setCourses] = useState([]);
+  const { themeMode } = useTheme();
 
   const getAllCourses = useCallback(async () => {
     try {
@@ -16,6 +16,7 @@ const CourseSection = () => {
       );
 
       setCourses(response.data.courses);
+      // console.log(courses);
     } catch (error) {
       toast.error("Unable to list courses");
     }
@@ -26,66 +27,113 @@ const CourseSection = () => {
   }, [getAllCourses]);
 
   return (
-    <div className="py-5">
-      <h4
-        className="text-center mx-1"
-        style={{ color: "#a87fff", fontWeight: "600" }}
-        data-aos="fade-up"
-      >
-        COURSES AND TRAININGS
-      </h4>
-      <h2
-        className="fs-1 fw-bold text-black text-center mx-1"
-        data-aos="fade-up"
-      >
-        Learn and grow your skills <br /> with our courses
-      </h2>
+    <section
+      className="py-5 courseSection"
+      style={
+        themeMode === "light"
+          ? {}
+          : themeMode === "dark"
+          ? {
+              backgroundImage:
+                "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+              color: "white",
+            }
+          : {}
+      }
+    >
+      <div className="container p-5">
+        <h2
+          className="text-center fs-4"
+          style={{ color: "#a87fff", fontWeight: "600" }}
+          data-aos="fade-up"
+        >
+          {sectionHeading}
+        </h2>
+        <h3
+          className="fs-1 fw-bold courseHeading text-center"
+          style={
+            themeMode === "light"
+              ? { color: "black" }
+              : themeMode === "dark"
+              ? { color: "white" }
+              : { color: "black" }
+          }
+          data-aos="fade-up"
+        >
+          {headingContent}
+        </h3>
 
-      <div className="course-cards container px-5">
-        <div className="row d-flex flex-wrap flex-row my-5">
-          {courses.length !== 0 ? (
-            courses?.map((course) => (
-              <div className="col-md-4 my-2" key={course?._id}  data-aos={course?.aos}>
-                <div className="course-card border shadow">
-                  <div className="card-img course-card-img img-fluid">
-                    <img
-                      src={CourseImage}
-                      alt=""
-                      height={"250px"}
-                      width={"100%"}
-                    />
-                  </div>
+        <div className="courseCardContainer">
+          {sectionCardData.map((cardData) => (
+            <div
+              className="courseCard"
+              data-aos={cardData?.data?.aos}
+              style={
+                themeMode === "light"
+                  ? {
+                      borderBottom: cardData?.data?.cardInlineStyle,
+                      boxShadow:
+                        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                    }
+                  : themeMode === "dark"
+                  ? {
+                      borderBottom: cardData?.data?.cardInlineStyle,
+                      boxShadow:
+                        "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
+                    }
+                  : {
+                      borderBottom: cardData?.data?.cardInlineStyle,
+                      boxShadow:
+                        "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                    }
+              }
+              key={cardData?.data?.id}
+            >
+              <div className="">
+                <img
+                  className="rounded img-fluid"
+                  src={cardData?.data?.image}
+                  height={"150px"}
+                  alt=""
+                />
+              </div>
 
-                  <div className="card-content p-3">
-                    <div className="course-card-head d-flex justify-content-between align-items-center">
-                      <h4
-                        className="text-black"
-                        style={{ fontSize: "22px", fontWeight: "600" }}
-                      >
-                        {course?.courseName}
-                      </h4>
-                      <span className="badge badge-success">
-                        {`${course?.coursePriceDiscount}% off`}
-                      </span>
-                    </div>
-                    <p className="text-justify" style={{ fontSize: "16px" }}>
-                      {course?.courseContent}
-                    </p>
+              <div className="card-head">
+                <h4>{cardData?.data?.title}</h4>
+              </div>
 
-                    <div className="course-card-btn d-flex align-items-center gap-2">
+              <div className="card-content">
+                <p
+                  style={
+                    themeMode === "light"
+                      ? {}
+                      : themeMode === "dark"
+                      ? {
+                          // backgroundImage:
+                          //   "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                          color: "#bfbfbf",
+                        }
+                      : {}
+                  }
+                >
+                  {cardData?.data?.description}
+                </p>
+              </div>
+
+              <div className="course-card-btn d-flex align-items-center gap-2 justify-content-between mt-2">
                       <Link
                         className="btn contact-banner-btn"
-                        to={`/courses/course/${slugify(
-                          course?._id,
-                          "-"
-                        ).toLowerCase()}`}
+                        // to={`/courses/course/${slugify(
+                        //   course?._id,
+                        //   "-"
+                        // ).toLowerCase()}`}
                       >
-                        View Details
+                        Add to Cart
                       </Link>
 
                       <div className="card-price">
                         <span className="m-0 text-gradient">
-                          Rs. {course?.courseDiscountedPrice}
+                          Rs. {"1999"}
                           <p
                             className="text-decoration-line-through d-inline"
                             style={{
@@ -94,21 +142,16 @@ const CourseSection = () => {
                               color: "gray",
                             }}
                           >
-                            Rs. {course?.coursePrice}
+                            Rs. {"1999"}
                           </p>
                         </span>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <Loading />
-          )}
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
