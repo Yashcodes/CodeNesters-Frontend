@@ -31,6 +31,7 @@ const Header = () => {
       user: null,
       authToken: "",
     });
+    handleClose();
 
     localStorage.removeItem("auth");
 
@@ -313,10 +314,7 @@ const Header = () => {
                           <Link
                             to={"/"}
                             className="text-white d-flex flex-row align-items-center gap-2"
-                            onClick={() => {
-                              handleLogout();
-                              handleClose();
-                            }}
+                            onClick={handleLogout}
                           >
                             Sign Out <MDBIcon fas icon="sign-out-alt" />
                           </Link>
@@ -332,6 +330,10 @@ const Header = () => {
                         <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>
                           Profile
                         </Link>
+                      </li>
+                      <li className="sidebar-list">
+                        <MDBIcon fas icon="shopping-cart" />
+                        <Link to={"/dashboard/user/cart"}>Cart</Link>
                       </li>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="book" />

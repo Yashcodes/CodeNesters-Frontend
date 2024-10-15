@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../styles/AuthStyles/Register.css";
 import Brand from "../../assets/images/brandLogo.png";
-import { MDBBtn, MDBIcon, MDBInput } from "mdb-react-ui-kit";
+import { MDBBtn, MDBInput } from "mdb-react-ui-kit";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../context/Auth";
 import SignIn from "../../assets/images/Register/signIn.svg";
 import { Helmet } from "react-helmet-async";
+import { useTheme } from "../../context/ThemeContext";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [auth, setAuth] = useAuth();
+  const { themeMode } = useTheme();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -61,6 +63,18 @@ const Login = () => {
     }
   };
 
+  const labelStyle =
+    themeMode === "light"
+      ? {}
+      : themeMode === "dark"
+      ? {
+          color: "white",
+        }
+      : {};
+
+  const inputColor =
+    themeMode === "light" ? "" : themeMode === "dark" ? "text-white" : "";
+
   return (
     <>
       <Helmet>
@@ -76,7 +90,26 @@ const Login = () => {
         <link rel="canonical" href="https://www.codenesters.in/login" />
       </Helmet>
 
-      <div className="register-page container-fluid bg-gray-gradient">
+      <div
+        className="register-page container-fluid"
+        style={
+          themeMode === "light"
+            ? {
+                backgroundImage:
+                  "linear-gradient(198deg, #cdbbf9aa 0%, #ffffff 100%)",
+              }
+            : themeMode === "dark"
+            ? {
+                backgroundImage:
+                  "radial-gradient(circle at 50% 50%, rgb(25 13 29) 0%, rgb(0 0 0) 115%)",
+                color: "white",
+              }
+            : {
+                backgroundImage:
+                  "linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%)",
+              }
+        }
+      >
         <div className="register-left col-md-4 col-sm-9">
           <h1
             className="text-gray fs-2"
@@ -100,7 +133,25 @@ const Login = () => {
         </div>
 
         <div className="register-right col-md-4 col-sm-10">
-          <div className="register-card shadow-lg">
+          <div
+            className="register-card"
+            style={
+              themeMode === "light"
+                ? {
+                    boxShadow:
+                      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                  }
+                : themeMode === "dark"
+                ? {
+                    boxShadow:
+                      "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
+                  }
+                : {
+                    boxShadow:
+                      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                  }
+            }
+          >
             <div className="register-card-header my-3">
               <div className="register-card-img">
                 <img src={Brand} alt="" width="34px" height="34px" />
@@ -119,6 +170,8 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  labelStyle={labelStyle}
+                  className={inputColor}
                 />
               </div>
               <div className="register-password mb-3">
@@ -129,6 +182,8 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                  labelStyle={labelStyle}
+                  className={inputColor}
                 />
               </div>
             </div>
