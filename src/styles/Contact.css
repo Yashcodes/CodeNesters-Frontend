@@ -476,17 +476,17 @@
   /* background-color: #e5e7eb; */
   padding: 12px;
 
-  background-color: #8ec5fc;
-  background-image: linear-gradient(332deg, #ffdada 0%, #e1c0fffa 100%);
+  /* background-color: #8ec5fc; */
+  /* background-image: linear-gradient(332deg, #ffdada 0%, #e1c0fffa 100%); */
 }
 
 .input-border {
   border: 1px solid #a87fff !important;
 }
 
-.why-appoint-head {
+/* .why-appoint-head {
   color: #000;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .why-appoint-head {
@@ -494,9 +494,9 @@
   }
 }
 
-.appoint-form-head {
+/* .appoint-form-head {
   color: #000;
-}
+} */
 
 @media screen and (max-width: 268px) {
   .appoint-head {
@@ -610,13 +610,14 @@
     #6e48aa 51%,
     #9d50bb 100%
   );
-  padding: 12px 34px;
+  padding: 10px 34px;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  font-size: 14px;
   border-radius: 6px;
   outline: 1px solid
     linear-gradient(to right, #9d50bb 0%, #6e48aa 51%, #9d50bb 100%);
