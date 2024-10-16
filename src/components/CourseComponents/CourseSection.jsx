@@ -4,10 +4,13 @@ import axios from "axios";
 import Loading from "../../Utils/Loading";
 import toast from "react-hot-toast";
 import { useTheme } from "../../context/ThemeContext";
+import { useAuth } from "../../context/Auth";
 
 const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
   const [courses, setCourses] = useState([]);
   const { themeMode } = useTheme();
+  const [auth] = useAuth();
+  const [isAdding, setIsAdding] = useState(null);
 
   const getAllCourses = useCallback(async () => {
     try {
@@ -20,6 +23,36 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
       toast.error("Unable to list courses");
     }
   }, []);
+
+  const addToCart = useCallback(
+    async (id) => {
+      setIsAdding(id);
+      try {
+        const { data } = await axios.post(
+          "http://localhost:5000/api/v1/cart/add-to-cart",
+          {
+            courseId: id,
+            quantity: 1,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: auth?.authToken,
+            },
+          }
+        );
+
+        if (data?.success) {
+          toast.success(data?.message);
+          setIsAdding(null);
+        }
+      } catch (error) {
+        toast.error("Error while adding course to cart");
+        setIsAdding(null);
+      }
+    },
+    [auth]
+  );
 
   useEffect(() => {
     getAllCourses();
@@ -117,32 +150,35 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
               </div>
 
               <div className="course-card-btn d-flex align-items-center gap-2 justify-content-between mt-2">
-                      <Link
-                        className="btn contact-banner-btn"
-                        // to={`/courses/course/${slugify(
-                        //   course?._id,
-                        //   "-"
-                        // ).toLowerCase()}`}
-                      >
-                        Add to Cart
-                      </Link>
+                <Link
+                  className="btn contact-banner-btn"
+                  onClick={() => addToCart(course._id)}
+                  // to={`/courses/course/${slugify(
+                  //   course?._id,
+                  //   "-"
+                  // ).toLowerCase()}`}
+                >
+                  {isAdding === course?._id
+                    ? "Adding to cart..."
+                    : "Add to Cart"}
+                </Link>
 
-                      <div className="card-price">
-                        <span className="m-0 text-gradient">
-                          Rs. {course?.coursePrice}
-                          <p
-                            className="text-decoration-line-through d-inline"
-                            style={{
-                              marginLeft: "8px",
-                              fontWeight: "normal",
-                              color: "gray",
-                            }}
-                          >
-                            Rs. {course?.courseDiscountedPrice}
-                          </p>
-                        </span>
-                      </div>
-                    </div>
+                <div className="card-price">
+                  <span className="m-0 text-gradient">
+                    Rs. {course?.coursePrice}
+                    <p
+                      className="text-decoration-line-through d-inline"
+                      style={{
+                        marginLeft: "8px",
+                        fontWeight: "normal",
+                        color: "gray",
+                      }}
+                    >
+                      Rs. {course?.courseDiscountedPrice}
+                    </p>
+                  </span>
+                </div>
+              </div>
             </div>
           ))}
         </div>

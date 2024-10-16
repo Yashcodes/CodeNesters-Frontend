@@ -7,13 +7,15 @@ import {
 } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useAuth } from "./Auth";
 
 const UserProfileContext = createContext();
 
 export const UserProfileProvider = (props) => {
   const [profileUrl, setProfileUrl] = useState("");
 
-  const auth = JSON.parse(localStorage.getItem("auth"));
+  // const auth = JSON.parse(localStorage.getItem("auth"));
+  const [auth] = useAuth();
 
   const getProfileUrl = useCallback(async () => {
     try {
@@ -38,7 +40,7 @@ export const UserProfileProvider = (props) => {
   }, [auth?.authToken, auth?.user?._id]);
 
   useEffect(() => {
-    if (auth) getProfileUrl();
+    if (auth.user != null) getProfileUrl();
   }, [auth, getProfileUrl]);
 
   return (

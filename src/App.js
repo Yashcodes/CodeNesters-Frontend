@@ -39,6 +39,7 @@ import GetAllUsers from "./pages/Admin/Users/GetAllUsers";
 import GetAllCourses from "./pages/Admin/Courses/GetAllCourses";
 import CreateCourse from "./pages/Admin/Courses/CreateCourse";
 import GetCourseEnquiries from "./pages/Admin/Courses/GetCourseEnquiries";
+import Cart from "./pages/User/Cart";
 
 function App() {
   useEffect(() => {
@@ -82,6 +83,7 @@ function App() {
             path="user/profile/:userid/change-password"
             element={<ChangePassword />}
           />
+          <Route path="user/cart" element={<Cart />} />
         </Route>
 
         {/* //! Protected Routes for Users */}

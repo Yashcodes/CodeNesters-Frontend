@@ -10,7 +10,8 @@
 html,
 body {
   scrollbar-width: none;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth !;
+  background-image: "linear-gradient(198deg, #bba9e2aa 0%, #ffffff 100%)";
 }
 
 @media only screen and (max-width: 768px) {
