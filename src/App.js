@@ -40,6 +40,7 @@ import GetAllCourses from "./pages/Admin/Courses/GetAllCourses";
 import CreateCourse from "./pages/Admin/Courses/CreateCourse";
 import GetCourseEnquiries from "./pages/Admin/Courses/GetCourseEnquiries";
 import Cart from "./pages/User/Cart";
+import PaymentSuccess from "./pages/Payment/PaymentSuccess";
 
 function App() {
   useEffect(() => {
@@ -84,6 +85,7 @@ function App() {
             element={<ChangePassword />}
           />
           <Route path="user/cart" element={<Cart />} />
+          <Route path="user/payment" element={<PaymentSuccess />} />
         </Route>
 
         {/* //! Protected Routes for Users */}

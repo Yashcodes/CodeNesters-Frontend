@@ -29,7 +29,7 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
       setIsAdding(id);
       try {
         const { data } = await axios.post(
-          "http://localhost:5000/api/v1/cart/add-to-cart",
+          "https://code-nesters-backend.vercel.app/api/v1/cart/add-to-cart",
           {
             courseId: id,
             quantity: 1,
