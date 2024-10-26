@@ -51,7 +51,7 @@ const Cart = () => {
 
       if (data?.success) {
         var options = {
-          key: process.env.REACT_APP_RAZORPAY_KEY,
+          key: process.env.REACT_APP_RAZORPAY,
           amount: data?.order?.amount,
           currency: "INR",
           name: "CodeNesters",
