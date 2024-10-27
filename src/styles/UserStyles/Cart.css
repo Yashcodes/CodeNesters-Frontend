@@ -3,3 +3,19 @@
   /* color: rgb(255, 255, 255); */
   width: 100%;
 }
+
+@media only screen and (max-width : 475px) {
+  .cart-card {
+    flex-wrap: wrap;
+  }
+
+  .cart-card img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.cart-card img {
+  width: 180px;
+  height: 140px;
+}

@@ -6,14 +6,18 @@ import axios from "axios";
 import { useAuth } from "../../context/Auth";
 import { MDBIcon } from "mdb-react-ui-kit";
 import toast from "react-hot-toast";
+import Loading from "../../Utils/Loading";
 
 const Cart = () => {
   const { themeMode } = useTheme();
   const [auth] = useAuth();
   const [cart, setCart] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getCartProducts = useCallback(async () => {
     try {
+      setIsLoading(true);
+
       const { data } = await axios.get(
         "https://code-nesters-backend.vercel.app/api/v1/cart/get-user-cart",
         {
@@ -24,10 +28,11 @@ const Cart = () => {
         }
       );
 
-      console.log(data?.cartCourses);
       setCart(data?.cartCourses);
+      setIsLoading(false);
     } catch (error) {
-      console.log(error);
+      setIsLoading(false);
+      toast.error("Error Getting Cart Items");
     }
   }, [auth?.authToken]);
 
@@ -113,7 +118,9 @@ const Cart = () => {
   return (
     <Layout>
       <div
-        className="container-fluid cart-page-container p-2"
+        className={`container-fluid cart-page-container p-2 ${
+          isLoading ? "d-flex justify-content-center align-items-center" : ""
+        }`}
         style={
           themeMode === "light"
             ? {
@@ -132,115 +139,120 @@ const Cart = () => {
               }
         }
       >
-        <div className="container p-0">
-          <h1 className="text-center">
-            {cart.length !== 0 ? "Your Cart" : "Your Cart is Empty!"}
-          </h1>
-          <div className="d-flex flex-wrap justify-content-center gap-4">
-            <div className="cart-products" style={{ width: "30rem" }}>
-              {cart.map((cartProduct) => {
-                return (
-                  <div
-                    className="cart-card d-flex gap-3 p-2 rounded mb-4"
-                    key={cartProduct?._id}
-                    style={
-                      themeMode === "light"
-                        ? {
-                            boxShadow:
-                              "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
-                          }
-                        : themeMode === "dark"
-                        ? {
-                            boxShadow:
-                              "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
-                          }
-                        : {
-                            boxShadow:
-                              "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
-                          }
-                    }
-                  >
-                    <div className="cart-card-image">
-                      <img
-                        src={cartProduct?.course?.courseImage}
-                        alt="CartImage"
-                        width={"180"}
-                        height={"140"}
-                        className="rounded"
-                      />
-                    </div>
-                    <div className="cart-card-content">
-                      <p className="m-0 fs-5">
-                        {cartProduct?.course?.courseName}
-                      </p>
-                      <p
-                        className="mt-1"
-                        style={{
-                          width: "100%",
-                          display: "-webkit-box",
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          WebkitLineClamp: 2,
-                          textOverflow: "ellipsis",
-                          fontSize: "0.9rem",
-                        }}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <div className="container p-0">
+              <h1 className="text-center">
+                {cart.length !== 0 ? "Your Cart" : "Your Cart is Empty!"}
+              </h1>
+              <div className="d-flex flex-wrap justify-content-center gap-4">
+                <div className="cart-products" style={{ width: "30rem" }}>
+                  {cart.map((cartProduct) => {
+                    return (
+                      <div
+                        className="cart-card d-flex gap-3 p-2 rounded mb-4"
+                        key={cartProduct?._id}
+                        style={
+                          themeMode === "light"
+                            ? {
+                                boxShadow:
+                                  "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                              }
+                            : themeMode === "dark"
+                            ? {
+                                boxShadow:
+                                  "rgb(72 46 95 / 25%) 0px 13px 54px 8px, rgb(67 12 117 / 55%) 0px 8px 14px 3px",
+                              }
+                            : {
+                                boxShadow:
+                                  "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+                              }
+                        }
                       >
-                        {cartProduct?.course?.courseContent}
-                      </p>
-
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="card-price">
-                          <span className="m-0 fw-bold">
-                            Price: &nbsp; Rs. {cartProduct?.course?.coursePrice}
-                            <p
-                              className="text-decoration-line-through d-inline"
-                              style={{
-                                marginLeft: "8px",
-                                fontWeight: "normal",
-                                color: "gray",
-                              }}
-                            >
-                              Rs. {cartProduct?.course?.courseDiscountedPrice}
-                            </p>
-                          </span>
-                        </div>
-                        <div onClick={() => handleDelete(cartProduct?._id)}>
-                          <MDBIcon
-                            fas
-                            icon="trash"
-                            color="red"
-                            className="text-danger"
-                            style={{ cursor: "pointer" }}
+                        <div className="cart-card-image">
+                          <img
+                            src={cartProduct?.course?.courseImage}
+                            alt="CartImage"
+                            className={`rounded img-fluid`}
                           />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+                        <div className="cart-card-content">
+                          <p className="m-0 fs-5">
+                            {cartProduct?.course?.courseName}
+                          </p>
+                          <p
+                            className="mt-1"
+                            style={{
+                              width: "100%",
+                              display: "-webkit-box",
+                              WebkitBoxOrient: "vertical",
+                              overflow: "hidden",
+                              WebkitLineClamp: 2,
+                              textOverflow: "ellipsis",
+                              fontSize: "0.9rem",
+                            }}
+                          >
+                            {cartProduct?.course?.courseContent}
+                          </p>
 
-            {cart.length !== 0 ? (
-              <div
-                className="cart-checkout"
-                style={{
-                  // backgroundColor: "green",
-                  height: "500px",
-                  width: "25rem",
-                }}
-              >
-                <button
-                  className="btn contact-banner-btn"
-                  onClick={handleCheckout}
-                >
-                  Checkout
-                </button>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div className="card-price">
+                              <span className="m-0 fw-bold">
+                                Price: &nbsp; Rs.{" "}
+                                {cartProduct?.course?.coursePrice}
+                                <p
+                                  className="text-decoration-line-through d-inline"
+                                  style={{
+                                    marginLeft: "8px",
+                                    fontWeight: "normal",
+                                    color: "gray",
+                                  }}
+                                >
+                                  Rs.{" "}
+                                  {cartProduct?.course?.courseDiscountedPrice}
+                                </p>
+                              </span>
+                            </div>
+                            <div onClick={() => handleDelete(cartProduct?._id)}>
+                              <MDBIcon
+                                fas
+                                icon="trash"
+                                color="red"
+                                className="text-danger"
+                                style={{ cursor: "pointer" }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {cart.length !== 0 ? (
+                  <div
+                    className="cart-checkout"
+                    style={{
+                      height: "500px",
+                      width: "25rem",
+                    }}
+                  >
+                    <button
+                      className="btn contact-banner-btn"
+                      onClick={handleCheckout}
+                    >
+                      Checkout
+                    </button>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </Layout>
   );

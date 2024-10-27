@@ -166,7 +166,7 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
 
                   <div className="card-price">
                     <span className="m-0 text-gradient">
-                      Rs. {course?.coursePrice}
+                      Rs. {course?.courseDiscountedPrice}
                       <p
                         className="text-decoration-line-through d-inline"
                         style={{
@@ -175,7 +175,7 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
                           color: "gray",
                         }}
                       >
-                        Rs. {course?.courseDiscountedPrice}
+                        Rs. {course?.coursePrice}
                       </p>
                     </span>
                   </div>
