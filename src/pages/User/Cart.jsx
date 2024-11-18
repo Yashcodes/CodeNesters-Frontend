@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { useTheme } from "../../context/ThemeContext";
 import "../../styles/UserStyles/Cart.css";
@@ -265,7 +265,7 @@ const Cart = () => {
                   <div
                     className="cart-checkout"
                     style={{
-                      width: "25rem",
+                      width: "30rem",
                     }}
                   >
                     <div
@@ -312,7 +312,7 @@ const Cart = () => {
                     </div>
 
                     <button
-                      className="btn contact-banner-btn w-100 mt-3"
+                      className="btn contact-banner-btn w-100 mt-3" style={{padding: "10px 0px", fontSize: "0.7rem"}}
                       onClick={handleCheckout}
                     >
                       Checkout
@@ -321,7 +321,7 @@ const Cart = () => {
                 </div>
               </div>
             ) : (
-              <div className="container text-center p-0">
+              <div className="container text-center p-0 d-flex flex-column justify-content-center align-items-center"  style={{minHeight: "75vh"}}>
                 <h1 className="">Your Cart is Empty</h1>
                 <p className="fs-5">{errorMessage && errorMessage}</p>
               </div>
