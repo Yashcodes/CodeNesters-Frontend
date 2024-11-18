@@ -8,7 +8,7 @@ import { useTheme } from "../../context/ThemeContext";
 
 const Footer = () => {
   const { themeMode } = useTheme();
-  
+
   return (
     <>
       <footer
@@ -60,19 +60,49 @@ const Footer = () => {
 
                 <div className="footer-content-list">
                   <ul>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/"}>Home</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/about"}>About</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/services"}>Services</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/courses"}>Courses</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/contact"}>Contact</Link>
                     </li>
                   </ul>
@@ -88,13 +118,31 @@ const Footer = () => {
 
                 <div className="footer-content-list">
                   <ul>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/privacy-policy"}>Privacy Policy</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/terms-of-services"}>Terms of Use</Link>
                     </li>
-                    <li>
+                    <li
+                      onClick={() =>
+                        window.scrollTo({
+                          top: 0,
+                        })
+                      }
+                    >
                       <Link to={"/cancellation-and-refund"}>
                         Refund & Cancellation Policy
                       </Link>
