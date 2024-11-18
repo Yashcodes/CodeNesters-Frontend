@@ -18,25 +18,27 @@ const Cart = () => {
   const [totalDiscountedPrice, setTotalDiscountedPrice] = useState(0);
   const [totalDiscount, setTotalDiscount] = useState(0);
 
-  // const calculatePrice = useMemo(() => {
-  //   const totalOriginalPrice = cart.reduce(
-  //     (acc, item) => Number(item?.course?.coursePrice) + acc,
-  //     0
-  //   );
+  useEffect(() => {
+    if (cart.length) {
+      const totalOriginalPrice = cart.reduce(
+        (acc, item) => Number(item?.course?.coursePrice) + acc,
+        0
+      );
 
-  //   setTotalOriginalPrice(totalOriginalPrice);
+      setTotalOriginalPrice(totalOriginalPrice);
 
-  //   const totalDiscountedPrice = cart.reduce(
-  //     (acc, item) => Number(item?.course?.courseDiscountedPrice) + acc,
-  //     0
-  //   );
+      const totalDiscountedPrice = cart.reduce(
+        (acc, item) => Number(item?.course?.courseDiscountedPrice) + acc,
+        0
+      );
 
-  //   setTotalDiscountedPrice(totalDiscountedPrice);
+      setTotalDiscountedPrice(totalDiscountedPrice);
 
-  //   const totalDiscount = totalOriginalPrice - totalDiscountedPrice;
+      const totalDiscount = totalOriginalPrice - totalDiscountedPrice;
 
-  //   setTotalDiscount(totalDiscount);
-  // }, []);
+      setTotalDiscount(totalDiscount);
+    }
+  }, [cart]);
 
   const getCartProducts = useCallback(async () => {
     try {
@@ -69,7 +71,7 @@ const Cart = () => {
       const { data } = await axios.post(
         "https://code-nesters-backend.vercel.app/api/v1/payment/create-payment",
         {
-          amount: "100",
+          amount: totalDiscountedPrice ?? "",
           courses: JSON.stringify(ids),
         },
         {
@@ -107,10 +109,12 @@ const Cart = () => {
         const razorPay = new window.Razorpay(options);
         razorPay.open();
       } else {
-        console.log(data);
+        toast.error("Error Occured")
+        // console.log(data);
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Error Occured")
+      // console.log(error);
     }
   };
 
@@ -133,7 +137,8 @@ const Cart = () => {
         toast.error(data?.message);
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Error Occured")
+      // console.log(error);
     }
   };
 
@@ -273,6 +278,7 @@ const Cart = () => {
                             }
                           : themeMode === "dark"
                           ? {
+                              color: "white",
                               boxShadow:
                                 "rgb(72 46 95 / 45%) 0px 2px 2px 2px, rgb(67 12 117 / 75%) 0px 2px 2px 3px",
                             }
@@ -282,24 +288,24 @@ const Cart = () => {
                             }
                       }
                     >
-                      <div className="total-courses d-flex justify-content-between text-black">
+                      <div className="total-courses d-flex justify-content-between ">
                         <p>Total Courses</p>
                         <p>{cart.length}</p>
                       </div>
 
-                      <div className="total-original-price d-flex justify-content-between text-black">
+                      <div className="total-original-price d-flex justify-content-between">
                         <p>Original Price</p>
                         <p>{totalOriginalPrice}</p>
                       </div>
 
-                      <div className="total-discount d-flex justify-content-between text-black">
+                      <div className="total-discount d-flex justify-content-between ">
                         <p className="mb-0">Total Discount</p>
                         <p className="mb-0">{totalDiscount}</p>
                       </div>
 
                       <hr />
 
-                      <div className="total-price d-flex justify-content-between text-black">
+                      <div className="total-price d-flex justify-content-between ">
                         <p>Total Price</p>
                         <p>{totalDiscountedPrice}</p>
                       </div>
