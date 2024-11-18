@@ -233,7 +233,7 @@ const Header = () => {
                       : {}
                   }
                 >
-                  <Link to={"/register"} className="text-white">
+                  <Link to={"/register"} className="text-white stretched-link">
                     Register
                   </Link>
                 </button>
