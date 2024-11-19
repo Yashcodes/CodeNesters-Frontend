@@ -221,22 +221,22 @@ const Header = () => {
                   />
                 </div>
               ) : (
-                <button
-                  className={`btn register-btn text-white fs-6`}
-                  style={
-                    themeMode === "light"
-                      ? {}
-                      : themeMode === "dark"
-                      ? {
-                          outline: "none",
-                        }
-                      : {}
-                  }
-                >
-                  <Link to={"/register"} className="text-white stretched-link">
+                <Link to={"/register"} className="text-white">
+                  <button
+                    className={`btn register-btn text-white fs-6`}
+                    style={
+                      themeMode === "light"
+                        ? {}
+                        : themeMode === "dark"
+                        ? {
+                            outline: "none",
+                          }
+                        : {}
+                    }
+                  >
                     Register
-                  </Link>
-                </button>
+                  </button>
+                </Link>
               )}
 
               <div>
