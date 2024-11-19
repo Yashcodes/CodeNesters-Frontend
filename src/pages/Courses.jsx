@@ -4,12 +4,6 @@ import Layout from "../components/Layout/Layout";
 import CourseBanner from "../components/CourseComponents/CourseBanner";
 import CourseSection from "../components/CourseComponents/CourseSection";
 import ContactForServices from "../components/ServicesComponents/ContactForServices";
-import mernCourse from "../assets/images/course/mern.png";
-import flutterCourse from "../assets/images/course/flutter.png";
-import devopsCourse from "../assets/images/course/devops.png";
-import nodejsCourse from "../assets/images/course/nodejs.png";
-import phpCourse from "../assets/images/course/php.png";
-import cppCourse from "../assets/images/course/c++.png";
 
 const Courses = () => {
   const options = [

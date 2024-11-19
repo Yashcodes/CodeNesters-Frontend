@@ -12,8 +12,6 @@ import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "./context/ThemeContext";
 import "aos/dist/aos.css";
 import { UserProfileProvider } from "./context/UserProfileContext";
-import { CartProvider } from "./context/CartContext.jsx";
-
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
@@ -22,13 +20,11 @@ const App = (
     <ThemeProvider>
       <AuthProvider>
         <UserProfileProvider>
-          <CartProvider>
             <Router>
               {/* <React.StrictMode> */}
               <Root />
               {/* </React.StrictMode> */}
             </Router>
-          </CartProvider>
         </UserProfileProvider>
       </AuthProvider>
     </ThemeProvider>
