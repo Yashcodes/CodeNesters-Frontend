@@ -258,8 +258,25 @@ const Header = () => {
               </div>
             </div>
 
-            <Offcanvas show={show} onHide={handleClose} placement="end">
-              <Offcanvas.Header closeButton>
+            <Offcanvas
+              show={show}
+              onHide={handleClose}
+              placement="end"
+              style={
+                themeMode === "light"
+                  ? {}
+                  : themeMode === "dark"
+                  ? {
+                      color: "white",
+                      background: "none",
+                      backgroundImage:
+                        "radial-gradient(circle at 50% 50%, rgb(11 4 15) 91%, rgb(0, 0, 0) 113%)",
+                      boxShadow: "rgb(105 101 101 / 51%) 0px 1px 14px 1px",
+                    }
+                  : {}
+              }
+            >
+              <Offcanvas.Header>
                 <Offcanvas.Title>
                   <div className="sidebar-profile d-flex align-items-center gap-2">
                     <img
@@ -281,20 +298,55 @@ const Header = () => {
                     </div>
                   </div>
                 </Offcanvas.Title>
+
+                <button
+                  type="button"
+                  className="btn-close"
+                  aria-label="Close"
+                  style={themeMode === "dark" ? { filter: "invert(1)" } : {}}
+                  onClick={handleClose}
+                ></button>
               </Offcanvas.Header>
+
               <Offcanvas.Body>
                 {auth?.user?.email === "pariharyash1989@gmail.com" ? (
                   <div className="offCanvasBody">
                     <ul>
                       <li className="sidebar-list">
                         <MdSpaceDashboard />
-                        <Link to={`/dashboard/admin`}>Dashboard</Link>
+                        <Link
+                          to={`/dashboard/admin`}
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                }
+                              : {}
+                          }
+                        >
+                          Dashboard
+                        </Link>
                       </li>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="user" />
                         <Link
                           to={`/dashboard/admin/profile/${auth?.user?._id}`}
-                          style={{ marginLeft: "3px" }}
+                          style={
+                            themeMode === "light"
+                              ? {
+                                  marginLeft: "3px",
+                                }
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                  marginLeft: "3px",
+                                }
+                              : {
+                                  marginLeft: "3px",
+                                }
+                          }
                         >
                           Profile
                         </Link>
@@ -303,14 +355,38 @@ const Header = () => {
                         <MDBIcon fas icon="cog" />
                         <Link
                           to={"/dashboard/admin/settings"}
-                          style={{ marginLeft: "2px" }}
+                          style={
+                            themeMode === "light"
+                              ? {
+                                  marginLeft: "3px",
+                                }
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                  marginLeft: "3px",
+                                }
+                              : {
+                                  marginLeft: "3px",
+                                }
+                          }
                         >
                           Settings
                         </Link>
                       </li>
                       <hr />
                       <li>
-                        <button className="btn sidebar-btn fs-6">
+                        <button
+                          className="btn sidebar-btn fs-6"
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  boxShadow: "none",
+                                }
+                              : {}
+                          }
+                        >
                           <Link
                             to={"/"}
                             className="text-white d-flex flex-row align-items-center gap-2"
@@ -327,25 +403,86 @@ const Header = () => {
                     <ul>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="user" />
-                        <Link to={`/dashboard/user/profile/${auth?.user?._id}`}>
+                        <Link
+                          to={`/dashboard/user/profile/${auth?.user?._id}`}
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                }
+                              : {}
+                          }
+                        >
                           Profile
                         </Link>
                       </li>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="shopping-cart" />
-                        <Link to={"/dashboard/user/cart"}>Cart</Link>
+                        <Link
+                          to={"/dashboard/user/cart"}
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                }
+                              : {}
+                          }
+                        >
+                          Cart
+                        </Link>
                       </li>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="book" />
-                        <Link to={"/dashboard/user/courses"}>My Courses</Link>
+                        <Link
+                          to={"/dashboard/user/courses"}
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                }
+                              : {}
+                          }
+                        >
+                          My Courses
+                        </Link>
                       </li>
                       <li className="sidebar-list">
                         <MDBIcon fas icon="cog" />
-                        <Link to={"/dashboard/user/settings"}>Settings</Link>
+                        <Link
+                          to={"/dashboard/user/settings"}
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  color: "white",
+                                }
+                              : {}
+                          }
+                        >
+                          Settings
+                        </Link>
                       </li>
                       <hr />
                       <li>
-                        <button className="btn sidebar-btn fs-6">
+                        <button
+                          className="btn sidebar-btn fs-6"
+                          style={
+                            themeMode === "light"
+                              ? {}
+                              : themeMode === "dark"
+                              ? {
+                                  boxShadow: "none",
+                                }
+                              : {}
+                          }
+                        >
                           <Link
                             to={"/"}
                             className="text-white d-flex flex-row align-items-center gap-2"
