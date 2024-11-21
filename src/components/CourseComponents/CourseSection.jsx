@@ -26,6 +26,21 @@ const CourseSection = ({ sectionHeading, headingContent, cardAnimation }) => {
 
   const addToCart = useCallback(
     async (id) => {
+      if (!auth?.user) {
+        toast("Please login to add course to cart", {
+          duration: 2000,
+          position: "top-center",
+          icon: "⚠️",
+          style: {
+            borderRadius: "10px",
+            backgroundColor: "white",
+            color: "#000",
+          },
+        });
+
+        return;
+      }
+
       setIsAdding(id);
       try {
         const { data } = await axios.post(

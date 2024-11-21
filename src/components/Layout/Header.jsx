@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import brandLogo from "../../assets/images/brandLogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../components/Layout/styles/Header.css";
 import { useAuth } from "../../context/Auth";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -18,12 +18,12 @@ const Header = () => {
 
   //! Theme Context
   const { themeMode, darkTheme, lightTheme } = useTheme();
-  console.log(themeMode);
 
   // const firebase = useFirebase();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     setAuth({
@@ -31,11 +31,13 @@ const Header = () => {
       user: null,
       authToken: "",
     });
+
     handleClose();
 
     localStorage.removeItem("auth");
 
     toast.success("Logged Out Successfully");
+    navigate("/");
   };
 
   const handleThemeChange = (e) => {
@@ -482,11 +484,11 @@ const Header = () => {
                                 }
                               : {}
                           }
+                          onClick={handleLogout}
                         >
                           <Link
                             to={"/"}
                             className="text-white d-flex flex-row align-items-center gap-2"
-                            onClick={handleLogout}
                           >
                             Sign Out <MDBIcon fas icon="sign-out-alt" />
                           </Link>
