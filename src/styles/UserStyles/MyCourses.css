@@ -1,0 +1,48 @@
+/* @media only screen and (max-width: 576px) {
+  .order-card {
+    padding: 8px 8px !important;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .order-card {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+} */
+
+.order-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
+  gap: 16px; /* Space between items */
+  align-items: center; /* Vertically center content */
+}
+
+.order-detail {
+  text-align: center; /* Center-align text */
+  overflow: hidden; /* Prevent content overflow */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+@media (max-width: 768px) {
+  .order-details-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-details-grid {
+    grid-template-columns: 1fr; /* Single-column layout for small screens */
+    text-align: left; /* Left-align text for better readability */
+  }
+
+  .order-detail {
+    white-space: normal; /* Allow text to wrap */
+    display: flex;
+    justify-content: space-between;
+  }
+}

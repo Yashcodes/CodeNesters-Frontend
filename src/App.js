@@ -41,6 +41,7 @@ import CreateCourse from "./pages/Admin/Courses/CreateCourse";
 import GetCourseEnquiries from "./pages/Admin/Courses/GetCourseEnquiries";
 import Cart from "./pages/User/Cart";
 import PaymentSuccess from "./pages/Payment/PaymentSuccess";
+import MyCourseDetailsComponent from "./components/UserDashboardComponents/MyCourseDetailsComponent";
 
 function App() {
   useEffect(() => {
@@ -78,7 +79,8 @@ function App() {
         {/* //! Protected Routes for Users */}
         <Route path="/dashboard" element={<Private />}>
           <Route path="user/profile/:userid" element={<Profile />} />
-          <Route path="user/courses" element={<MyCourses />} />
+          <Route path="user/my-courses" element={<MyCourses />} />
+          <Route path="user/my-courses/:courseId" element={<MyCourseDetailsComponent />} />
           <Route path="user/settings" element={<Settings />} />
           <Route
             path="user/profile/:userid/change-password"

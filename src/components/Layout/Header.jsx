@@ -440,7 +440,7 @@ const Header = () => {
                       <li className="sidebar-list">
                         <MDBIcon fas icon="book" />
                         <Link
-                          to={"/dashboard/user/courses"}
+                          to={"/dashboard/user/my-courses"}
                           style={
                             themeMode === "light"
                               ? {}
