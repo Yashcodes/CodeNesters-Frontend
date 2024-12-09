@@ -6,7 +6,7 @@ import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
 import Loading from "../../Utils/Loading";
 import { useParams } from "react-router-dom";
-import "../../styles/UserStyles/MyCourseDetailsComponent.jsx.css";
+import "../../styles/UserStyles/MyCourseDetailsComponent.css";
 
 const MyCourseComponent = () => {
   const [isLoading, setIsLoading] = useState(false);

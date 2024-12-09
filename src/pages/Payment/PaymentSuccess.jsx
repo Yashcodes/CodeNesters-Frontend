@@ -26,7 +26,7 @@ const PaymentSuccess = () => {
     }
 
     setTimeout(() => {
-      navigate("/dashboard/user/cart");
+      navigate("/dashboard/user/my-courses");
       setIsNavigating(false);
     }, [3000]);
 

@@ -80,7 +80,7 @@ const MyCourses = () => {
                 {orders.map((order) => {
                   return (
                     <div
-                      className="order-card py-3 px-4 rounded mt-4 mb-4"
+                      className="my-order-card py-3 rounded mt-4 mb-4"
                       key={order._id}
                       style={
                         themeMode === "light"
@@ -132,7 +132,7 @@ const MyCourses = () => {
                 className="container text-center p-0 d-flex flex-column justify-content-center align-items-center"
                 style={{ minHeight: "80vh" }}
               >
-                <h1 className="">Your have no Orders</h1>
+                <h1 className="">Your have no courses purchased</h1>
                 <p className="fs-5">{errorMessage && errorMessage}</p>
               </div>
             )}

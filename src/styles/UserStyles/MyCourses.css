@@ -1,47 +1,44 @@
-/* @media only screen and (max-width: 576px) {
-  .order-card {
-    padding: 8px 8px !important;
-    font-size: 12px;
+@media (max-width: 410px) {
+  .my-order-card {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    font-size: 0.8rem !important;
   }
 }
 
-@media only screen and (min-width: 577px) {
-  .order-card {
-    font-size: 18px;
-  }
+.my-order-card {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
-@media only screen and (min-width: 768px) {
-} */
 
 .order-details-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
-  gap: 16px; /* Space between items */
-  align-items: center; /* Vertically center content */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: center;
 }
 
 .order-detail {
-  text-align: center; /* Center-align text */
-  overflow: hidden; /* Prevent content overflow */
-  white-space: nowrap; /* Prevent text wrapping */
-  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
   .order-details-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .order-details-grid {
-    grid-template-columns: 1fr; /* Single-column layout for small screens */
-    text-align: left; /* Left-align text for better readability */
+    grid-template-columns: 1fr;
+    text-align: left;
   }
 
   .order-detail {
-    white-space: normal; /* Allow text to wrap */
+    white-space: normal;
     display: flex;
     justify-content: space-between;
   }
