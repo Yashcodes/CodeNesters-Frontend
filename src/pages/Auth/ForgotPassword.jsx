@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles/ResetPassword.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
+
+  const navigate = useNavigate();
 
   const forgotPasswordHandler = async (e) => {
     e.preventDefault();
@@ -26,6 +28,10 @@ const ForgotPassword = () => {
       console.log(response?.data);
       setEmail("");
       toast.success("Link sent successfully");
+
+      if(response?.data?.success) {
+        navigate("/login");
+      }
     } catch (error) {
       toast.error("Error occured");
     }
